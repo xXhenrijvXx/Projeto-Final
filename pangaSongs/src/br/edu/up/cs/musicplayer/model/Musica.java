@@ -9,7 +9,7 @@ public class Musica extends Media {
         this.artista = artista;
         this.genero = genero;
     }
-
+    @Override
     public void reproduzir(){
         System.out.println("Tocando " + super.getNome() + " de " + artista);
         //Implementar código de reprodução real

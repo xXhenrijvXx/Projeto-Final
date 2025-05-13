@@ -10,6 +10,23 @@ public class Playlist extends Media {
         super(nome, 0, ""); //caminho para playlist não existe e a duração vai ser calculada
     }
 
+    public void adicionarMusica(Musica musica){
+        musicas.add(musica);
+        atualizarDuracao();
+    }
+
+    public void removerMusica(Musica musica){
+        musicas.remove(musica);
+        atualizarDuracao();
+    }
+
+    private void atualizarDuracao(){
+        double total = 0;
+        for (Musica m : musicas){
+            total += m.getDuracao();
+        }
+    }
+    @Override
     public void reproduzir(){
         System.out.println("Tocando playlist: " + super.getNome());
         for(Musica m : musicas){
