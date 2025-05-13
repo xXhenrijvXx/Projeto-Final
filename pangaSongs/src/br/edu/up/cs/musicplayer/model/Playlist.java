@@ -16,8 +16,9 @@ public class Playlist extends Media {
     }
 
     public void removerMusica(Musica musica){
-        musicas.remove(musica);
-        atualizarDuracao();
+        if(musicas.remove(musica)) {
+            atualizarDuracao();
+        }
     }
 
     private void atualizarDuracao(){

@@ -7,21 +7,32 @@ import java.util.List;
 public class MusicaController {
     private List<Musica> musicas = new ArrayList<>();
 
-    public void adicionar(Musica musica){
+    public void adicionarMusica(Musica musica){
         musicas.add(musica);
     }
+
     public void editar(int index, Musica novaMusica){
         musicas.set(index, novaMusica);
     }
-    public void remover(int index){
-        if(index >= 0 && index < musicas.size()){
-            musicas.remove(index);
+
+    public void removerMusica(String nome){
+        musicas.removeIf(m -> m.getNome().equalsIgnoreCase(nome));
+    }
+
+    public void listarMusicas() {
+        for (Musica m : musicas) {
+            System.out.println("🎵 " + m.getNome());
         }
     }
-    public List<Musica> listar() {
-        return musicas;
+
+    public Musica buscarMusica(String nome) {
+        for (Musica m : musicas) {
+            if (m.getNome().equalsIgnoreCase(nome)) return m;
+        }
+        return null;
     }
-    public Musica get(int index){
-        return (index >= 0 && index < musicas.size()) ? musicas.get(index) : null;
+
+    public List<Musica> getMusicas() {
+        return musicas;
     }
 }
