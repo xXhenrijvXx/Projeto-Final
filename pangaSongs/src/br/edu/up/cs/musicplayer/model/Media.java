@@ -2,6 +2,8 @@ package br.edu.up.cs.musicplayer.model;
 
 import br.edu.up.cs.musicplayer.interfaces.Reproduzivel;
 
+import java.io.IOException;
+
 public abstract class Media implements Reproduzivel {
     private String nome;
     private double duracao;
@@ -13,7 +15,7 @@ public abstract class Media implements Reproduzivel {
         this.caminhoArquivo = caminhoArquivo;
     }
 
-    public abstract void reproduzir();
+    public abstract void reproduzir() throws IOException;
 
     public void setNome(String nome) {
         this.nome = nome;

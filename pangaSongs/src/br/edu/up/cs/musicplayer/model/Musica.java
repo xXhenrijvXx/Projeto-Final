@@ -1,5 +1,9 @@
 package br.edu.up.cs.musicplayer.model;
 
+import br.edu.up.cs.musicplayer.util.Logger;
+
+import java.io.IOException;
+
 public class Musica extends Media {
     private String artista;
     private String genero;
@@ -15,8 +19,9 @@ public class Musica extends Media {
     }
 
     @Override
-    public void reproduzir(){
+    public void reproduzir() throws IOException {
         System.out.println("Tocando " + super.getNome() + " de " + artista);
+        Logger.registrar("Reproduzindo música: " + super.getNome());
         //Implementar código de reprodução real
     }
 

@@ -5,10 +5,11 @@ import br.edu.up.cs.musicplayer.controller.PlaylistController;
 import br.edu.up.cs.musicplayer.view.MusicaView;
 import br.edu.up.cs.musicplayer.view.PlaylistView;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         MusicaController mc = new MusicaController();
         PlaylistController pc = new PlaylistController();
         MusicaView mv = new MusicaView(mc);
