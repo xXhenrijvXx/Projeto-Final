@@ -15,6 +15,11 @@ public class Playlist extends Media {
         atualizarDuracao();
     }
 
+    public void adicionarMusica(String nome, double duracao, String caminhoArquivo){
+        Musica musica = new Musica(nome, duracao, caminhoArquivo);
+        adicionarMusica(musica);
+    }
+
     public void removerMusica(Musica musica){
         if(musicas.remove(musica)) {
             atualizarDuracao();
@@ -36,6 +41,6 @@ public class Playlist extends Media {
     }
 
     public List<Musica> getMusicas() {
-        return musicas;
+        return new ArrayList<>(musicas);
     }
 }

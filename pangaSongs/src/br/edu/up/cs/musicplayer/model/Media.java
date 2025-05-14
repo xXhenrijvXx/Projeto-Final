@@ -1,6 +1,8 @@
 package br.edu.up.cs.musicplayer.model;
 
-public abstract class Media {
+import br.edu.up.cs.musicplayer.interfaces.Reproduzivel;
+
+public abstract class Media implements Reproduzivel {
     private String nome;
     private double duracao;
     private String caminhoArquivo;

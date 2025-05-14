@@ -9,6 +9,11 @@ public class Musica extends Media {
         this.artista = artista;
         this.genero = genero;
     }
+
+    public Musica(String nome, double duracao, String caminhoArquivo) {
+        super(nome, duracao, caminhoArquivo);
+    }
+
     @Override
     public void reproduzir(){
         System.out.println("Tocando " + super.getNome() + " de " + artista);
