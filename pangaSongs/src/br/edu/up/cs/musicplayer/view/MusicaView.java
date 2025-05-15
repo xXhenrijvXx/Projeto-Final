@@ -17,14 +17,16 @@ public class MusicaView {
     public void menu() throws IOException {
         int opcao;
         do{
-            System.out.println("\n🎵 Gerenciar Músicas\n1. Adicionar música\n2. Remover música\n3. Listar músicas\n0. Voltar\nEscolha: ");
+            System.out.println("\nGerenciar Músicas\n1. Adicionar música\n2. Remover música\n3. Editar música\n4. Listar músicas\n0. Voltar\nEscolha: ");
             opcao = sc.nextInt();
             sc.nextLine();
 
             switch (opcao){
                 case 1 -> adicionarMusica();
                 case 2 -> removerMusica();
-                case 3 -> controller.listarMusicas();
+                case 3 -> editarMusica();
+                case 4 -> controller.listarMusicas();
+                case 0 -> {}
                 default -> System.out.println("Opção inválida!");
             }
         } while (opcao != 0);
@@ -38,8 +40,12 @@ public class MusicaView {
         sc.nextLine();
         System.out.println("Caminho do arquivo: ");
         String caminho = sc.nextLine();
+        System.out.println("Gênero da música: ");
+        String genero = sc.nextLine();
+        System.out.println("Artista: ");
+        String artista = sc.nextLine();
 
-        Musica musica = new Musica(nome, duracao, caminho);
+        Musica musica = new Musica(nome, duracao, caminho, artista, genero);
         controller.adicionarMusica(musica);
         System.out.println("Música adicionada!");
     }
@@ -48,6 +54,11 @@ public class MusicaView {
         System.out.println("Nome da música a remover: ");
         String nome = sc.nextLine();
         controller.removerMusica(nome);
-        System.out.println("Música removida!");
+    }
+
+    private void editarMusica(){
+        System.out.println("Nome da música a editar: ");
+        String nome = sc.nextLine();
+        controller.editarMusica(nome);
     }
 }

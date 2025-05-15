@@ -1,0 +1,10 @@
+[2025-05-14 22:27:44] Música removida: teste
+[2025-05-14 22:28:12] Música adicionada: Teste
+[2025-05-14 22:28:46] Música adicionada: Master of Puppets
+[2025-05-14 22:29:00] Música removida: Teste
+[2025-05-14 22:29:13] Música removida: Master of puppets
+[2025-05-14 22:29:38] Playlist adicionada: PangaTeste
+[2025-05-14 22:30:10] Música adicionada: Teste
+[2025-05-14 22:30:47] Reproduzindo playlist: PangaTeste
+[2025-05-14 22:30:47] Reproduzindo música: Teste
+[2025-05-14 23:51:16] Música removida: teste

@@ -8,14 +8,10 @@ public class Musica extends Media {
     private String artista;
     private String genero;
 
-    public Musica(String nome, String artista, String genero, double duracao, String caminhoArquivo) {
+    public Musica(String nome, double duracao, String caminhoArquivo, String artista, String genero) {
         super(nome, duracao, caminhoArquivo);
         this.artista = artista;
         this.genero = genero;
-    }
-
-    public Musica(String nome, double duracao, String caminhoArquivo) {
-        super(nome, duracao, caminhoArquivo);
     }
 
     @Override

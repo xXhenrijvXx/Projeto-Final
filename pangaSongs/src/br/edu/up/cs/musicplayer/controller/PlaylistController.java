@@ -21,8 +21,12 @@ public class PlaylistController {
         }
     }
     public void removerPlaylist(String nome) throws IOException {
-        playlists.removeIf(p -> p.getNome().equalsIgnoreCase(nome));
-        Logger.registrar("Playlist removida: " + nome);
+        if(playlists.removeIf(p -> p.getNome().equalsIgnoreCase(nome))){
+            Logger.registrar("Playlist removida: " + nome);
+            System.out.println("Playlist removida!");
+        } else{
+            System.out.println("Playlist não encontrada.");
+        }
     }
 
     public void listarPlaylists() {
@@ -35,6 +39,7 @@ public class PlaylistController {
         for (Playlist p : playlists) {
             if (p.getNome().equalsIgnoreCase(nome)) return p;
         }
+        System.out.println("Playlist não encontrada!");
         return null;
     }
 
@@ -46,8 +51,7 @@ public class PlaylistController {
         Playlist p = buscarPlaylist(nomePlaylist);
         if (p != null) {
             p.adicionarMusica(musica);
-        } else {
-            System.out.println("Playlist não encontrada.");
+            System.out.println("Música adicionada!");
         }
     }
 }

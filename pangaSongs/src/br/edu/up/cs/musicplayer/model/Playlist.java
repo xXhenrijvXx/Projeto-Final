@@ -18,8 +18,8 @@ public class Playlist extends Media {
         atualizarDuracao();
     }
 
-    public void adicionarMusica(String nome, double duracao, String caminhoArquivo){
-        Musica musica = new Musica(nome, duracao, caminhoArquivo);
+    public void adicionarMusica(String nome, double duracao, String caminhoArquivo, String artista, String genero){
+        Musica musica = new Musica(nome, duracao, caminhoArquivo, artista, genero);
         adicionarMusica(musica);
     }
 

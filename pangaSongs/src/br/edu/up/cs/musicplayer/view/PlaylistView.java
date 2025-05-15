@@ -54,9 +54,6 @@ public class PlaylistView {
         Musica musica = musicaController.buscarMusica(nomeMusica);
         if(musica != null){
             controller.adicionarMusicaNaPlaylist(nomePlaylist, musica);
-            System.out.println("Música adicionada!");
-        } else{
-            System.out.println("Música não encontrada!");
         }
     }
 
@@ -64,7 +61,6 @@ public class PlaylistView {
         System.out.println("Nome da playlist a remover: ");
         String nome = sc.nextLine();
         controller.removerPlaylist(nome);
-        System.out.println("Playlist removida!");
     }
 
     private void reproduzirPlaylist() throws IOException {
@@ -73,8 +69,6 @@ public class PlaylistView {
         Playlist playlist = controller.buscarPlaylist(nome);
         if(playlist != null){
             playlist.reproduzir();
-        }else{
-            System.out.println("Playlist não encontrada!");
         }
     }
 }

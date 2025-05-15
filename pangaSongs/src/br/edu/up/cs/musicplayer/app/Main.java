@@ -19,18 +19,16 @@ public class Main {
         PlaylistController pc = new PlaylistController();
         MusicaView mv = new MusicaView(mc);
         PlaylistView pv = new PlaylistView(pc, mc);
-        MusicaController musicaController = new MusicaController();
-        PlaylistController playlistController = new PlaylistController();
 
         // Carregar músicas e playlists
         List<Musica> musicasCarregadas = ArquivoMusica.carregar();
         for (Musica m : musicasCarregadas) {
-            musicaController.adicionarMusica(m);
+            mc.adicionarMusica(m);
         }
 
         List<Playlist> playlistsCarregadas = ArquivoPlaylist.carregar(musicasCarregadas);
         for (Playlist p : playlistsCarregadas) {
-            playlistController.adicionarPlaylist(p);
+            pc.adicionarPlaylist(p);
         }
 
         Scanner sc = new Scanner(System.in);
@@ -50,7 +48,7 @@ public class Main {
             }
         } while (opcao != 0);
 
-        ArquivoMusica.salvar(musicaController.getMusicas());
-        ArquivoPlaylist.salvar(playlistController.getPlaylists());
+        ArquivoMusica.salvar(mc.getMusicas());
+        ArquivoPlaylist.salvar(pc.getPlaylists());
     }
 }
