@@ -7,10 +7,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Playlist extends Media {
+    private static int contador = 0;
     private List<Musica> musicas = new ArrayList<>();
 
-    public Playlist(String nome) {
-        super(nome, 0, ""); //caminho para playlist não existe e a duração vai ser calculada
+    public Playlist(int id, String nome) {
+        super(id, nome, 0, ""); //caminho para playlist não existe e a duração vai ser calculada
+    }
+
+    public Playlist(String nome){
+        super(contador++, nome, 0, "");
     }
 
     public void adicionarMusica(Musica musica){

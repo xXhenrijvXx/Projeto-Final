@@ -13,17 +13,13 @@ public class ArquivoPlaylist {
     public static void salvar(List<Playlist> playlists) throws IOException {
         BufferedWriter bw = new BufferedWriter(new FileWriter(arquivoPath));
         for(Playlist p : playlists){
-            StringBuilder sb = new StringBuilder(p.getNome());
-            for(Musica m : p.getMusicas()){
-                sb.append(";").append(m.getNome());
-            }
-            bw.write(sb.toString());
+            bw.write(p.getId() + ";" + p.getNome());
             bw.newLine();
         }
         bw.close();
     }
 
-    public static List<Playlist> carregar(List<Musica> musicasDisponiveis) throws IOException {
+    public static List<Playlist> carregar() throws IOException {
         File arquivo = new File(arquivoPath);
         if(!arquivo.exists()){
             arquivo.getParentFile().mkdirs();
@@ -37,18 +33,8 @@ public class ArquivoPlaylist {
 
         while ((linha = br.readLine()) != null) {
             String[] partes = linha.split(";");
-            if (partes.length >= 1) {
-                Playlist p = new Playlist(partes[0]);
-
-                for (int i = 1; i < partes.length; i++) {
-                    for (Musica m : musicasDisponiveis) {
-                        if (m.getNome().equalsIgnoreCase(partes[i])) {
-                            p.adicionarMusica(m);
-                            break;
-                        }
-                    }
-                }
-
+            if (partes.length == 2) {
+                Playlist p = new Playlist(Integer.parseInt(partes[0]), partes[1]);
                 playlists.add(p);
             }
         }

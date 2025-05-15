@@ -47,8 +47,8 @@ public class MusicaView {
 
         Musica musica = new Musica(nome, duracao, caminho, artista, genero);
         controller.adicionarMusica(musica);
-        System.out.println("Música adicionada!");
     }
+
 
     private void removerMusica() throws IOException {
         System.out.println("Nome da música a remover: ");

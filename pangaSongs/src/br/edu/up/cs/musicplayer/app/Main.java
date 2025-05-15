@@ -1,5 +1,6 @@
 package br.edu.up.cs.musicplayer.app;
 
+import br.edu.up.cs.musicplayer.archives.ArquivoPlaylistMusica;
 import br.edu.up.cs.musicplayer.controller.MusicaController;
 import br.edu.up.cs.musicplayer.controller.PlaylistController;
 import br.edu.up.cs.musicplayer.model.Musica;
@@ -20,16 +21,14 @@ public class Main {
         MusicaView mv = new MusicaView(mc);
         PlaylistView pv = new PlaylistView(pc, mc);
 
-        // Carregar músicas e playlists
-        List<Musica> musicasCarregadas = ArquivoMusica.carregar();
-        for (Musica m : musicasCarregadas) {
-            mc.adicionarMusica(m);
-        }
+        Musica.carregarUltimoId("data/id_musica.txt");
+        List<Musica> listaMusicas = ArquivoMusica.carregar();
+        List<Playlist> listaPl = ArquivoPlaylist.carregar();
+        ArquivoPlaylistMusica.carregar(listaPl, listaMusicas);
 
-        List<Playlist> playlistsCarregadas = ArquivoPlaylist.carregar(musicasCarregadas);
-        for (Playlist p : playlistsCarregadas) {
-            pc.adicionarPlaylist(p);
-        }
+        for (Musica m : listaMusicas) mc.adicionarMusica(m);
+        for (Playlist p : listaPl) pc.adicionarPlaylist(p);
+
 
         Scanner sc = new Scanner(System.in);
         int opcao;
@@ -43,12 +42,14 @@ public class Main {
                 case 1 -> mv.menu();
                 case 2 -> pv.menu();
                 case 0 -> System.out.println("Encerrando...");
-                default -> System.out.println("Opcção inválida!");
+                default -> System.out.println("Opção inválida!");
 
             }
         } while (opcao != 0);
 
         ArquivoMusica.salvar(mc.getMusicas());
+        Musica.salvarUltimoId("data/id_musica.txt");
         ArquivoPlaylist.salvar(pc.getPlaylists());
+        ArquivoPlaylistMusica.salvar(pc.getPlaylists());
     }
 }

@@ -8,3 +8,52 @@
 [2025-05-14 22:30:47] Reproduzindo playlist: PangaTeste
 [2025-05-14 22:30:47] Reproduzindo música: Teste
 [2025-05-14 23:51:16] Música removida: teste
+[2025-05-15 15:41:45] Música adicionada: 
+[2025-05-15 15:45:41] Música adicionada: 
+[2025-05-15 15:45:54] Música adicionada: 
+[2025-05-15 15:47:22] Música adicionada: 
+[2025-05-15 15:48:02] Música adicionada: teste2
+[2025-05-15 15:48:23] Playlist adicionada: teste
+[2025-05-15 15:49:24] Reproduzindo playlist: teste
+[2025-05-15 15:49:24] Reproduzindo música: 
+[2025-05-15 15:49:24] Reproduzindo música: teste2
+[2025-05-15 15:49:55] Música adicionada: 
+[2025-05-15 15:50:00] Música adicionada: teste2
+[2025-05-15 15:50:02] Playlist adicionada: teste
+[2025-05-15 15:50:20] Reproduzindo playlist: teste
+[2025-05-15 15:50:20] Reproduzindo música: 
+[2025-05-15 15:50:20] Reproduzindo música: teste2
+[2025-05-15 15:52:10] Música adicionada: 
+[2025-05-15 15:52:12] Música adicionada: teste2
+[2025-05-15 15:52:12] Playlist adicionada: teste
+[2025-05-15 15:52:21] Playlist adicionada: teste2
+[2025-05-15 15:52:41] Reproduzindo playlist: teste
+[2025-05-15 15:52:41] Reproduzindo música: 
+[2025-05-15 15:52:41] Reproduzindo música: teste2
+[2025-05-15 15:52:52] Reproduzindo playlist: teste2
+[2025-05-15 15:52:52] Reproduzindo música: 
+[2025-05-15 15:53:07] Música adicionada: 
+[2025-05-15 15:53:09] Música adicionada: teste2
+[2025-05-15 15:53:09] Playlist adicionada: teste
+[2025-05-15 15:53:10] Playlist adicionada: teste2
+[2025-05-15 15:53:24] Reproduzindo playlist: teste
+[2025-05-15 15:53:24] Reproduzindo música: 
+[2025-05-15 15:53:24] Reproduzindo música: teste2
+[2025-05-15 15:53:35] Música adicionada: 
+[2025-05-15 15:53:37] Música adicionada: teste2
+[2025-05-15 15:53:37] Playlist adicionada: teste
+[2025-05-15 15:53:37] Playlist adicionada: teste2
+[2025-05-15 15:53:47] Reproduzindo playlist: teste
+[2025-05-15 15:53:47] Reproduzindo música: 
+[2025-05-15 15:53:47] Reproduzindo música: teste2
+[2025-05-15 15:53:55] Reproduzindo playlist: teste2
+[2025-05-15 18:38:45] Música adicionada: teste
+[2025-05-15 18:39:17] Música adicionada: teste
+[2025-05-15 18:39:32] Playlist adicionada: teste
+[2025-05-15 18:39:43] Playlist adicionada: teste2
+[2025-05-15 18:40:04] Música adicionada: panga
+[2025-05-15 18:41:08] Reproduzindo playlist: teste
+[2025-05-15 18:41:08] Reproduzindo música: teste
+[2025-05-15 18:41:08] Reproduzindo música: panga
+[2025-05-15 18:41:20] Reproduzindo playlist: teste2
+[2025-05-15 18:41:20] Reproduzindo música: panga

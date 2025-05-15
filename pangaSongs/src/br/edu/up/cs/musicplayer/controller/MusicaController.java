@@ -15,6 +15,8 @@ public class MusicaController {
     public void adicionarMusica(Musica musica) throws IOException {
         musicas.add(musica);
         Logger.registrar("Música adicionada: " + musica.getNome());
+        System.out.println("Música adicionada");
+        esperarEnter();
     }
 
     public void editarMusica(String nome){
@@ -32,7 +34,10 @@ public class MusicaController {
                     case 3 -> editarGenero(m);
                     case 4 -> editarCaminho(m);
                     case 0 -> {}
-                    default -> System.out.println("Opção inválida!");
+                    default -> {
+                        System.out.println("Opção inválida!");
+                        esperarEnter();
+                    }
                 }
             }while(opcao != 0);
         }
@@ -58,12 +63,20 @@ public class MusicaController {
         musica.setCaminhoArquivo(sc.nextLine());
     }
 
+    public static void esperarEnter() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Pressione ENTER para continuar...");
+        scanner.nextLine();
+    }
+
     public void removerMusica(String nome) throws IOException {
         if(musicas.removeIf(m -> m.getNome().equalsIgnoreCase(nome))){
             Logger.registrar("Música removida: " + nome);
             System.out.println("Música removida!");
+            esperarEnter();
         } else{
             System.out.println("Música não encontrada.");
+            esperarEnter();
         }
     }
 
@@ -71,6 +84,7 @@ public class MusicaController {
         for (Musica m : musicas) {
             System.out.println("🎵 " + m.getNome());
         }
+        esperarEnter();
     }
 
     public Musica buscarMusica(String nome) {
@@ -78,6 +92,7 @@ public class MusicaController {
             if (m.getNome().equalsIgnoreCase(nome)) return m;
         }
         System.out.println("Música não encontrada!");
+        esperarEnter();
         return null;
     }
 

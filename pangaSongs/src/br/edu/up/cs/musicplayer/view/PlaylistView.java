@@ -42,7 +42,6 @@ public class PlaylistView {
         String nome = sc.nextLine();
         Playlist p = new Playlist(nome);
         controller.adicionarPlaylist(p);
-        System.out.println("✅ Playlist criada!");
     }
 
     private void adicionarMusica(){

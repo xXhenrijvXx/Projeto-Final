@@ -14,7 +14,7 @@ public class ArquivoMusica {
         BufferedWriter bw = new BufferedWriter(fw);
 
         for(Musica m : musicas){
-            bw.write(m.getNome() + ";" + m.getArtista() + ";" + m.getGenero() + ";" + m.getDuracao() + ";" + m.getCaminhoArquivo());
+            bw.write(m.getId() + ";" + m.getNome() + ";" + m.getArtista() + ";" + m.getGenero() + ";" + m.getDuracao() + ";" + m.getCaminhoArquivo());
             bw.newLine();
         }
 
@@ -35,12 +35,13 @@ public class ArquivoMusica {
 
         while ((linha = br.readLine()) != null){
             String[] partes = linha.split(";");
-            if(partes.length == 5){
-                String nome = partes[0];
-                double duracao = Double.parseDouble(partes[1]);
-                String caminho = partes[2];
+            if(partes.length == 6){
+                int id = Integer.parseInt(partes[0]);
+                String nome = partes[1];
+                String genero = partes[2];
                 String artista = partes[3];
-                String genero = partes[4];
+                double duracao = Double.parseDouble(partes[4]);
+                String caminho = partes[5];
                 musicas.add(new Musica(nome, duracao, caminho, artista, genero));
             }
         }
