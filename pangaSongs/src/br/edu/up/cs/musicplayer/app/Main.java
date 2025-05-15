@@ -2,10 +2,15 @@ package br.edu.up.cs.musicplayer.app;
 
 import br.edu.up.cs.musicplayer.controller.MusicaController;
 import br.edu.up.cs.musicplayer.controller.PlaylistController;
+import br.edu.up.cs.musicplayer.model.Musica;
+import br.edu.up.cs.musicplayer.model.Playlist;
+import br.edu.up.cs.musicplayer.persistence.MusicaPersistence;
+import br.edu.up.cs.musicplayer.persistence.PlaylistPersistence;
 import br.edu.up.cs.musicplayer.view.MusicaView;
 import br.edu.up.cs.musicplayer.view.PlaylistView;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -14,6 +19,19 @@ public class Main {
         PlaylistController pc = new PlaylistController();
         MusicaView mv = new MusicaView(mc);
         PlaylistView pv = new PlaylistView(pc, mc);
+        MusicaController musicaController = new MusicaController();
+        PlaylistController playlistController = new PlaylistController();
+
+        // Carregar músicas e playlists
+        List<Musica> musicasCarregadas = MusicaPersistence.carregar();
+        for (Musica m : musicasCarregadas) {
+            musicaController.adicionarMusica(m);
+        }
+
+        List<Playlist> playlistsCarregadas = PlaylistPersistence.carregar(musicasCarregadas);
+        for (Playlist p : playlistsCarregadas) {
+            playlistController.adicionarPlaylist(p);
+        }
 
         Scanner sc = new Scanner(System.in);
         int opcao;
@@ -31,5 +49,8 @@ public class Main {
 
             }
         } while (opcao != 0);
+
+        MusicaPersistence.salvar(musicaController.getMusicas());
+        PlaylistPersistence.salvar(playlistController.getPlaylists());
     }
 }
