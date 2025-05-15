@@ -4,8 +4,8 @@ import br.edu.up.cs.musicplayer.controller.MusicaController;
 import br.edu.up.cs.musicplayer.controller.PlaylistController;
 import br.edu.up.cs.musicplayer.model.Musica;
 import br.edu.up.cs.musicplayer.model.Playlist;
-import br.edu.up.cs.musicplayer.persistence.MusicaPersistence;
-import br.edu.up.cs.musicplayer.persistence.PlaylistPersistence;
+import br.edu.up.cs.musicplayer.archives.ArquivoMusica;
+import br.edu.up.cs.musicplayer.archives.ArquivoPlaylist;
 import br.edu.up.cs.musicplayer.view.MusicaView;
 import br.edu.up.cs.musicplayer.view.PlaylistView;
 
@@ -23,12 +23,12 @@ public class Main {
         PlaylistController playlistController = new PlaylistController();
 
         // Carregar músicas e playlists
-        List<Musica> musicasCarregadas = MusicaPersistence.carregar();
+        List<Musica> musicasCarregadas = ArquivoMusica.carregar();
         for (Musica m : musicasCarregadas) {
             musicaController.adicionarMusica(m);
         }
 
-        List<Playlist> playlistsCarregadas = PlaylistPersistence.carregar(musicasCarregadas);
+        List<Playlist> playlistsCarregadas = ArquivoPlaylist.carregar(musicasCarregadas);
         for (Playlist p : playlistsCarregadas) {
             playlistController.adicionarPlaylist(p);
         }
@@ -50,7 +50,7 @@ public class Main {
             }
         } while (opcao != 0);
 
-        MusicaPersistence.salvar(musicaController.getMusicas());
-        PlaylistPersistence.salvar(playlistController.getPlaylists());
+        ArquivoMusica.salvar(musicaController.getMusicas());
+        ArquivoPlaylist.salvar(playlistController.getPlaylists());
     }
 }

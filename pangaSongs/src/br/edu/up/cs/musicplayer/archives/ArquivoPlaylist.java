@@ -1,4 +1,4 @@
-package br.edu.up.cs.musicplayer.persistence;
+package br.edu.up.cs.musicplayer.archives;
 
 import br.edu.up.cs.musicplayer.model.Musica;
 import br.edu.up.cs.musicplayer.model.Playlist;
@@ -7,7 +7,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PlaylistPersistence {
+public class ArquivoPlaylist {
     private static final String arquivoPath = "data/playlist.txt";
 
     public static void salvar(List<Playlist> playlists) throws IOException {
