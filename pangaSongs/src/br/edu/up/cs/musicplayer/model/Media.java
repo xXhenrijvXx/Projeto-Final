@@ -5,26 +5,30 @@ import br.edu.up.cs.musicplayer.interfaces.Reproduzivel;
 import java.io.IOException;
 
 public abstract class Media implements Reproduzivel {
-    private int id;
+    String id;
     private String nome;
     private double duracao;
     private String caminhoArquivo;
 
-    public Media(int id, String nome, double duracao, String caminhoArquivo) {
+    public Media(String id, String nome, double duracao, String caminhoArquivo) {
         this.id = id;
         this.nome = nome;
         this.duracao = duracao;
         this.caminhoArquivo = caminhoArquivo;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
+    }
+
     public abstract void reproduzir() throws IOException;
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public int getId() {
-        return id;
     }
 
     public void setDuracao(double duracao) {

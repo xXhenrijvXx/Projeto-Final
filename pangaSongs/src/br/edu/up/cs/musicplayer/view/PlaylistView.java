@@ -7,6 +7,7 @@ import br.edu.up.cs.musicplayer.model.Playlist;
 
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.UUID;
 
 public class PlaylistView {
     private PlaylistController controller;
@@ -21,7 +22,7 @@ public class PlaylistView {
     public void menu() throws IOException {
         int opcao;
         do{
-            System.out.println("\n📁 Gerenciar Playlists\n1. Criar playlist\n2. Adicionar música em playlist\n3. Remover playlist\n4. Listar playlists\n5. Reproduzir playlist\n0. Voltar\nEscolha: ");
+            System.out.println("\nGerenciar Playlists\n1. Criar playlist\n2. Adicionar música em playlist\n3. Remover playlist\n4. Listar playlists\n5. Reproduzir playlist\n0. Voltar\nEscolha: ");
             opcao = sc.nextInt();
             sc.nextLine();
 
@@ -40,8 +41,10 @@ public class PlaylistView {
     private void criarPlaylist() throws IOException {
         System.out.println("Nome da nova playlist: ");
         String nome = sc.nextLine();
-        Playlist p = new Playlist(nome);
+        Playlist p = new Playlist(UUID.randomUUID().toString(), nome);
         controller.adicionarPlaylist(p);
+        System.out.println("Playlist criada!");
+        MusicaController.esperarEnter();
     }
 
     private void adicionarMusica(){
@@ -50,7 +53,7 @@ public class PlaylistView {
         System.out.println("Nome da música a adicionar: ");
         String nomeMusica = sc.nextLine();
 
-        Musica musica = musicaController.buscarMusica(nomeMusica);
+        Musica musica = musicaController.buscarMusicaNome(nomeMusica);
         if(musica != null){
             controller.adicionarMusicaNaPlaylist(nomePlaylist, musica);
         }
@@ -60,6 +63,10 @@ public class PlaylistView {
         System.out.println("Nome da playlist a remover: ");
         String nome = sc.nextLine();
         controller.removerPlaylist(nome);
+    }
+
+    public PlaylistController getController() {
+        return controller;
     }
 
     private void reproduzirPlaylist() throws IOException {

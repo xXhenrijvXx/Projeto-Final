@@ -15,12 +15,10 @@ public class MusicaController {
     public void adicionarMusica(Musica musica) throws IOException {
         musicas.add(musica);
         Logger.registrar("Música adicionada: " + musica.getNome());
-        System.out.println("Música adicionada");
-        esperarEnter();
     }
 
     public void editarMusica(String nome){
-        Musica m = buscarMusica(nome);
+        Musica m = buscarMusicaNome(nome);
         if(m != null){
             int opcao;
             do {
@@ -87,7 +85,16 @@ public class MusicaController {
         esperarEnter();
     }
 
-    public Musica buscarMusica(String nome) {
+    public Musica buscarMusicaId(String id) {
+        for (Musica m : musicas) {
+            if (m.getId().equalsIgnoreCase(id)) return m;
+        }
+        System.out.println("Música não encontrada!");
+        esperarEnter();
+        return null;
+    }
+
+    public Musica buscarMusicaNome(String nome) {
         for (Musica m : musicas) {
             if (m.getNome().equalsIgnoreCase(nome)) return m;
         }

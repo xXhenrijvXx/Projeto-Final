@@ -1,5 +1,6 @@
 package br.edu.up.cs.musicplayer.controller;
 
+import br.edu.up.cs.musicplayer.archives.ArquivoPlaylistMusica;
 import br.edu.up.cs.musicplayer.model.Musica;
 import br.edu.up.cs.musicplayer.model.Playlist;
 import br.edu.up.cs.musicplayer.util.Logger;
@@ -11,13 +12,13 @@ import java.util.Scanner;
 
 public class PlaylistController {
     private List<Playlist> playlists = new ArrayList<>();
+    private List<ArquivoPlaylistMusica> ids = new ArrayList<>();
 
     public void adicionarPlaylist(Playlist playlist) throws IOException {
         playlists.add(playlist);
         Logger.registrar("Playlist adicionada: " + playlist.getNome());
-        System.out.println("Playlist criada!");
-        esperarEnter();
     }
+
     public void editar(int index, Playlist novaPlaylist){
         if(index >= 0 && index < playlists.size()){
             playlists.set(index, novaPlaylist);
@@ -54,13 +55,27 @@ public class PlaylistController {
         return null;
     }
 
+    public Playlist buscarPlaylistId(String id) {
+        for (Playlist p : playlists) {
+            if (p.getId().equalsIgnoreCase(id)) return p;
+        }
+        System.out.println("Playlist não encontrada!");
+        return null;
+    }
+
+    public List<ArquivoPlaylistMusica> getIds() {
+        return ids;
+    }
+
     public List<Playlist> getPlaylists() {
         return playlists;
     }
 
     public void adicionarMusicaNaPlaylist(String nomePlaylist, Musica musica) {
         Playlist p = buscarPlaylist(nomePlaylist);
+        ArquivoPlaylistMusica pm = new ArquivoPlaylistMusica(musica.getId(), p.getId());
         if (p != null) {
+            ids.add(pm);
             p.adicionarMusica(musica);
             System.out.println("Música adicionada!");
             esperarEnter();

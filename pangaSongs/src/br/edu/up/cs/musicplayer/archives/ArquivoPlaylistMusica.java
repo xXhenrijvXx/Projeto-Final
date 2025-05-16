@@ -4,54 +4,65 @@ import br.edu.up.cs.musicplayer.model.Musica;
 import br.edu.up.cs.musicplayer.model.Playlist;
 
 import java.io.*;
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class ArquivoPlaylistMusica {
-    private static final String caminhoArquivo = "data/playlist_musica.txt";
+    private String idMusica;
+    private String idPlaylist;
+    private static final String caminhoArquivo = "data/musica_playlist.txt";
 
-    public static void salvar(List<Playlist> playlists) throws IOException {
-        File arquivo = new File(caminhoArquivo);
-        BufferedWriter bw = new BufferedWriter(new FileWriter(caminhoArquivo));
-        for(Playlist p : playlists){
-            for(Musica m : p.getMusicas()){
-                bw.write(p.getId() + m.getId());
-                bw.newLine();
-            }
-        }
+    public ArquivoPlaylistMusica(String idMusica, String idPlaylist) {
+        this.idMusica = idMusica;
+        this.idPlaylist = idPlaylist;
     }
 
-    public static void carregar(List<Playlist> playlists, List<Musica> musicas) throws IOException {
+    public void setIdMusica(String idMusica) {
+        this.idMusica = idMusica;
+    }
+
+    public void setIdPlaylist(String idPlaylist) {
+        this.idPlaylist = idPlaylist;
+    }
+
+    public String getIdMusica() {
+        return idMusica;
+    }
+
+    public String getIdPlaylist() {
+        return idPlaylist;
+    }
+
+    public static void salvar(List<ArquivoPlaylistMusica> ids) throws IOException {
+        BufferedWriter bw = new BufferedWriter(new FileWriter(caminhoArquivo));
+        for (ArquivoPlaylistMusica pm : ids) {
+            bw.write(pm.getIdMusica() + ";" + pm.getIdPlaylist());
+            bw.newLine();
+        }
+        bw.close();
+    }
+
+    public static List<ArquivoPlaylistMusica> carregar() throws IOException {
         File arquivo = new File(caminhoArquivo);
-        if(!arquivo.exists()) {
+        if (!arquivo.exists()) {
             arquivo.getParentFile().mkdirs();
             arquivo.createNewFile();
-            return;
-        }
-
-        Map<Integer, Playlist> mapP = new HashMap<>();
-        for(Playlist p : playlists){
-            mapP.put(p.getId(), p);
-        }
-
-        Map<Integer, Musica> mapM = new HashMap<>();
-        for(Musica m : musicas){
-            mapM.put(m.getId(), m);
+            return new ArrayList<>();
         }
 
         BufferedReader br = new BufferedReader(new FileReader(arquivo));
+        List<ArquivoPlaylistMusica> ids = new ArrayList<>();
         String linha;
 
-        while((linha = br.readLine()) != null){
-            String[] p = linha.split(";");
-            int pid = Integer.parseInt(p[0]);
-            int mid = Integer.parseInt(p[1]);
-            Playlist pl = mapP.get(pid);
-            Musica mu = mapM.get(mid);
-            if (pl != null && mu != null) {
-                pl.adicionarMusica(mu);
+        while ((linha = br.readLine()) != null) {
+            String[] partes = linha.split(";");
+            if (partes.length == 2) {
+                ArquivoPlaylistMusica pm = new ArquivoPlaylistMusica(partes[0], partes[1]);
+                ids.add(pm);
             }
         }
+
+        br.close();
+        return ids;
     }
 }

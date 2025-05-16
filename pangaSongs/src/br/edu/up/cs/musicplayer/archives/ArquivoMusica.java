@@ -7,23 +7,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ArquivoMusica {
-    private static final String arquivoPath = "data/musicas.txt";
+    private static final String CAMINHO_ARQUIVO = "data/musicas.txt";
 
     public static void salvar(List<Musica> musicas) throws IOException {
-        FileWriter fw = new FileWriter(arquivoPath);
+        FileWriter fw = new FileWriter(CAMINHO_ARQUIVO);
         BufferedWriter bw = new BufferedWriter(fw);
 
-        for(Musica m : musicas){
-            bw.write(m.getId() + ";" + m.getNome() + ";" + m.getArtista() + ";" + m.getGenero() + ";" + m.getDuracao() + ";" + m.getCaminhoArquivo());
+        for (Musica m : musicas) {
+            bw.write(m.getId() + ";" + m.getNome() + ";" + m.getDuracao() + ";" + m.getCaminhoArquivo() + ";" + m.getGenero() + ";" + m.getArtista());
             bw.newLine();
         }
 
         bw.close();
+        fw.close();
     }
 
     public static List<Musica> carregar() throws IOException {
-        File arquivo = new File(arquivoPath);
-        if(!arquivo.exists()){
+        File arquivo = new File(CAMINHO_ARQUIVO);
+        if (!arquivo.exists()) {
             arquivo.getParentFile().mkdirs();
             arquivo.createNewFile();
             return new ArrayList<>();
@@ -33,16 +34,16 @@ public class ArquivoMusica {
         List<Musica> musicas = new ArrayList<>();
         String linha;
 
-        while ((linha = br.readLine()) != null){
+        while ((linha = br.readLine()) != null) {
             String[] partes = linha.split(";");
-            if(partes.length == 6){
-                int id = Integer.parseInt(partes[0]);
+            if (partes.length == 6) {
+                String id = partes[0];
                 String nome = partes[1];
-                String genero = partes[2];
-                String artista = partes[3];
-                double duracao = Double.parseDouble(partes[4]);
-                String caminho = partes[5];
-                musicas.add(new Musica(nome, duracao, caminho, artista, genero));
+                double duracao = Double.parseDouble(partes[2]);
+                String caminho = partes[3];
+                String artista = partes[4];
+                String genero = partes[5];
+                musicas.add(new Musica(id, nome, duracao, caminho, artista, genero));
             }
         }
 

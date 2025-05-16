@@ -21,17 +21,23 @@ public class Main {
         MusicaView mv = new MusicaView(mc);
         PlaylistView pv = new PlaylistView(pc, mc);
 
-        Playlist.carregarUltimoId("data/id_playlist.txt");
-        Musica.carregarUltimoId("data/id_musica.txt");
-        System.out.println(Playlist.getContador());
-        System.out.println(Musica.getContador());
-        List<Musica> listaMusicas = ArquivoMusica.carregar();
-        List<Playlist> listaPl = ArquivoPlaylist.carregar();
-        ArquivoPlaylistMusica.carregar(listaPl, listaMusicas);
+        List<Musica> musicasCarregadas = ArquivoMusica.carregar();
+        for (Musica m : musicasCarregadas) {
+            mc.adicionarMusica(m);
+        }
 
-        for (Musica m : listaMusicas) mc.adicionarMusica(m);
-        for (Playlist p : listaPl) pc.adicionarPlaylist(p);
-
+        List<Playlist> playlistsCarregadas = ArquivoPlaylist.carregar();
+        for (Playlist p : playlistsCarregadas) {
+            pc.adicionarPlaylist(p);
+        }
+        
+        List<ArquivoPlaylistMusica> idsCarregados = ArquivoPlaylistMusica.carregar();
+        for(ArquivoPlaylistMusica pm : idsCarregados){
+            Playlist p = pc.buscarPlaylistId(pm.getIdPlaylist());
+            Musica m = mc.buscarMusicaId(pm.getIdMusica());
+            
+            pc.adicionarMusicaNaPlaylist(p.getNome(), m);
+        }
 
         Scanner sc = new Scanner(System.in);
         int opcao;
@@ -45,16 +51,13 @@ public class Main {
                 case 1 -> mv.menu();
                 case 2 -> pv.menu();
                 case 0 -> System.out.println("Encerrando...");
-                default -> System.out.println("Opção inválida!");
+                default -> System.out.println("Opcção inválida!");
 
             }
         } while (opcao != 0);
 
         ArquivoMusica.salvar(mc.getMusicas());
-        Musica.salvarUltimoId("data/id_musica.txt");
         ArquivoPlaylist.salvar(pc.getPlaylists());
-        ArquivoPlaylistMusica.salvar(pc.getPlaylists());
-        Playlist.salvarUltimoId("data/id_playlist.txt");
-
+        ArquivoPlaylistMusica.salvar(pc.getIds());
     }
 }

@@ -5,6 +5,7 @@ import br.edu.up.cs.musicplayer.model.Musica;
 
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.UUID;
 
 public class MusicaView {
     private MusicaController controller;
@@ -32,6 +33,10 @@ public class MusicaView {
         } while (opcao != 0);
     }
 
+    public MusicaController getController() {
+        return controller;
+    }
+
     private void adicionarMusica() throws IOException {
         System.out.println("Nome da música: ");
         String nome = sc.nextLine();
@@ -45,8 +50,10 @@ public class MusicaView {
         System.out.println("Artista: ");
         String artista = sc.nextLine();
 
-        Musica musica = new Musica(nome, duracao, caminho, artista, genero);
+        Musica musica = new Musica(UUID.randomUUID().toString(), nome, duracao, caminho, artista, genero);
         controller.adicionarMusica(musica);
+        System.out.println("Música adicionada!");
+        MusicaController.esperarEnter();
     }
 
 
