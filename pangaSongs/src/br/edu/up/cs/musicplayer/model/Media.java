@@ -11,6 +11,7 @@ public abstract class Media implements Reproduzivel {
     private String caminhoArquivo;
 
     public Media(int id, String nome, double duracao, String caminhoArquivo) {
+        this.id = id;
         this.nome = nome;
         this.duracao = duracao;
         this.caminhoArquivo = caminhoArquivo;

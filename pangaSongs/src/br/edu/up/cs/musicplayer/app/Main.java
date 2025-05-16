@@ -21,7 +21,10 @@ public class Main {
         MusicaView mv = new MusicaView(mc);
         PlaylistView pv = new PlaylistView(pc, mc);
 
+        Playlist.carregarUltimoId("data/id_playlist.txt");
         Musica.carregarUltimoId("data/id_musica.txt");
+        System.out.println(Playlist.getContador());
+        System.out.println(Musica.getContador());
         List<Musica> listaMusicas = ArquivoMusica.carregar();
         List<Playlist> listaPl = ArquivoPlaylist.carregar();
         ArquivoPlaylistMusica.carregar(listaPl, listaMusicas);
@@ -51,5 +54,7 @@ public class Main {
         Musica.salvarUltimoId("data/id_musica.txt");
         ArquivoPlaylist.salvar(pc.getPlaylists());
         ArquivoPlaylistMusica.salvar(pc.getPlaylists());
+        Playlist.salvarUltimoId("data/id_playlist.txt");
+
     }
 }

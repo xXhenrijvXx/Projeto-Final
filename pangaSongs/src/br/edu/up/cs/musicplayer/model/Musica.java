@@ -6,7 +6,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class Musica extends Media {
-    private static int contador = 0;
+    private static Integer contador;
     private String artista;
     private String genero;
 
@@ -24,26 +24,36 @@ public class Musica extends Media {
     }
 
     public static void salvarUltimoId(String caminho) throws IOException {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(caminho))) {
-            writer.write(Integer.toString(contador));
-        }
+        BufferedWriter writer = new BufferedWriter(new FileWriter(caminho));
+        System.out.println(Integer.toString(contador));
+        writer.write(Integer.toString(contador));
+        writer.close();
     }
 
     public static void carregarUltimoId(String caminho) throws IOException {
         File file = new File(caminho);
-        if (file.exists()) {
-            try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-                String linha = reader.readLine();
-                if (linha != null) {
-                    contador = Integer.parseInt(linha);
-                }
-            }
-        }else{
+        if (!file.exists()) {
             file.getParentFile().mkdirs();
-            file.createNewFile();
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+                writer.write("0");
+            }
+            contador = 0;
+            return;
+        }
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String linha = reader.readLine();
+            if (linha != null) {
+                contador = Integer.parseInt(linha);
+            } else {
+                contador = 0;
+            }
         }
     }
 
+    public static Integer getContador() {
+        return contador;
+    }
 
     public static void setContador(int contador) {
         Musica.contador = contador;
