@@ -12,7 +12,6 @@ import java.util.Scanner;
 
 public class PlaylistController {
     private List<Playlist> playlists = new ArrayList<>();
-    private List<ArquivoPlaylistMusica> ids = new ArrayList<>();
 
     public void adicionarPlaylist(Playlist playlist) throws IOException {
         playlists.add(playlist);
@@ -63,22 +62,16 @@ public class PlaylistController {
         return null;
     }
 
-    public List<ArquivoPlaylistMusica> getIds() {
-        return ids;
-    }
-
     public List<Playlist> getPlaylists() {
         return playlists;
     }
 
-    public void adicionarMusicaNaPlaylist(String nomePlaylist, Musica musica) {
+    public String adicionarMusicaNaPlaylist(String nomePlaylist, Musica musica) {
         Playlist p = buscarPlaylist(nomePlaylist);
-        ArquivoPlaylistMusica pm = new ArquivoPlaylistMusica(musica.getId(), p.getId());
         if (p != null) {
-            ids.add(pm);
             p.adicionarMusica(musica);
-            System.out.println("Música adicionada!");
-            esperarEnter();
+            return p.getId();
         }
+        return null;
     }
 }

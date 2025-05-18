@@ -2,6 +2,7 @@ package br.edu.up.cs.musicplayer.view;
 
 import br.edu.up.cs.musicplayer.controller.MusicaController;
 import br.edu.up.cs.musicplayer.controller.PlaylistController;
+import br.edu.up.cs.musicplayer.controller.PlaylistMusicaController;
 import br.edu.up.cs.musicplayer.model.Musica;
 import br.edu.up.cs.musicplayer.model.Playlist;
 
@@ -9,14 +10,18 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.util.UUID;
 
+import static br.edu.up.cs.musicplayer.controller.PlaylistController.esperarEnter;
+
 public class PlaylistView {
     private PlaylistController controller;
     private MusicaController musicaController;
+    private PlaylistMusicaController playlistMusicaController;
     private Scanner sc = new Scanner(System.in);
 
-    public PlaylistView(PlaylistController controller, MusicaController musicaController) {
+    public PlaylistView(PlaylistController controller, MusicaController musicaController, PlaylistMusicaController playlistMusicaController) {
         this.controller = controller;
         this.musicaController = musicaController;
+        this.playlistMusicaController = playlistMusicaController;
     }
 
     public void menu() throws IOException {
@@ -55,7 +60,11 @@ public class PlaylistView {
 
         Musica musica = musicaController.buscarMusicaNome(nomeMusica);
         if(musica != null){
-            controller.adicionarMusicaNaPlaylist(nomePlaylist, musica);
+            String playlistId = controller.adicionarMusicaNaPlaylist(nomePlaylist, musica);
+            if(playlistId != null){
+                playlistMusicaController.adicionarMusicaNaPlaylist(musica.getId(), playlistId);
+            }
+            System.out.println("Música adicionada!");
         }
     }
 
@@ -76,5 +85,6 @@ public class PlaylistView {
         if(playlist != null){
             playlist.reproduzir();
         }
+        PlaylistController.esperarEnter();
     }
 }

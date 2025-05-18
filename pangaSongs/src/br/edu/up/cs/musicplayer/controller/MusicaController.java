@@ -22,7 +22,7 @@ public class MusicaController {
         if(m != null){
             int opcao;
             do {
-                System.out.println("\nEditar Música - " + m.getNome() + "\n1. Editar nome\n2. Editar artista\n3. Editar gênero\nEditar caminho\n0. Voltar\nEscolha: ");
+                System.out.println("\nEditar Música - " + m.getNome() + "\n1. Editar nome\n2. Editar artista\n3. Editar gênero\n4. Editar caminho\n0. Voltar\nEscolha: ");
                 opcao = sc.nextInt();
                 sc.nextLine();
 

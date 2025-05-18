@@ -3,10 +3,12 @@ package br.edu.up.cs.musicplayer.app;
 import br.edu.up.cs.musicplayer.archives.ArquivoPlaylistMusica;
 import br.edu.up.cs.musicplayer.controller.MusicaController;
 import br.edu.up.cs.musicplayer.controller.PlaylistController;
+import br.edu.up.cs.musicplayer.controller.PlaylistMusicaController;
 import br.edu.up.cs.musicplayer.model.Musica;
 import br.edu.up.cs.musicplayer.model.Playlist;
 import br.edu.up.cs.musicplayer.archives.ArquivoMusica;
 import br.edu.up.cs.musicplayer.archives.ArquivoPlaylist;
+import br.edu.up.cs.musicplayer.model.PlaylistMusica;
 import br.edu.up.cs.musicplayer.view.MusicaView;
 import br.edu.up.cs.musicplayer.view.PlaylistView;
 
@@ -18,8 +20,10 @@ public class Main {
     public static void main(String[] args) throws IOException {
         MusicaController mc = new MusicaController();
         PlaylistController pc = new PlaylistController();
-        MusicaView mv = new MusicaView(mc);
-        PlaylistView pv = new PlaylistView(pc, mc);
+        PlaylistMusicaController pmc = new PlaylistMusicaController();
+
+        MusicaView mv = new MusicaView(mc, pmc);
+        PlaylistView pv = new PlaylistView(pc, mc, pmc);
 
         List<Musica> musicasCarregadas = ArquivoMusica.carregar();
         for (Musica m : musicasCarregadas) {
@@ -31,11 +35,12 @@ public class Main {
             pc.adicionarPlaylist(p);
         }
         
-        List<ArquivoPlaylistMusica> idsCarregados = ArquivoPlaylistMusica.carregar();
-        for(ArquivoPlaylistMusica pm : idsCarregados){
-            Playlist p = pc.buscarPlaylistId(pm.getIdPlaylist());
-            Musica m = mc.buscarMusicaId(pm.getIdMusica());
-            
+        List<PlaylistMusica> idsCarregados = ArquivoPlaylistMusica.carregar();
+        for(PlaylistMusica id : idsCarregados){
+            Playlist p = pc.buscarPlaylistId(id.getIdPlaylist());
+            Musica m = mc.buscarMusicaId(id.getIdMusica());
+
+            pmc.adicionarMusicaNaPlaylist(m.getId(), p.getId());
             pc.adicionarMusicaNaPlaylist(p.getNome(), m);
         }
 
@@ -48,7 +53,7 @@ public class Main {
             sc.nextLine();
 
             switch (opcao){
-                case 1 -> mv.menu();
+                case 1 -> mv.menu(pc);
                 case 2 -> pv.menu();
                 case 0 -> System.out.println("Encerrando...");
                 default -> System.out.println("Opcção inválida!");
@@ -58,6 +63,6 @@ public class Main {
 
         ArquivoMusica.salvar(mc.getMusicas());
         ArquivoPlaylist.salvar(pc.getPlaylists());
-        ArquivoPlaylistMusica.salvar(pc.getIds());
+        ArquivoPlaylistMusica.salvar(pmc.getIds());
     }
 }

@@ -3,7 +3,6 @@ package br.edu.up.cs.musicplayer.model;
 import br.edu.up.cs.musicplayer.util.Logger;
 
 import java.io.*;
-import java.util.ArrayList;
 
 public class Musica extends Media {
     private String artista;
@@ -17,7 +16,7 @@ public class Musica extends Media {
 
     @Override
     public void reproduzir() throws IOException {
-        System.out.println("Tocando " + super.getNome() + " de " + artista);
+        System.out.println("Tocando " + super.getNome() + " de " + getArtista());
         Logger.registrar("Reproduzindo música: " + super.getNome());
         //Implementar código de reprodução real
     }
