@@ -9,9 +9,8 @@ public class Logger {
     private static final String logPath = "log.txt";
 
     public static void registrar(String mensagem) throws IOException {
-        try(FileWriter fw = new FileWriter(logPath, true)){
-            String dataHora = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-            fw.write("[" + dataHora + "] " + mensagem + "\n");
-        }
+        FileWriter fw = new FileWriter(logPath, true);
+        String dataHora = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+        fw.write("[" + dataHora + "] " + mensagem + "\n");
     }
 }

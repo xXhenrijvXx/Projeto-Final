@@ -14,7 +14,7 @@ public class ArquivoMusica {
         BufferedWriter bw = new BufferedWriter(fw);
 
         for (Musica m : musicas) {
-            bw.write(m.getId() + ";" + m.getNome() + ";" + m.getDuracao() + ";" + m.getCaminhoArquivo() + ";" + m.getGenero() + ";" + m.getArtista());
+            bw.write(m.getId() + ";" + m.getNome() + ";" + m.getDuracao() + ";" + m.getCaminhoArquivo() + ";" + m.getArtista() + ";" + m.getGenero());
             bw.newLine();
         }
 

@@ -2,6 +2,7 @@ package br.edu.up.cs.musicplayer.controller;
 
 import br.edu.up.cs.musicplayer.model.Musica;
 import br.edu.up.cs.musicplayer.util.Logger;
+import br.edu.up.cs.musicplayer.view.MusicaView;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,8 +14,11 @@ public class MusicaController {
     Scanner sc = new Scanner(System.in);
 
     public void adicionarMusica(Musica musica) throws IOException {
-        musicas.add(musica);
-        Logger.registrar("Música adicionada: " + musica.getNome());
+        if(musicas.add(musica)){
+            Logger.registrar("Música adicionada: " + musica.getNome());
+        }else{
+            System.out.println("Falha ao adicionar a música");
+        }
     }
 
     public void editarMusica(String nome){
@@ -32,10 +36,7 @@ public class MusicaController {
                     case 3 -> editarGenero(m);
                     case 4 -> editarCaminho(m);
                     case 0 -> {}
-                    default -> {
-                        System.out.println("Opção inválida!");
-                        esperarEnter();
-                    }
+                    default -> System.out.println("Opção inválida!");
                 }
             }while(opcao != 0);
         }
@@ -61,20 +62,12 @@ public class MusicaController {
         musica.setCaminhoArquivo(sc.nextLine());
     }
 
-    public static void esperarEnter() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Pressione ENTER para continuar...");
-        scanner.nextLine();
-    }
-
     public void removerMusica(String nome) throws IOException {
         if(musicas.removeIf(m -> m.getNome().equalsIgnoreCase(nome))){
             Logger.registrar("Música removida: " + nome);
             System.out.println("Música removida!");
-            esperarEnter();
         } else{
             System.out.println("Música não encontrada.");
-            esperarEnter();
         }
     }
 
@@ -82,7 +75,7 @@ public class MusicaController {
         for (Musica m : musicas) {
             System.out.println("🎵 " + m.getNome());
         }
-        esperarEnter();
+        MusicaView.esperarEnter();
     }
 
     public Musica buscarMusicaId(String id) {
@@ -90,7 +83,7 @@ public class MusicaController {
             if (m.getId().equalsIgnoreCase(id)) return m;
         }
         System.out.println("Música não encontrada!");
-        esperarEnter();
+        MusicaView.esperarEnter();
         return null;
     }
 
@@ -99,7 +92,7 @@ public class MusicaController {
             if (m.getNome().equalsIgnoreCase(nome)) return m;
         }
         System.out.println("Música não encontrada!");
-        esperarEnter();
+        MusicaView.esperarEnter();
         return null;
     }
 

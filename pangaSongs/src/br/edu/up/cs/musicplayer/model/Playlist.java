@@ -2,6 +2,8 @@ package br.edu.up.cs.musicplayer.model;
 
 import br.edu.up.cs.musicplayer.util.Logger;
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +38,7 @@ public class Playlist extends Media {
     }
 
     @Override
-    public void reproduzir() throws IOException {
+    public void reproduzir() throws IOException, UnsupportedAudioFileException, LineUnavailableException, InterruptedException {
         System.out.println("Tocando playlist: " + super.getNome());
         Logger.registrar("Reproduzindo playlist: " + super.getNome());
 

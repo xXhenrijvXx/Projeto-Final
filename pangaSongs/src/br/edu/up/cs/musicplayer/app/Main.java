@@ -12,12 +12,14 @@ import br.edu.up.cs.musicplayer.model.PlaylistMusica;
 import br.edu.up.cs.musicplayer.view.MusicaView;
 import br.edu.up.cs.musicplayer.view.PlaylistView;
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, UnsupportedAudioFileException, LineUnavailableException, InterruptedException {
         MusicaController mc = new MusicaController();
         PlaylistController pc = new PlaylistController();
         PlaylistMusicaController pmc = new PlaylistMusicaController();
@@ -56,7 +58,7 @@ public class Main {
                 case 1 -> mv.menu(pc);
                 case 2 -> pv.menu();
                 case 0 -> System.out.println("Encerrando...");
-                default -> System.out.println("Opcção inválida!");
+                default -> System.out.println("Opção inválida!");
 
             }
         } while (opcao != 0);

@@ -6,11 +6,11 @@ import br.edu.up.cs.musicplayer.controller.PlaylistMusicaController;
 import br.edu.up.cs.musicplayer.model.Musica;
 import br.edu.up.cs.musicplayer.model.Playlist;
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.UUID;
-
-import static br.edu.up.cs.musicplayer.controller.PlaylistController.esperarEnter;
 
 public class PlaylistView {
     private PlaylistController controller;
@@ -24,7 +24,7 @@ public class PlaylistView {
         this.playlistMusicaController = playlistMusicaController;
     }
 
-    public void menu() throws IOException {
+    public void menu() throws IOException, UnsupportedAudioFileException, LineUnavailableException, InterruptedException {
         int opcao;
         do{
             System.out.println("\nGerenciar Playlists\n1. Criar playlist\n2. Adicionar música em playlist\n3. Remover playlist\n4. Listar playlists\n5. Reproduzir playlist\n0. Voltar\nEscolha: ");
@@ -49,7 +49,13 @@ public class PlaylistView {
         Playlist p = new Playlist(UUID.randomUUID().toString(), nome);
         controller.adicionarPlaylist(p);
         System.out.println("Playlist criada!");
-        MusicaController.esperarEnter();
+        esperarEnter();
+    }
+
+    public static void esperarEnter() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Pressione ENTER para continuar...");
+        scanner.nextLine();
     }
 
     private void adicionarMusica(){
@@ -65,6 +71,7 @@ public class PlaylistView {
                 playlistMusicaController.adicionarMusicaNaPlaylist(musica.getId(), playlistId);
             }
             System.out.println("Música adicionada!");
+            esperarEnter();
         }
     }
 
@@ -72,19 +79,22 @@ public class PlaylistView {
         System.out.println("Nome da playlist a remover: ");
         String nome = sc.nextLine();
         controller.removerPlaylist(nome);
+        esperarEnter();
     }
 
     public PlaylistController getController() {
         return controller;
     }
 
-    private void reproduzirPlaylist() throws IOException {
+    private void reproduzirPlaylist() throws IOException, UnsupportedAudioFileException, LineUnavailableException, InterruptedException {
         System.out.println("Nome da playlist a reproduzir: ");
         String nome = sc.nextLine();
         Playlist playlist = controller.buscarPlaylist(nome);
         if(playlist != null){
             playlist.reproduzir();
+        } else{
+            System.out.println("Playlist " + nome + " não encontrada!");
         }
-        PlaylistController.esperarEnter();
+        esperarEnter();
     }
 }

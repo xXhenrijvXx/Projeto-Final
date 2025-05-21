@@ -252,3 +252,4 @@
 [2025-05-17 23:40:27] Playlist adicionada: teste
 [2025-05-17 23:40:27] Playlist adicionada: teste2
 [2025-05-17 23:40:27] Playlist adicionada: rock
+[2025-05-18 23:55:51] Música adicionada: nome

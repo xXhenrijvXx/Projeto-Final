@@ -2,6 +2,8 @@ package br.edu.up.cs.musicplayer.model;
 
 import br.edu.up.cs.musicplayer.interfaces.Reproduzivel;
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import java.io.IOException;
 
 public abstract class Media implements Reproduzivel {
@@ -25,7 +27,7 @@ public abstract class Media implements Reproduzivel {
         return id;
     }
 
-    public abstract void reproduzir() throws IOException;
+    public abstract void reproduzir() throws IOException, LineUnavailableException, UnsupportedAudioFileException, InterruptedException;
 
     public void setNome(String nome) {
         this.nome = nome;
