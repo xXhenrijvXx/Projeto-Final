@@ -1,6 +1,7 @@
 package br.edu.up.cs.musicplayer.model;
 
 import br.edu.up.cs.musicplayer.util.Logger;
+import br.edu.up.cs.musicplayer.view.PlaylistPlayerView;
 
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
@@ -42,8 +43,23 @@ public class Playlist extends Media {
         System.out.println("Tocando playlist: " + super.getNome());
         Logger.registrar("Reproduzindo playlist: " + super.getNome());
 
-        for(Musica m : musicas){
-            m.reproduzir();
+        int idx = 0;
+        PlaylistPlayerView ppv = new PlaylistPlayerView();
+
+        while (idx >= 0 && idx < this.musicas.size()) {
+            Musica m = this.musicas.get(idx);
+            System.out.println("► Tocando: " + m.getNome());
+
+            String cmd = ppv.menu(m.getCaminhoArquivo(), (idx == 0), (idx == (this.musicas.size())-1));
+
+            switch (cmd) {
+                case "n" -> idx++;
+                case "b" -> idx = Math.max(0, idx - 1);
+                case "s" -> {
+                    return;
+                }
+                default -> {}
+            }
         }
     }
 

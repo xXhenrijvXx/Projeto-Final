@@ -14,11 +14,8 @@ public class MusicaController {
     Scanner sc = new Scanner(System.in);
 
     public void adicionarMusica(Musica musica) throws IOException {
-        if(musicas.add(musica)){
-            Logger.registrar("Música adicionada: " + musica.getNome());
-        }else{
-            System.out.println("Falha ao adicionar a música");
-        }
+        musicas.add(musica);
+        Logger.registrar("Música adicionada: " + musica.getNome());
     }
 
     public void editarMusica(String nome){
@@ -39,6 +36,8 @@ public class MusicaController {
                     default -> System.out.println("Opção inválida!");
                 }
             }while(opcao != 0);
+        }else{
+            System.out.println("Música não encontrada!");
         }
     }
 
@@ -91,8 +90,6 @@ public class MusicaController {
         for (Musica m : musicas) {
             if (m.getNome().equalsIgnoreCase(nome)) return m;
         }
-        System.out.println("Música não encontrada!");
-        MusicaView.esperarEnter();
         return null;
     }
 

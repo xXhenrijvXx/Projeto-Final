@@ -1,6 +1,7 @@
 package br.edu.up.cs.musicplayer.view;
 
 import br.edu.up.cs.musicplayer.controller.MusicPlayerController;
+import br.edu.up.cs.musicplayer.util.Logger;
 
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
@@ -25,7 +26,6 @@ public class MusicPlayerView {
         thread.start();
 
         do{
-            System.out.println("[p] Pausar | [c] Continuar | [s] Parar\nDigite: ");
             opcao = sc.nextLine().trim().toLowerCase();
 
             switch (opcao){
@@ -37,6 +37,7 @@ public class MusicPlayerView {
         }while(!opcao.equalsIgnoreCase("s") && !mp.isFinalizada());
 
         thread.join();
-        System.out.println("Música finalizada");
+        Logger.registrar("Musica finalizada");
+        System.out.println("Música finalizada");;
     }
 }

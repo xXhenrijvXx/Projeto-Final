@@ -35,7 +35,10 @@ public class PlaylistView {
                 case 1 -> criarPlaylist();
                 case 2 -> adicionarMusica();
                 case 3 -> removerPlaylist();
-                case 4 -> controller.listarPlaylists();
+                case 4 -> {
+                    controller.listarPlaylists();
+                    esperarEnter();
+                }
                 case 5 -> reproduzirPlaylist();
                 case 0 -> {}
                 default -> System.out.println("Opção inválida!");
@@ -46,10 +49,16 @@ public class PlaylistView {
     private void criarPlaylist() throws IOException {
         System.out.println("Nome da nova playlist: ");
         String nome = sc.nextLine();
-        Playlist p = new Playlist(UUID.randomUUID().toString(), nome);
-        controller.adicionarPlaylist(p);
-        System.out.println("Playlist criada!");
-        esperarEnter();
+
+        Playlist playlist = controller.buscarPlaylist(nome);
+        if(playlist != null){
+            Playlist p = new Playlist(UUID.randomUUID().toString(), nome);
+            controller.adicionarPlaylist(p);
+            System.out.println("Playlist criada!");
+            esperarEnter();
+        }else{
+            System.out.println("Playlist não encontrada!");
+        }
     }
 
     public static void esperarEnter() {
@@ -61,18 +70,26 @@ public class PlaylistView {
     private void adicionarMusica(){
         System.out.println("Nome da playlist: ");
         String nomePlaylist = sc.nextLine();
-        System.out.println("Nome da música a adicionar: ");
-        String nomeMusica = sc.nextLine();
 
-        Musica musica = musicaController.buscarMusicaNome(nomeMusica);
-        if(musica != null){
-            String playlistId = controller.adicionarMusicaNaPlaylist(nomePlaylist, musica);
-            if(playlistId != null){
-                playlistMusicaController.adicionarMusicaNaPlaylist(musica.getId(), playlistId);
+        Playlist playlist = controller.buscarPlaylist(nomePlaylist);
+        if(playlist != null){
+            System.out.println("Nome da música a adicionar: ");
+            String nomeMusica = sc.nextLine();
+
+            Musica musica = musicaController.buscarMusicaNome(nomeMusica);
+            if(musica != null) {
+                String playlistId = controller.adicionarMusicaNaPlaylist(playlist, musica);
+                System.out.println("Música adicionada!");
+                if(playlistId != null){
+                    playlistMusicaController.adicionarMusicaNaPlaylist(musica.getId(), playlistId);
+                }
+            }else {
+                System.out.println("Música não encontrada!");
             }
-            System.out.println("Música adicionada!");
-            esperarEnter();
+        }else{
+            System.out.println("Playlist não encontrada!");
         }
+        esperarEnter();
     }
 
     private void removerPlaylist() throws IOException {

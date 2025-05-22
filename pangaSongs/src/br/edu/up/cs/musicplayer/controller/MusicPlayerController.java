@@ -10,23 +10,28 @@ public class MusicPlayerController {
     private boolean finalizada = false;
 
     public void tocar(String caminhoArquivo) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        pausada = false;
+        finalizada = false;
+
         File arquivo = new File(caminhoArquivo);
 
         AudioInputStream audioStream = AudioSystem.getAudioInputStream(arquivo);
         clip = AudioSystem.getClip();
         clip.open(audioStream);
+
         clip.addLineListener(event -> {
             if (event.getType() == LineEvent.Type.STOP && !pausada) {
                 finalizada = true;
             }
         });
+
         clip.start();
     }
 
     public void pausar() {
         if (clip != null && clip.isRunning()) {
-            clip.stop();
             pausada = true;
+            clip.stop();
             System.out.println("Música pausada.");
         }
     }
@@ -46,6 +51,10 @@ public class MusicPlayerController {
             finalizada = true;
             System.out.println("Música parada.");
         }
+    }
+
+    public boolean isPausada() {
+        return pausada;
     }
 
     public boolean isFinalizada() {

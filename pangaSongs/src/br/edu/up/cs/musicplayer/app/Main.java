@@ -43,7 +43,7 @@ public class Main {
             Musica m = mc.buscarMusicaId(id.getIdMusica());
 
             pmc.adicionarMusicaNaPlaylist(m.getId(), p.getId());
-            pc.adicionarMusicaNaPlaylist(p.getNome(), m);
+            pc.adicionarMusicaNaPlaylist(p, m);
         }
 
         Scanner sc = new Scanner(System.in);

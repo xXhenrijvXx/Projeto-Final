@@ -49,30 +49,38 @@ public class MusicaView {
         String nome = sc.nextLine();
 
         MusicPlayerView mpv = new MusicPlayerView();
-        mpv.menu(controller.buscarMusicaNome(nome).getCaminhoArquivo());
-
+        Musica musica = controller.buscarMusicaNome(nome);
+        if(musica != null){
+            mpv.menu(musica.getCaminhoArquivo());
+        }else{
+            System.out.println("Música não encontrada!");
+        }
     }
 
     private void adicionarMusica() throws IOException {
         System.out.println("Nome da música: ");
         String nome = sc.nextLine();
-        System.out.println("Caminho do arquivo: ");
-        String caminho = sc.nextLine();
-        if(caminho.endsWith(".wav")){
-            System.out.println("Gênero da música: ");
-            String genero = sc.nextLine();
-            System.out.println("Artista: ");
-            String artista = sc.nextLine();
+        if(controller.buscarMusicaNome(nome) == null){
+            System.out.println("Caminho do arquivo: ");
+            String caminho = sc.nextLine();
+            if(caminho.endsWith(".wav")){
+                System.out.println("Gênero da música: ");
+                String genero = sc.nextLine();
+                System.out.println("Artista: ");
+                String artista = sc.nextLine();
 
-            Musica musica = new Musica(UUID.randomUUID().toString(), nome, caminho, artista, genero);
-            controller.adicionarMusica(musica);
-            System.out.println("Música adicionada!");
+                Musica musica = new Musica(UUID.randomUUID().toString(), nome, caminho, artista, genero);
+                controller.adicionarMusica(musica);
+                System.out.println("Música adicionada!");
+                esperarEnter();
+                return;
+            }
+
+            System.out.println("Tipo de arquivo não suportado, música não cadastrada.");
             esperarEnter();
-            return;
+        }else{
+            System.out.println("Música já cadastrada");
         }
-
-        System.out.println("Tipo de arquivo não suportado, música não cadastrada.");
-        esperarEnter();
     }
 
     public static void esperarEnter() {
@@ -84,9 +92,15 @@ public class MusicaView {
     private void removerMusica(PlaylistController pc) throws IOException {
         System.out.println("Nome da música a remover: ");
         String nome = sc.nextLine().trim().toLowerCase();
-        pmc.removerMusicaDasPlaylists(controller.buscarMusicaNome(nome), pc.getPlaylists());
-        controller.removerMusica(nome);
-        System.out.println("Música removida!");
+
+        Musica musica = controller.buscarMusicaNome(nome);
+        if(musica != null){
+            pmc.removerMusicaDasPlaylists(musica, pc.getPlaylists());
+            controller.removerMusica(nome);
+            System.out.println("Música removida!");
+        }else{
+            System.out.println("Música não encontrada!");
+        }
         esperarEnter();
     }
 

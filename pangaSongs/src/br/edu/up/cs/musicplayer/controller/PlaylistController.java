@@ -12,18 +12,15 @@ public class PlaylistController {
     private List<Playlist> playlists = new ArrayList<>();
 
     public void adicionarPlaylist(Playlist playlist) throws IOException {
-        if(playlists.add(playlist)){
-            Logger.registrar("Playlist adicionada: " + playlist.getNome());
-        }else{
-            System.out.println("Falha ao adicionar a playlist");
-        }
+        playlists.add(playlist);
+        Logger.registrar("Playlist adicionada: " + playlist.getNome());
     }
 
     public void removerPlaylist(String nome) throws IOException {
-        if(playlists.removeIf(p -> p.getNome().equalsIgnoreCase(nome))){
+        if (playlists.removeIf(p -> p.getNome().equalsIgnoreCase(nome))) {
             Logger.registrar("Playlist removida: " + nome);
             System.out.println("Playlist removida!");
-        } else{
+        } else {
             System.out.println("Playlist não encontrada.");
         }
     }
@@ -38,7 +35,6 @@ public class PlaylistController {
         for (Playlist p : playlists) {
             if (p.getNome().equalsIgnoreCase(nome)) return p;
         }
-        System.out.println("Playlist não encontrada!");
         return null;
     }
 
@@ -46,7 +42,6 @@ public class PlaylistController {
         for (Playlist p : playlists) {
             if (p.getId().equalsIgnoreCase(id)) return p;
         }
-        System.out.println("Playlist não encontrada!");
         return null;
     }
 
@@ -54,12 +49,8 @@ public class PlaylistController {
         return playlists;
     }
 
-    public String adicionarMusicaNaPlaylist(String nomePlaylist, Musica musica) {
-        Playlist p = buscarPlaylist(nomePlaylist);
-        if (p != null) {
-            p.adicionarMusica(musica);
-            return p.getId();
-        }
-        return null;
+    public String adicionarMusicaNaPlaylist(Playlist playlist, Musica musica) {
+        playlist.adicionarMusica(musica);
+        return playlist.getId();
     }
 }
