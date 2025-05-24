@@ -5,11 +5,13 @@ import java.io.File;
 import java.io.IOException;
 
 public class MusicPlayerController {
-    private Clip clip;
-    private boolean pausada = false;
-    private boolean finalizada = false;
+    private static Clip clip;
+    private static boolean pausada = false;
+    private static boolean finalizada = false;
 
-    public void tocar(String caminhoArquivo) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+    private MusicPlayerController(){}
+
+    public static void tocar(String caminhoArquivo) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         pausada = false;
         finalizada = false;
 
@@ -28,7 +30,7 @@ public class MusicPlayerController {
         clip.start();
     }
 
-    public void pausar() {
+    public static void pausar() {
         if (clip != null && clip.isRunning()) {
             pausada = true;
             clip.stop();
@@ -36,7 +38,7 @@ public class MusicPlayerController {
         }
     }
 
-    public void continuar() {
+    public static void continuar() {
         if (clip != null && !clip.isRunning()) {
             clip.start();
             pausada = false;
@@ -44,7 +46,7 @@ public class MusicPlayerController {
         }
     }
 
-    public void parar() {
+    public static void parar() {
         if (clip != null) {
             clip.stop();
             clip.close();
@@ -53,11 +55,11 @@ public class MusicPlayerController {
         }
     }
 
-    public boolean isPausada() {
+    public static boolean isPausada() {
         return pausada;
     }
 
-    public boolean isFinalizada() {
+    public static boolean isFinalizada() {
         return finalizada;
     }
 }

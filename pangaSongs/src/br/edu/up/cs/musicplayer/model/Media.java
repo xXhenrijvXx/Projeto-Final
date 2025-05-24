@@ -10,17 +10,11 @@ public abstract class Media implements Reproduzivel {
     String id;
     private String nome;
     private double duracao;
-    private String caminhoArquivo;
 
-    public Media(String id, String nome, double duracao, String caminhoArquivo) {
+    public Media(String id, String nome, double duracao) {
         this.id = id;
         this.nome = nome;
         this.duracao = duracao;
-        this.caminhoArquivo = caminhoArquivo;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getId() {
@@ -37,10 +31,6 @@ public abstract class Media implements Reproduzivel {
         this.duracao = duracao;
     }
 
-    public void setCaminhoArquivo(String caminhoArquivo) {
-        this.caminhoArquivo = caminhoArquivo;
-    }
-
     public String getNome() {
         return nome;
     }
@@ -49,7 +39,4 @@ public abstract class Media implements Reproduzivel {
         return duracao;
     }
 
-    public String getCaminhoArquivo() {
-        return caminhoArquivo;
-    }
 }

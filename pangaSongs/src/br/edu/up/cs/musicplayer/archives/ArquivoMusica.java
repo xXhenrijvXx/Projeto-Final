@@ -1,16 +1,15 @@
 package br.edu.up.cs.musicplayer.archives;
 
 import br.edu.up.cs.musicplayer.model.Musica;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ArquivoMusica {
-    private static final String CAMINHO_ARQUIVO = "data/musicas.txt";
+    private static final String caminhoArquivo = "data/musicas.txt";
 
     public static void salvar(List<Musica> musicas) throws IOException {
-        FileWriter fw = new FileWriter(CAMINHO_ARQUIVO);
+        FileWriter fw = new FileWriter(caminhoArquivo);
         BufferedWriter bw = new BufferedWriter(fw);
 
         for (Musica m : musicas) {
@@ -23,7 +22,7 @@ public class ArquivoMusica {
     }
 
     public static List<Musica> carregar() throws IOException {
-        File arquivo = new File(CAMINHO_ARQUIVO);
+        File arquivo = new File(caminhoArquivo);
         if (!arquivo.exists()) {
             arquivo.getParentFile().mkdirs();
             arquivo.createNewFile();

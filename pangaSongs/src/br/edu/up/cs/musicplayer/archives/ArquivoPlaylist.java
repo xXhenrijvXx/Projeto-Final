@@ -1,17 +1,16 @@
 package br.edu.up.cs.musicplayer.archives;
 
-import br.edu.up.cs.musicplayer.model.Musica;
-import br.edu.up.cs.musicplayer.model.Playlist;
 
+import br.edu.up.cs.musicplayer.model.Playlist;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ArquivoPlaylist {
-    private static final String CAMINHO_ARQUIVO = "data/playlists.txt";
+    private static final String caminhoArquivo = "data/playlists.txt";
 
     public static void salvar(List<Playlist> playlists) throws IOException {
-        BufferedWriter bw = new BufferedWriter(new FileWriter(CAMINHO_ARQUIVO));
+        BufferedWriter bw = new BufferedWriter(new FileWriter(caminhoArquivo));
         for (Playlist p : playlists) {
             bw.write(p.getId() + ";" + p.getNome());
             bw.newLine();
@@ -20,7 +19,7 @@ public class ArquivoPlaylist {
     }
 
     public static List<Playlist> carregar() throws IOException {
-        File arquivo = new File(CAMINHO_ARQUIVO);
+        File arquivo = new File(caminhoArquivo);
         if (!arquivo.exists()) {
             arquivo.getParentFile().mkdirs();
             arquivo.createNewFile();

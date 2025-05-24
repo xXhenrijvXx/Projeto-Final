@@ -1,8 +1,8 @@
 package br.edu.up.cs.musicplayer.model;
 
 public class PlaylistMusica {
-    private String idMusica;
-    private String idPlaylist;
+    private final String idMusica;
+    private final String idPlaylist;
 
     public PlaylistMusica(String idMusica, String idPlaylist) {
         this.idMusica = idMusica;
@@ -15,13 +15,5 @@ public class PlaylistMusica {
 
     public String getIdPlaylist() {
         return idPlaylist;
-    }
-
-    public void setIdMusica(String idMusica) {
-        this.idMusica = idMusica;
-    }
-
-    public void setIdPlaylist(String idPlaylist) {
-        this.idPlaylist = idPlaylist;
     }
 }
