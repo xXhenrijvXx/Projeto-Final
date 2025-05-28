@@ -9,6 +9,8 @@ import java.util.List;
 public class ArquivoPlaylistMusica {
     private static final String caminhoArquivo = "data/musica_playlist.txt";
 
+    private ArquivoPlaylistMusica(){}
+
     public static void salvar(List<PlaylistMusica> ids) throws IOException {
         BufferedWriter bw = new BufferedWriter(new FileWriter(caminhoArquivo));
         for (PlaylistMusica pm : ids) {

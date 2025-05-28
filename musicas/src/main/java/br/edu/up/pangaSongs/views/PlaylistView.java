@@ -5,71 +5,149 @@ import br.edu.up.pangaSongs.controller.PlaylistController;
 import br.edu.up.pangaSongs.models.Musica;
 import br.edu.up.pangaSongs.models.Playlist;
 import br.edu.up.pangaSongs.util.ScannerUtil;
-
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.UnsupportedAudioFileException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 import java.util.UUID;
 
 public class PlaylistView {
 
+    private static final Logger logger = LogManager.getLogger(PlaylistView.class);
+
     private PlaylistView(){}
 
-    public static void menu() throws IOException, UnsupportedAudioFileException, LineUnavailableException, InterruptedException {
-        int opcao;
+    public static void menu() throws IOException, InterruptedException {
+        String opcao;
+        logger.info("Menu de playlists iniciado.");
         do{
             System.out.println("\n***** Gerenciar Playlists *****\n\n1. Criar playlist\n2. Remover playlist\n3. Editar playlist\n4. Listar playlists\n5. Reproduzir playlist\n6. Listar músicas de uma playlist\n0. Voltar");
             System.out.print("\nEscolha uma Opção: ");
-            opcao = ScannerUtil.getScanner().nextInt();
-            ScannerUtil.getScanner().nextLine();
+
+            opcao = ScannerUtil.getScanner().nextLine();
+
+            logger.info("Opção selecionada: {}", opcao);
 
             switch (opcao){
-                case 1 -> criarPlaylist();
-                case 2 -> removerPlaylist();
-                case 3 -> editarPlaylist();
-                case 4 -> {
+                case "1" -> criarPlaylist();
+                case "2" -> removerPlaylist();
+                case "3" -> editarPlaylist();
+                case "4" -> {
                     PlaylistController.listarPlaylists();
                     esperarEnter();
                 }
-                case 5 -> reproduzirPlaylist();
-                case 6 -> listarMusicasPlaylist();
-                case 0 -> {}
-                default -> System.out.println("\nOpção inválida!");
+                case "5" -> reproduzirPlaylist();
+                case "6" -> listarMusicasPlaylist();
+                case "0" -> {}
+                default -> {
+                    logger.warn("Opção inválida!");
+                    System.out.println("\nOpção inválida!");
+                }
             }
-        } while (opcao != 0);
+        } while (opcao != "0");
+        logger.info("Menu de playlists encerrado.");
+    }
+
+    private static void criarPlaylist() {
+        System.out.println("Nome da nova playlist: ");
+        String nome = ScannerUtil.getScanner().nextLine();
+
+        Playlist p = PlaylistController.buscarPlaylist(nome);
+        if(p == null){
+            p = new Playlist(UUID.randomUUID().toString(), nome);
+            PlaylistController.adicionarPlaylist(p);
+            System.out.println("Playlist criada!");
+            logger.info("Playlist criada: {}", p.getNome());
+        }else{
+            System.out.println("Playlist já cadastrada!");
+            logger.warn("Playlist ja existente: {}", nome);
+        }
+        esperarEnter();
+    }
+
+    private static void removerPlaylist() {
+        System.out.println("Nome da playlist a remover: ");
+        String nome = ScannerUtil.getScanner().nextLine();
+        PlaylistController.removerPlaylist(nome);
+        esperarEnter();
     }
 
     private static void editarPlaylist(){
         System.out.println("Nome da playlist a editar: ");
-        String nome = ScannerUtil.getScanner().nextLine().trim().toLowerCase();
+        String nome = ScannerUtil.getScanner().nextLine().trim();
         Playlist p = PlaylistController.buscarPlaylist(nome);
+
         if(p != null){
-            int opcao;
+            logger.info("Editando a playlist: {}", p.getNome());
+            String opcao;
             do {
                 System.out.println("\nEditar playlist - " + p.getNome() + "\n1. Editar nome\n2. Adicionar música\n3. Remover música\n0. Voltar\nEscolha: ");
-                opcao = ScannerUtil.getScanner().nextInt();
-                ScannerUtil.getScanner().nextLine();
+                opcao = ScannerUtil.getScanner().nextLine();
+
+                logger.info("Opção selecionada: {}", opcao);
 
                 switch (opcao){
-                    case 1 -> PlaylistController.editarNome(p);
-                    case 2 -> {
+                    case "1" -> PlaylistController.editarNome(p);
+                    case "2" -> {
                         System.out.println("Nome da música a adicionar: ");
                         Musica m = MusicaController.buscarMusicaNome(ScannerUtil.getScanner().nextLine());
                         PlaylistController.adicionarMusicaNaPlaylist(p, m);
                     }
-                    case 3 -> {
+                    case "3" -> {
                         System.out.println("Nome da música a remover: ");
                         Musica m = MusicaController.buscarMusicaNome(ScannerUtil.getScanner().nextLine());
                         PlaylistController.removerMusicaDaPlaylist(p, m);
                     }
-                    case 0 -> {}
-                    default -> System.out.println("Opção inválida!");
+                    case "0" -> {}
+                    default -> {
+                        logger.warn("Opção inválida!");
+                        System.out.println("Opção inválida!");
+                    }
                 }
-            }while(opcao != 0);
+            }while(opcao != "0");
         }else{
             System.out.println("Playlist não encontrada!");
         }
         esperarEnter();
+    }
+
+    private static void reproduzirPlaylist() {
+        System.out.println("Nome da playlist a reproduzir: ");
+        String nome = ScannerUtil.getScanner().nextLine();
+
+        Playlist playlist = PlaylistController.buscarPlaylist(nome);
+
+        if(playlist != null){
+            logger.info("Reproduzindo playlist: {}", playlist.getNome());
+            System.out.println("Reproduzindo playlist: " + playlist.getNome());
+
+            int idx = 0;
+
+            while (idx >= 0 && idx < playlist.getMusicas().size()) {
+                Musica m = playlist.getMusicas().get(idx);
+                System.out.println("► Tocando: " + m.getNome() + " de " + m.getArtista());
+
+                String cmd = menuReproducao(m, (idx == 0), (idx == (playlist.getMusicas().size())-1));
+
+                switch (cmd) {
+                    case "n" -> {
+                        idx++;
+                        logger.info("Próxima música");
+                    }
+                    case "b" -> {
+                        logger.info("Música anterior");
+                        idx = Math.max(0, idx - 1);
+                    }
+                    case "s" -> {
+                        logger.info("Encerrando reprodução da playlist.");
+                        return;
+                    }
+                    default -> {}
+                }
+            }
+        } else{
+            System.out.println("Playlist " + nome + " não encontrada!");
+            esperarEnter();
+        }
     }
 
     private static void listarMusicasPlaylist(){
@@ -77,6 +155,7 @@ public class PlaylistView {
 
         Playlist playlist = PlaylistController.buscarPlaylist(ScannerUtil.getScanner().nextLine());
         if(playlist != null){
+            logger.info("Listando músicas da playlist: {}", playlist.getNome());
             System.out.println("Playlist - " + playlist.getNome());
             PlaylistController.listarMusicas(playlist);
             System.out.printf("\nTotal: %d músicas\nDuração total: %.2f min\n", playlist.getMusicas().size(), playlist.getDuracao()/60);
@@ -86,41 +165,21 @@ public class PlaylistView {
         esperarEnter();
     }
 
-    private static void criarPlaylist() throws IOException {
-        System.out.println("Nome da nova playlist: ");
-        String nome = ScannerUtil.getScanner().nextLine();
-
-        Playlist playlist = PlaylistController.buscarPlaylist(nome);
-        if(playlist == null){
-            Playlist p = new Playlist(UUID.randomUUID().toString(), nome);
-            PlaylistController.adicionarPlaylist(p);
-            System.out.println("Playlist criada!");
-        }else{
-            System.out.println("Playlist já cadastrada!");
-        }
-        esperarEnter();
-    }
-
     public static void esperarEnter() {
         System.out.println("Pressione ENTER para continuar...");
         ScannerUtil.getScanner().nextLine();
     }
 
-    private static void removerPlaylist() throws IOException {
-        System.out.println("Nome da playlist a remover: ");
-        String nome = ScannerUtil.getScanner().nextLine();
-        PlaylistController.removerPlaylist(nome);
-        esperarEnter();
-    }
-
-    private static String menuReproducao(Musica musica, boolean isIndexZero, boolean isLastIndex) throws InterruptedException {
+    private static String menuReproducao(Musica musica, boolean isIndexZero, boolean isLastIndex) {
         String opcao;
 
         Thread thread = new Thread(() -> {
             try {
+                logger.info("Reproduzindo música: {}", musica.getNome());
                 musica.reproduzir();
             } catch (Exception e) {
-                System.out.println("Erro ao tocar: " + e.getMessage());
+                logger.error("Erro ao reproduzir música '{}':", musica.getNome(), e);
+                System.out.println("Erro ao reproduzir música: " + e.getMessage());
                 musica.parar();
             }
         });
@@ -139,47 +198,33 @@ public class PlaylistView {
             opcao = ScannerUtil.getScanner().nextLine().trim().toLowerCase();
 
             switch (opcao) {
-                case "p" -> { if (!musica.isPausada()) musica.pausar(); } //tava bugando
-                case "c" -> { if (musica.isPausada()) musica.continuar(); }
+                case "p" -> {
+                    if (!musica.isPausada()){
+                        musica.pausar();
+                        logger.info("Música pausada.");
+                    }
+                }
+                case "c" -> {
+                    if (musica.isPausada()){
+                        musica.continuar();
+                        logger.info("Continuando música.");
+                    }
+                }
                 case "b", "n", "s" -> musica.parar();
-                default -> System.out.println("Opção inválida!");
+                default -> {
+                    logger.info("Opção inválida!");
+                    System.out.println("Opção inválida!");
+                }
             }
         } while (!("b".equals(opcao) || "n".equals(opcao) || "s".equals(opcao)) && !musica.isFinalizada());
 
-        thread.join();
+        try{
+            thread.join();
+        }catch (InterruptedException e){
+            logger.error("Erro ao finalizar thread de reprodução: ", e);
+            Thread.currentThread().interrupt();
+        }
 
         return opcao;
-    }
-
-    private static void reproduzirPlaylist() throws IOException, InterruptedException {
-        System.out.println("Nome da playlist a reproduzir: ");
-        String nome = ScannerUtil.getScanner().nextLine();
-
-        Playlist playlist = PlaylistController.buscarPlaylist(nome);
-
-        if(playlist != null){
-            System.out.println("Tocando playlist: " + playlist.getNome());
-
-            int idx = 0;
-
-            while (idx >= 0 && idx < playlist.getMusicas().size()) {
-                Musica m = playlist.getMusicas().get(idx);
-                System.out.println("► Tocando: " + m.getNome() + " de " + m.getArtista());
-
-                String cmd = menuReproducao(m, (idx == 0), (idx == (playlist.getMusicas().size())-1));
-
-                switch (cmd) {
-                    case "n" -> idx++;
-                    case "b" -> idx = Math.max(0, idx - 1);
-                    case "s" -> {
-                        return;
-                    }
-                    default -> {}
-                }
-            }
-        } else{
-            System.out.println("Playlist " + nome + " não encontrada!");
-            esperarEnter();
-        }
     }
 }

@@ -5,35 +5,38 @@ import br.edu.up.pangaSongs.models.*;
 import br.edu.up.pangaSongs.archives.*;
 import br.edu.up.pangaSongs.util.ScannerUtil;
 import br.edu.up.pangaSongs.views.*;
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.UnsupportedAudioFileException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) throws IOException, UnsupportedAudioFileException, LineUnavailableException, InterruptedException {
+    public static void main(String[] args){
+        Logger logger = LogManager.getLogger(PrincipalView.class);
 
-        carregarArquivos();
+        logger.info("Iniciando aplicação...");
 
-        int opcao;
+        try{
+            carregarArquivos();
+            logger.info("Arquivos carregados com sucesso!");
+        } catch (Exception e) {
+            logger.error("Erro ao carregar arquivos: ", e);
+        }
 
-        do {
-            System.out.println("\n***** Menu Principal *****\n\n1. Gerenciar Músicas\n2. Gerenciar Playlists\n0. Sair");
-            System.out.print("\nEscolha uma Opção: ");
-            opcao = ScannerUtil.getScanner().nextInt();
-            ScannerUtil.getScanner().nextLine();
+        try {
+            PrincipalView.menu();
+        } catch (Exception e) {
+            logger.error("Erro durante a execução do menu principal: ", e);
+        }
 
-            switch (opcao){
-                case 1 -> MusicaView.menuPrincipal();
-                case 2 -> PlaylistView.menu();
-                case 0 -> System.out.println("Encerrando...");
-                default -> System.out.println("Opção inválida!");
-
-            }
-        } while (opcao != 0);
-
-        salvarArquivos();
+        try {
+            salvarArquivos();
+        } catch (Exception e) {
+            logger.error("Erro ao salvar arquivos: ", e);
+        }
         ScannerUtil.fechaScanner();
+
+        logger.info("Encerrando aplicação...");
     }
 
     private static void salvarArquivos() throws IOException {

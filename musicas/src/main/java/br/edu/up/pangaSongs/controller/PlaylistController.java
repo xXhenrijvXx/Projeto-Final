@@ -3,28 +3,35 @@ package br.edu.up.pangaSongs.controller;
 import br.edu.up.pangaSongs.models.Musica;
 import br.edu.up.pangaSongs.models.Playlist;
 import br.edu.up.pangaSongs.util.ScannerUtil;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class PlaylistController {
     private static final List<Playlist> playlists = new ArrayList<>();
+    private static final Logger logger = LogManager.getLogger(PlaylistController.class);
 
     private PlaylistController(){}
 
-    public static void adicionarPlaylist(Playlist playlist) throws IOException {
+    public static void adicionarPlaylist(Playlist playlist) {
         playlists.add(playlist);
     }
 
-    public static void removerPlaylist(String nome) throws IOException {
+    public static void removerPlaylist(String nome) {
         if (playlists.removeIf(p -> p.getNome().equalsIgnoreCase(nome))) {
             System.out.println("Playlist removida!");
+            logger.info("Playlist removida: {}", nome);
         } else {
             System.out.println("Playlist não encontrada.");
+            logger.warn("Playlist não encontrada.");
         }
     }
 
     public static void editarNome(Playlist p){
+        logger.info("Alterando nome da playlist: {}", p.getNome());
         System.out.println("Digite o novo nome: ");
         p.setNome(ScannerUtil.getScanner().nextLine());
     }
@@ -45,6 +52,7 @@ public class PlaylistController {
         for (Playlist p : playlists) {
             if (p.getNome().equalsIgnoreCase(nome)) return p;
         }
+        logger.warn("Playlist não encontrada!");
         return null;
     }
 
@@ -63,6 +71,7 @@ public class PlaylistController {
         if(musica != null){
             playlist.removerMusica(musica);
             PlaylistMusicaController.removerMusicaDaPlaylist(musica, playlist);
+            logger.info("Música '{}' removida da playlist '{}'!", musica.getNome(), playlist.getNome());
         }else{
             System.out.println("Música não encontrada");
         }
@@ -71,6 +80,8 @@ public class PlaylistController {
     public static void adicionarMusicaNaPlaylist(Playlist playlist, Musica musica) {
         if(musica != null){
             playlist.adicionarMusica(musica);
+            logger.info("Música '{}' adicionada na playlist '{}'", musica.getNome(), playlist.getNome());
+
         }else{
             System.out.println("Música não encontrada");
         }

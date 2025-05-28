@@ -9,7 +9,7 @@ public class Musica extends Media {
     private String genero;
     private String caminhoArquivo;
 
-    public Musica(String id, String nome, String caminhoArquivo, String artista, String genero) throws IOException {
+    public Musica(String id, String nome, String caminhoArquivo, String artista, String genero){
         super(id, nome, 0.0);
         this.artista = artista;
         this.genero = genero;
@@ -26,7 +26,7 @@ public class Musica extends Media {
     }
 
     @Override
-    public void reproduzir() throws IOException, LineUnavailableException, UnsupportedAudioFileException, InterruptedException {
+    public void reproduzir() throws IOException, LineUnavailableException, UnsupportedAudioFileException {
 
         MusicPlayerController.tocar(getCaminhoArquivo());
     }

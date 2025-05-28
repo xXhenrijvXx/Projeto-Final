@@ -8,6 +8,8 @@ import java.util.List;
 public class ArquivoMusica {
     private static final String caminhoArquivo = "data/musicas.txt";
 
+    private ArquivoMusica(){}
+
     public static void salvar(List<Musica> musicas) throws IOException {
         FileWriter fw = new FileWriter(caminhoArquivo);
         BufferedWriter bw = new BufferedWriter(fw);
