@@ -44,7 +44,7 @@ public class PlaylistView {
                     System.out.println("\nOpção inválida!");
                 }
             }
-        } while (opcao != "0");
+        } while (!opcao.equals("0"));
         logger.info("Menu de playlists encerrado.");
     }
 
@@ -92,6 +92,9 @@ public class PlaylistView {
                         System.out.println("Nome da música a adicionar: ");
                         Musica m = MusicaController.buscarMusicaNome(ScannerUtil.getScanner().nextLine());
                         PlaylistController.adicionarMusicaNaPlaylist(p, m);
+                        if(m != null) {
+                            logger.info("Música '{}' adicionada na playlist '{}'", m.getNome(), p.getNome());
+                        }
                     }
                     case "3" -> {
                         System.out.println("Nome da música a remover: ");
@@ -104,7 +107,7 @@ public class PlaylistView {
                         System.out.println("Opção inválida!");
                     }
                 }
-            }while(opcao != "0");
+            }while(!opcao.equals("0"));
         }else{
             System.out.println("Playlist não encontrada!");
         }

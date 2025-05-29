@@ -1,6 +1,9 @@
 package br.edu.up.pangaSongs.models;
 
 import br.edu.up.pangaSongs.controller.MusicPlayerController;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 import javax.sound.sampled.*;
 import java.io.*;
 
@@ -8,6 +11,7 @@ public class Musica extends Media {
     private String artista;
     private String genero;
     private String caminhoArquivo;
+    private static final Logger logger = LogManager.getLogger(Musica.class);
 
     public Musica(String id, String nome, String caminhoArquivo, String artista, String genero){
         super(id, nome, 0.0);
@@ -65,6 +69,7 @@ public class Musica extends Media {
 
         } catch (UnsupportedAudioFileException | IOException e) {
             System.out.println("Erro ao ler WAV: " + e.getMessage());
+            logger.error("Erro ao ler WAV: ", e);
             return 0.0;
         }
     }

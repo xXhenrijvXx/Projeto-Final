@@ -31,7 +31,7 @@ public class PrincipalView {
                     System.out.println("Opção inválida!");
                 }
             }
-        } while (opcao != "0");
+        } while (!opcao.equals("0"));
         logger.info("Menu principal encerrado.");
     }
 }

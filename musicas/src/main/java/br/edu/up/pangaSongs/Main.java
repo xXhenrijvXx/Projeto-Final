@@ -14,12 +14,12 @@ public class Main {
 
         logger.info("Iniciando aplicação...");
 
-        carregarArquivos(logger);//verificar se é necessario tratar o encerramento do codigo caso de erro
+        carregarArquivos(logger);
         logger.info("Arquivos carregados com sucesso!");
 
         PrincipalView.menu();
 
-        salvarArquivos();//verificar se é necessario tratar o encerramento do codigo caso de erro
+        salvarArquivos();
 
         ScannerUtil.fechaScanner();
 
@@ -37,26 +37,28 @@ public class Main {
         List<Playlist> playlistsCarregadas = ArquivoPlaylist.carregar();
         List<PlaylistMusica> idsCarregados = ArquivoPlaylistMusica.carregar();
 
-        for (Musica m : musicasCarregadas) {
-            MusicaController.adicionarMusica(m);
-        }
+        if(musicasCarregadas != null && playlistsCarregadas != null && idsCarregados != null) {
+            for (Musica m : musicasCarregadas) {
+                MusicaController.adicionarMusica(m);
+            }
 
 
-        for (Playlist p : playlistsCarregadas) {
-            PlaylistController.adicionarPlaylist(p);
-        }
+            for (Playlist p : playlistsCarregadas) {
+                PlaylistController.adicionarPlaylist(p);
+            }
 
 
-        for(PlaylistMusica id : idsCarregados){
-            Playlist p = PlaylistController.buscarPlaylistId(id.getIdPlaylist());
-            Musica m = MusicaController.buscarMusicaId(id.getIdMusica());
+            for (PlaylistMusica id : idsCarregados) {
+                Playlist p = PlaylistController.buscarPlaylistId(id.getIdPlaylist());
+                Musica m = MusicaController.buscarMusicaId(id.getIdMusica());
 
-            if(p != null && m != null) {
-                PlaylistMusicaController.adicionarMusicaNaPlaylist(m.getId(), p.getId());
-                PlaylistController.adicionarMusicaNaPlaylist(p, m);
-            }else{
-                System.out.println("Erro, Id cadastrado mas música ou playlist não.");
-                logger.error("Erro, Id cadastrado mas música ou playlist não.");
+                if (p != null && m != null) {
+                    PlaylistMusicaController.adicionarMusicaNaPlaylist(m.getId(), p.getId());
+                    PlaylistController.adicionarMusicaNaPlaylist(p, m);
+                } else {
+                    System.out.println("Erro, Id cadastrado mas música ou playlist não.");
+                    logger.error("Erro, Id cadastrado mas música ou playlist não.");
+                }
             }
         }
     }

@@ -5,6 +5,7 @@ import br.edu.up.pangaSongs.models.Playlist;
 import br.edu.up.pangaSongs.models.PlaylistMusica;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class PlaylistMusicaController{
     private static final List<PlaylistMusica> ids = new ArrayList<>();
@@ -14,7 +15,7 @@ public class PlaylistMusicaController{
     public static void removerMusicaDasPlaylists(Musica musica){
         for(Playlist p : PlaylistController.getPlaylists()){
             for(Musica m : p.getMusicas()){
-                if(m.getId() == musica.getId()){
+                if(Objects.equals(m.getId(), musica.getId())){
                     p.removerMusica(musica);
                     removerMusicaDaPlaylist(m, p);
                 }

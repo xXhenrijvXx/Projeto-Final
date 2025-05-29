@@ -78,8 +78,6 @@ public class PlaylistController {
     public static void adicionarMusicaNaPlaylist(Playlist playlist, Musica musica){
         if(musica != null){
             playlist.adicionarMusica(musica);
-            logger.info("Música '{}' adicionada na playlist '{}'", musica.getNome(), playlist.getNome());
-
         }else{
             System.out.println("Música não encontrada");
         }

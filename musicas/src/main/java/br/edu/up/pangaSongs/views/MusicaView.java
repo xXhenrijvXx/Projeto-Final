@@ -31,6 +31,7 @@ public class MusicaView {
                 case "3" -> editarMusica();
                 case "4" -> {
                     logger.info("Listando músicas");
+                    System.out.println("\n***** Músicas *****\n");
                     MusicaController.listarMusicas();
                     AguardarUtil.esperarEnter();
                 }
@@ -38,28 +39,31 @@ public class MusicaView {
                 case "0" -> {}
                 default -> System.out.println("\nOpção inválida!");
             }
-        } while (opcao != "0");
+        } while (!opcao.equals("0"));
         logger.info("Menu de músicas encerrado.");
     }
 
     private static void adicionarMusica() {
-        System.out.println("Nome da nova música: ");
+        System.out.println("***** Adicionar música *****");
+        System.out.print("\nNome da nova música: ");
         String nome = ScannerUtil.getScanner().nextLine();
 
         Musica musica = MusicaController.buscarMusicaNome(nome);
         if(musica == null){
-            System.out.println("Caminho do arquivo: ");
+            System.out.print("Caminho do arquivo: ");
             String caminho = ScannerUtil.getScanner().nextLine();
             if(caminho.endsWith(".wav")){
-                System.out.println("Gênero da música: ");
+                System.out.print("Gênero da música: ");
                 String genero = ScannerUtil.getScanner().nextLine();
-                System.out.println("Artista: ");
+                System.out.print("Artista: ");
                 String artista = ScannerUtil.getScanner().nextLine();
 
                 musica = new Musica(UUID.randomUUID().toString(), nome, caminho, artista, genero);
-                MusicaController.adicionarMusica(musica);
-                System.out.println("Música adicionada!");
-                logger.info("Música criada");
+                if(musica.getDuracao() != 0.0) {
+                    MusicaController.adicionarMusica(musica);
+                    System.out.println("Música adicionada!");
+                    logger.info("Música criada");
+                }
             }else{
                 System.out.println("Tipo de arquivo não suportado, música não cadastrada.");
                 logger.warn("Tipo de arquivo não suportado, música não cadastrada.");
@@ -87,7 +91,8 @@ public class MusicaView {
     }
 
     private static void editarMusica(){
-        System.out.println("Nome da música a editar: ");
+
+        System.out.print("\nNome da música a editar: ");
         String nome = ScannerUtil.getScanner().nextLine().trim();
 
         Musica musica = MusicaController.buscarMusicaNome(nome);
@@ -95,29 +100,42 @@ public class MusicaView {
             logger.info("Editando a música: {}", musica.getNome());
             String opcao;
             do {
-                System.out.println("\nEditar Música - " + musica.getNome() + "\n1. Editar nome\n2. Editar artista\n3. Editar gênero\n4. Editar caminho\n0. Voltar\nEscolha: ");
+                System.out.println("\n**** Editar Música - " + musica.getNome() + " ****\n\n1. Editar nome\n2. Editar artista\n3. Editar gênero\n4. Editar caminho\n0. Voltar");
+                System.out.print("\nEscolha uma Opção: ");
 
                 opcao = ScannerUtil.getScanner().nextLine();
 
                 logger.info("Opção selecionada: {}", opcao);
 
                 switch (opcao){
-                    case "1" -> MusicaController.editarNome(musica);
-                    case "2" -> MusicaController.editarArtista(musica);
-                    case "3" -> MusicaController.editarGenero(musica);
-                    case "4" -> MusicaController.editarCaminho(musica);
+                    case "1" -> {
+                        MusicaController.editarNome(musica);
+                        AguardarUtil.esperarEnter();
+                    }
+                    case "2" -> {
+                        MusicaController.editarArtista(musica);
+                        AguardarUtil.esperarEnter();
+                    }
+                    case "3" -> {
+                        MusicaController.editarGenero(musica);
+                        AguardarUtil.esperarEnter();
+                    }
+                    case "4" -> {
+                        MusicaController.editarCaminho(musica);
+                        AguardarUtil.esperarEnter();
+                    }
                     case "0" -> {}
                     default -> {
                         logger.warn("Opção inválida!");
                         System.out.println("Opção inválida!");
+                        AguardarUtil.esperarEnter();
                     }
                 }
 
-            }while(opcao != "0");
+            }while(!opcao.equals("0"));
         }else{
             System.out.println("Música não encontrada!");
         }
-        AguardarUtil.esperarEnter();
     }
 
     private static void menuReproducao(Musica musica) {
@@ -136,7 +154,7 @@ public class MusicaView {
         System.out.println("\n► Tocando: " + musica.getNome() + " de " + musica.getArtista());
 
         do{
-            if (!musica.isPausada()) System.out.print("\n[p] Pausar | ");
+            if (!musica.isPausada()) System.out.print("[p] Pausar | ");
             else System.out.print("[c] Continuar | ");
             System.out.print("[s] Stop\n");
             System.out.print("Digite: ");
