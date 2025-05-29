@@ -5,64 +5,59 @@ import br.edu.up.pangaSongs.models.*;
 import br.edu.up.pangaSongs.archives.*;
 import br.edu.up.pangaSongs.util.ScannerUtil;
 import br.edu.up.pangaSongs.views.*;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import java.io.IOException;
+import org.apache.logging.log4j.*;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args){
-        Logger logger = LogManager.getLogger(PrincipalView.class);
+        Logger logger = LogManager.getLogger(Main.class);
 
         logger.info("Iniciando aplicação...");
 
-        try{
-            carregarArquivos();
-            logger.info("Arquivos carregados com sucesso!");
-        } catch (Exception e) {
-            logger.error("Erro ao carregar arquivos: ", e);
-        }
+        carregarArquivos(logger);//verificar se é necessario tratar o encerramento do codigo caso de erro
+        logger.info("Arquivos carregados com sucesso!");
 
-        try {
-            PrincipalView.menu();
-        } catch (Exception e) {
-            logger.error("Erro durante a execução do menu principal: ", e);
-        }
+        PrincipalView.menu();
 
-        try {
-            salvarArquivos();
-        } catch (Exception e) {
-            logger.error("Erro ao salvar arquivos: ", e);
-        }
+        salvarArquivos();//verificar se é necessario tratar o encerramento do codigo caso de erro
+
         ScannerUtil.fechaScanner();
 
         logger.info("Encerrando aplicação...");
     }
 
-    private static void salvarArquivos() throws IOException {
+    private static void salvarArquivos() {
         ArquivoMusica.salvar(MusicaController.getMusicas());
         ArquivoPlaylist.salvar(PlaylistController.getPlaylists());
         ArquivoPlaylistMusica.salvar(PlaylistMusicaController.getIds());
     }
 
-    private static void carregarArquivos() throws IOException {
+    private static void carregarArquivos(Logger logger) {
         List<Musica> musicasCarregadas = ArquivoMusica.carregar();
+        List<Playlist> playlistsCarregadas = ArquivoPlaylist.carregar();
+        List<PlaylistMusica> idsCarregados = ArquivoPlaylistMusica.carregar();
+
         for (Musica m : musicasCarregadas) {
             MusicaController.adicionarMusica(m);
         }
 
-        List<Playlist> playlistsCarregadas = ArquivoPlaylist.carregar();
+
         for (Playlist p : playlistsCarregadas) {
             PlaylistController.adicionarPlaylist(p);
         }
 
-        List<PlaylistMusica> idsCarregados = ArquivoPlaylistMusica.carregar();
+
         for(PlaylistMusica id : idsCarregados){
             Playlist p = PlaylistController.buscarPlaylistId(id.getIdPlaylist());
             Musica m = MusicaController.buscarMusicaId(id.getIdMusica());
 
-            PlaylistMusicaController.adicionarMusicaNaPlaylist(m.getId(), p.getId());
-            PlaylistController.adicionarMusicaNaPlaylist(p, m);
+            if(p != null && m != null) {
+                PlaylistMusicaController.adicionarMusicaNaPlaylist(m.getId(), p.getId());
+                PlaylistController.adicionarMusicaNaPlaylist(p, m);
+            }else{
+                System.out.println("Erro, Id cadastrado mas música ou playlist não.");
+                logger.error("Erro, Id cadastrado mas música ou playlist não.");
+            }
         }
     }
 }

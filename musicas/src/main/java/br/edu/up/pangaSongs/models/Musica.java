@@ -26,9 +26,10 @@ public class Musica extends Media {
     }
 
     @Override
-    public void reproduzir() throws IOException, LineUnavailableException, UnsupportedAudioFileException {
+    public void reproduzir(){
 
         MusicPlayerController.tocar(getCaminhoArquivo());
+        //verificar se é preciso implementar lógica de encerramento caso erro
     }
 
     public boolean isFinalizada(){

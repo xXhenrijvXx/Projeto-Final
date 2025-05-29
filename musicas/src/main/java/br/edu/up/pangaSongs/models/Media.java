@@ -1,9 +1,6 @@
 package br.edu.up.pangaSongs.models;
 
 import br.edu.up.pangaSongs.interfaces.Reproduzivel;
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.UnsupportedAudioFileException;
-import java.io.IOException;
 
 public abstract class Media implements Reproduzivel {
     String id;
@@ -20,7 +17,7 @@ public abstract class Media implements Reproduzivel {
         return id;
     }
 
-    public abstract void reproduzir() throws IOException, LineUnavailableException, UnsupportedAudioFileException, InterruptedException;
+    public abstract void reproduzir();
 
     public void setNome(String nome) {
         this.nome = nome;

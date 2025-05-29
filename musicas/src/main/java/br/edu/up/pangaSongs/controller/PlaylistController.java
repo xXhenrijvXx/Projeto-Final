@@ -5,8 +5,6 @@ import br.edu.up.pangaSongs.models.Playlist;
 import br.edu.up.pangaSongs.util.ScannerUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,11 +14,11 @@ public class PlaylistController {
 
     private PlaylistController(){}
 
-    public static void adicionarPlaylist(Playlist playlist) {
+    public static void adicionarPlaylist(Playlist playlist){
         playlists.add(playlist);
     }
 
-    public static void removerPlaylist(String nome) {
+    public static void removerPlaylist(String nome){
         if (playlists.removeIf(p -> p.getNome().equalsIgnoreCase(nome))) {
             System.out.println("Playlist removida!");
             logger.info("Playlist removida: {}", nome);
@@ -42,32 +40,32 @@ public class PlaylistController {
         }
     }
 
-    public static void listarPlaylists() {
+    public static void listarPlaylists(){
         for (Playlist p : playlists) {
             System.out.println("📁 Playlist: " + p.getNome());
         }
     }
 
-    public static Playlist buscarPlaylist(String nome) {
-        for (Playlist p : playlists) {
+    public static Playlist buscarPlaylist(String nome){
+        for (Playlist p : playlists){
             if (p.getNome().equalsIgnoreCase(nome)) return p;
         }
         logger.warn("Playlist não encontrada!");
         return null;
     }
 
-    public static Playlist buscarPlaylistId(String id) {
-        for (Playlist p : playlists) {
+    public static Playlist buscarPlaylistId(String id){
+        for (Playlist p : playlists){
             if (p.getId().equalsIgnoreCase(id)) return p;
         }
         return null;
     }
 
-    public static List<Playlist> getPlaylists() {
+    public static List<Playlist> getPlaylists(){
         return playlists;
     }
 
-    public static void removerMusicaDaPlaylist(Playlist playlist, Musica musica) {
+    public static void removerMusicaDaPlaylist(Playlist playlist, Musica musica){
         if(musica != null){
             playlist.removerMusica(musica);
             PlaylistMusicaController.removerMusicaDaPlaylist(musica, playlist);
@@ -77,7 +75,7 @@ public class PlaylistController {
         }
     }
 
-    public static void adicionarMusicaNaPlaylist(Playlist playlist, Musica musica) {
+    public static void adicionarMusicaNaPlaylist(Playlist playlist, Musica musica){
         if(musica != null){
             playlist.adicionarMusica(musica);
             logger.info("Música '{}' adicionada na playlist '{}'", musica.getNome(), playlist.getNome());

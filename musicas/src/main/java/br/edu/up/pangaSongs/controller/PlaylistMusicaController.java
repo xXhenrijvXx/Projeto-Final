@@ -6,7 +6,7 @@ import br.edu.up.pangaSongs.models.PlaylistMusica;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PlaylistMusicaController {
+public class PlaylistMusicaController{
     private static final List<PlaylistMusica> ids = new ArrayList<>();
 
     private PlaylistMusicaController(){}
@@ -29,7 +29,7 @@ public class PlaylistMusicaController {
 
     }
 
-    public static void adicionarMusicaNaPlaylist(String musicaId, String playlistId) {
+    public static void adicionarMusicaNaPlaylist(String musicaId, String playlistId){
         ids.add(new PlaylistMusica(musicaId, playlistId));
     }
 

@@ -1,13 +1,12 @@
 package br.edu.up.pangaSongs.models;
 
-import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Playlist extends Media {
+public class Playlist extends Media{
     private final List<Musica> musicas;
 
-    public Playlist(String id, String nome) {
+    public Playlist(String id, String nome){
         super(id, nome, 0);
         this.musicas = new ArrayList<>();
     }
@@ -34,11 +33,11 @@ public class Playlist extends Media {
     }
 
     @Override
-    public void reproduzir() throws IOException, InterruptedException {
+    public void reproduzir(){
 
     }
 
-    public List<Musica> getMusicas() {
+    public List<Musica> getMusicas(){
         return new ArrayList<>(musicas);
     }
 }

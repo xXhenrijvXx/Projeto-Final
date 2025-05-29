@@ -1,54 +1,73 @@
 package br.edu.up.pangaSongs.archives;
 
 import br.edu.up.pangaSongs.models.Musica;
+import org.apache.logging.log4j.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ArquivoMusica {
     private static final String caminhoArquivo = "data/musicas.txt";
+    private static final Logger logger = LogManager.getLogger(ArquivoMusica.class);
 
     private ArquivoMusica(){}
 
-    public static void salvar(List<Musica> musicas) throws IOException {
-        FileWriter fw = new FileWriter(caminhoArquivo);
-        BufferedWriter bw = new BufferedWriter(fw);
+    public static void salvar(List<Musica> musicas) {
+        try {
+            FileWriter fw = new FileWriter(caminhoArquivo);
+            BufferedWriter bw = new BufferedWriter(fw);
 
-        for (Musica m : musicas) {
-            bw.write(m.getId() + ";" + m.getNome() + ";" + m.getDuracao() + ";" + m.getCaminhoArquivo() + ";" + m.getArtista() + ";" + m.getGenero());
-            bw.newLine();
+            for (Musica m : musicas) {
+                bw.write(m.getId() + ";" + m.getNome() + ";" + m.getDuracao() + ";" + m.getCaminhoArquivo() + ";" + m.getArtista() + ";" + m.getGenero());
+                bw.newLine();
+            }
+
+            bw.close();
+            fw.close();
+        }catch (IOException e){
+            System.out.println("Erro ao salvar o arquivo de músicas.");
+            logger.error("Erro ao salvar o arquivo de músicas: ", e);
         }
-
-        bw.close();
-        fw.close();
     }
 
-    public static List<Musica> carregar() throws IOException {
+    public static List<Musica> carregar() {
         File arquivo = new File(caminhoArquivo);
+        List<Musica> musicas = new ArrayList<>();
         if (!arquivo.exists()) {
             arquivo.getParentFile().mkdirs();
-            arquivo.createNewFile();
-            return new ArrayList<>();
-        }
-
-        BufferedReader br = new BufferedReader(new FileReader(arquivo));
-        List<Musica> musicas = new ArrayList<>();
-        String linha;
-
-        while ((linha = br.readLine()) != null) {
-            String[] partes = linha.split(";");
-            if (partes.length == 6) {
-                String id = partes[0];
-                String nome = partes[1];
-                double duracao = Double.parseDouble(partes[2]);
-                String caminho = partes[3];
-                String artista = partes[4];
-                String genero = partes[5];
-                musicas.add(new Musica(id, nome, duracao, caminho, artista, genero));
+            try{
+                arquivo.createNewFile();
+            }catch(IOException e){
+                System.out.println("Erro ao criar o arquivo de músicas.");
+                logger.error("Erro ao criar o arquivo de músicas: ", e);
+                return null;
             }
+            return musicas;
         }
+        try{
+            BufferedReader br = new BufferedReader(new FileReader(arquivo));
+            String linha;
 
-        br.close();
+            while ((linha = br.readLine()) != null) {
+                String[] partes = linha.split(";");
+                if (partes.length == 6) {
+                    String id = partes[0];
+                    String nome = partes[1];
+                    double duracao = Double.parseDouble(partes[2]);
+                    String caminho = partes[3];
+                    String artista = partes[4];
+                    String genero = partes[5];
+                    musicas.add(new Musica(id, nome, duracao, caminho, artista, genero));
+                }
+            }
+
+            br.close();
+
+        }catch (IOException e){
+            System.out.println("Erro ao ler o arquivo de músicas");
+            logger.error("Erro ao ler o arquivo de músicas: ", e);
+            return null;
+        }
         return musicas;
     }
 }

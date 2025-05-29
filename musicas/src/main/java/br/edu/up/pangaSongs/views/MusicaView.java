@@ -3,6 +3,7 @@ package br.edu.up.pangaSongs.views;
 import br.edu.up.pangaSongs.controller.MusicaController;
 import br.edu.up.pangaSongs.controller.PlaylistMusicaController;
 import br.edu.up.pangaSongs.models.Musica;
+import br.edu.up.pangaSongs.util.AguardarUtil;
 import br.edu.up.pangaSongs.util.ScannerUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -31,7 +32,7 @@ public class MusicaView {
                 case "4" -> {
                     logger.info("Listando músicas");
                     MusicaController.listarMusicas();
-                    esperarEnter();
+                    AguardarUtil.esperarEnter();
                 }
                 case "5" -> tocarMusica();
                 case "0" -> {}
@@ -42,10 +43,11 @@ public class MusicaView {
     }
 
     private static void adicionarMusica() {
-        System.out.println("Nome da música: ");
+        System.out.println("Nome da nova música: ");
         String nome = ScannerUtil.getScanner().nextLine();
 
-        if(MusicaController.buscarMusicaNome(nome) == null){
+        Musica musica = MusicaController.buscarMusicaNome(nome);
+        if(musica == null){
             System.out.println("Caminho do arquivo: ");
             String caminho = ScannerUtil.getScanner().nextLine();
             if(caminho.endsWith(".wav")){
@@ -54,7 +56,7 @@ public class MusicaView {
                 System.out.println("Artista: ");
                 String artista = ScannerUtil.getScanner().nextLine();
 
-                Musica musica = new Musica(UUID.randomUUID().toString(), nome, caminho, artista, genero);
+                musica = new Musica(UUID.randomUUID().toString(), nome, caminho, artista, genero);
                 MusicaController.adicionarMusica(musica);
                 System.out.println("Música adicionada!");
                 logger.info("Música criada");
@@ -65,7 +67,7 @@ public class MusicaView {
         }else{
             System.out.println("Música já cadastrada");
         }
-        esperarEnter();
+        AguardarUtil.esperarEnter();
     }
 
     private static void removerMusica() {
@@ -81,7 +83,7 @@ public class MusicaView {
         }else{
             System.out.println("Música não encontrada!");
         }
-        esperarEnter();
+        AguardarUtil.esperarEnter();
     }
 
     private static void editarMusica(){
@@ -115,7 +117,7 @@ public class MusicaView {
         }else{
             System.out.println("Música não encontrada!");
         }
-        esperarEnter();
+        AguardarUtil.esperarEnter();
     }
 
     private static void menuReproducao(Musica musica) {
@@ -181,12 +183,7 @@ public class MusicaView {
             menuReproducao(musica);
         }else{
             System.out.println("Música não encontrada!");
-            esperarEnter();
+            AguardarUtil.esperarEnter();
         }
-    }
-
-    public static void esperarEnter() {
-        System.out.println("Pressione ENTER para continuar...");
-        ScannerUtil.getScanner().nextLine();
     }
 }

@@ -17,7 +17,6 @@ public class MusicaController {
         musicas.add(musica);
     }
 
-
     public static void editarNome(Musica musica){
         logger.info("Alterando nome da música: {}", musica.getNome());
         System.out.println("Nome da música atual -> " + musica.getNome() + "\nDigite o novo nome: ");
@@ -59,8 +58,8 @@ public class MusicaController {
     public static Musica buscarMusicaId(String id) {
         for (Musica m : musicas) {
             if (m.getId().equalsIgnoreCase(id)) return m;
-            //log erro
         }
+        logger.warn("Música não encontrada!");
         return null;
     }
 

@@ -4,10 +4,10 @@ import br.edu.up.pangaSongs.controller.MusicaController;
 import br.edu.up.pangaSongs.controller.PlaylistController;
 import br.edu.up.pangaSongs.models.Musica;
 import br.edu.up.pangaSongs.models.Playlist;
+import br.edu.up.pangaSongs.util.AguardarUtil;
 import br.edu.up.pangaSongs.util.ScannerUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import java.io.IOException;
 import java.util.UUID;
 
 public class PlaylistView {
@@ -16,7 +16,7 @@ public class PlaylistView {
 
     private PlaylistView(){}
 
-    public static void menu() throws IOException, InterruptedException {
+    public static void menu() {
         String opcao;
         logger.info("Menu de playlists iniciado.");
         do{
@@ -32,8 +32,9 @@ public class PlaylistView {
                 case "2" -> removerPlaylist();
                 case "3" -> editarPlaylist();
                 case "4" -> {
+                    logger.info("Listando playlists.");
                     PlaylistController.listarPlaylists();
-                    esperarEnter();
+                    AguardarUtil.esperarEnter();
                 }
                 case "5" -> reproduzirPlaylist();
                 case "6" -> listarMusicasPlaylist();
@@ -61,14 +62,14 @@ public class PlaylistView {
             System.out.println("Playlist já cadastrada!");
             logger.warn("Playlist ja existente: {}", nome);
         }
-        esperarEnter();
+        AguardarUtil.esperarEnter();
     }
 
     private static void removerPlaylist() {
         System.out.println("Nome da playlist a remover: ");
         String nome = ScannerUtil.getScanner().nextLine();
         PlaylistController.removerPlaylist(nome);
-        esperarEnter();
+        AguardarUtil.esperarEnter();
     }
 
     private static void editarPlaylist(){
@@ -107,7 +108,7 @@ public class PlaylistView {
         }else{
             System.out.println("Playlist não encontrada!");
         }
-        esperarEnter();
+        AguardarUtil.esperarEnter();
     }
 
     private static void reproduzirPlaylist() {
@@ -146,7 +147,7 @@ public class PlaylistView {
             }
         } else{
             System.out.println("Playlist " + nome + " não encontrada!");
-            esperarEnter();
+            AguardarUtil.esperarEnter();
         }
     }
 
@@ -162,12 +163,7 @@ public class PlaylistView {
         }else{
             System.out.println("Playlist não encontrada!");
         }
-        esperarEnter();
-    }
-
-    public static void esperarEnter() {
-        System.out.println("Pressione ENTER para continuar...");
-        ScannerUtil.getScanner().nextLine();
+        AguardarUtil.esperarEnter();
     }
 
     private static String menuReproducao(Musica musica, boolean isIndexZero, boolean isLastIndex) {

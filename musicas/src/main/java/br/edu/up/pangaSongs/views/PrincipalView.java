@@ -3,14 +3,13 @@ package br.edu.up.pangaSongs.views;
 import br.edu.up.pangaSongs.util.ScannerUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import java.io.IOException;
 
 public class PrincipalView {
     private static final Logger logger = LogManager.getLogger(PrincipalView.class);
 
     private PrincipalView(){}
 
-    public static void menu() throws IOException, InterruptedException {
+    public static void menu() {
         String opcao;
 
         logger.info("Menu Principal iniciado.");
