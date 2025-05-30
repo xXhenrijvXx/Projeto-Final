@@ -4,10 +4,9 @@ import br.edu.up.pangaSongs.controller.MusicaController;
 import br.edu.up.pangaSongs.controller.PlaylistController;
 import br.edu.up.pangaSongs.models.Musica;
 import br.edu.up.pangaSongs.models.Playlist;
-import br.edu.up.pangaSongs.util.AguardarUtil;
+import br.edu.up.pangaSongs.util.ConsoleUtil;
 import br.edu.up.pangaSongs.util.ScannerUtil;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.*;
 import java.util.UUID;
 
 public class PlaylistView {
@@ -20,6 +19,7 @@ public class PlaylistView {
         String opcao;
         logger.info("Menu de playlists iniciado.");
         do{
+            ConsoleUtil.limparConsole();
             System.out.println("\n***** Gerenciar Playlists *****\n\n1. Criar playlist\n2. Remover playlist\n3. Editar playlist\n4. Listar playlists\n5. Reproduzir playlist\n6. Listar músicas de uma playlist\n0. Voltar");
             System.out.print("\nEscolha uma Opção: ");
 
@@ -33,8 +33,10 @@ public class PlaylistView {
                 case "3" -> editarPlaylist();
                 case "4" -> {
                     logger.info("Listando playlists.");
+                    ConsoleUtil.limparConsole();
+                    System.out.println("***** Playlists *****\n");
                     PlaylistController.listarPlaylists();
-                    AguardarUtil.esperarEnter();
+                    ConsoleUtil.esperarEnter();
                 }
                 case "5" -> reproduzirPlaylist();
                 case "6" -> listarMusicasPlaylist();
@@ -49,7 +51,9 @@ public class PlaylistView {
     }
 
     private static void criarPlaylist() {
-        System.out.println("Nome da nova playlist: ");
+        ConsoleUtil.limparConsole();
+        System.out.println("**** Adicionar playlist ****");
+        System.out.print("\nNome da nova playlist: ");
         String nome = ScannerUtil.getScanner().nextLine();
 
         Playlist p = PlaylistController.buscarPlaylist(nome);
@@ -62,44 +66,70 @@ public class PlaylistView {
             System.out.println("Playlist já cadastrada!");
             logger.warn("Playlist ja existente: {}", nome);
         }
-        AguardarUtil.esperarEnter();
+        ConsoleUtil.esperarEnter();
     }
 
     private static void removerPlaylist() {
-        System.out.println("Nome da playlist a remover: ");
+        ConsoleUtil.limparConsole();
+        System.out.println("***** Remover playlist *****");
+        System.out.print("\nNome da playlist a remover: ");
         String nome = ScannerUtil.getScanner().nextLine();
-        PlaylistController.removerPlaylist(nome);
-        AguardarUtil.esperarEnter();
+
+        Playlist playlist = PlaylistController.buscarPlaylist(nome);
+
+        if(playlist != null){
+            PlaylistController.removerPlaylist(nome);
+        }else{
+            System.out.println("Playlist não encontrada!");
+        }
+        ConsoleUtil.esperarEnter();
     }
 
     private static void editarPlaylist(){
-        System.out.println("Nome da playlist a editar: ");
+        ConsoleUtil.limparConsole();
+        System.out.println("***** Editar playlist *****");
+        System.out.print("\nNome da playlist a editar: ");
         String nome = ScannerUtil.getScanner().nextLine().trim();
+
         Playlist p = PlaylistController.buscarPlaylist(nome);
 
         if(p != null){
             logger.info("Editando a playlist: {}", p.getNome());
             String opcao;
             do {
-                System.out.println("\nEditar playlist - " + p.getNome() + "\n1. Editar nome\n2. Adicionar música\n3. Remover música\n0. Voltar\nEscolha: ");
+                ConsoleUtil.limparConsole();
+                System.out.println("**** Editar playlist - " + p.getNome() + " ****\n\n1. Editar nome\n2. Adicionar música\n3. Remover música\n0. Voltar");
+                System.out.print("\nEscolha uma opção: ");
+
                 opcao = ScannerUtil.getScanner().nextLine();
 
                 logger.info("Opção selecionada: {}", opcao);
 
                 switch (opcao){
-                    case "1" -> PlaylistController.editarNome(p);
+                    case "1" -> {
+                        PlaylistController.editarNome(p);
+                        ConsoleUtil.esperarEnter();
+                    }
                     case "2" -> {
-                        System.out.println("Nome da música a adicionar: ");
+                        ConsoleUtil.limparConsole();
+                        System.out.println("**** Adicionar música na playlist - " + p.getNome() + " ****");
+                        System.out.print("\nNome da música a adicionar: ");
                         Musica m = MusicaController.buscarMusicaNome(ScannerUtil.getScanner().nextLine());
                         PlaylistController.adicionarMusicaNaPlaylist(p, m);
                         if(m != null) {
                             logger.info("Música '{}' adicionada na playlist '{}'", m.getNome(), p.getNome());
                         }
+                        ConsoleUtil.esperarEnter();
                     }
                     case "3" -> {
-                        System.out.println("Nome da música a remover: ");
+                        ConsoleUtil.limparConsole();
+                        System.out.println("**** Remover música na playlist - " + p.getNome() + " ****");
+                        System.out.print("\nNome da música a remover: ");
                         Musica m = MusicaController.buscarMusicaNome(ScannerUtil.getScanner().nextLine());
-                        PlaylistController.removerMusicaDaPlaylist(p, m);
+                        if(m != null){
+                            PlaylistController.removerMusicaDaPlaylist(p, m);
+                        }
+                        ConsoleUtil.esperarEnter();
                     }
                     case "0" -> {}
                     default -> {
@@ -110,29 +140,30 @@ public class PlaylistView {
             }while(!opcao.equals("0"));
         }else{
             System.out.println("Playlist não encontrada!");
+            ConsoleUtil.esperarEnter();
         }
-        AguardarUtil.esperarEnter();
+
     }
 
-    private static void reproduzirPlaylist() {
-        System.out.println("Nome da playlist a reproduzir: ");
+    private static void reproduzirPlaylist(){
+        ConsoleUtil.limparConsole();
+
+        System.out.print("***** Reproduzir playlist *****\n\nNome da playlist a reproduzir: ");
         String nome = ScannerUtil.getScanner().nextLine();
 
         Playlist playlist = PlaylistController.buscarPlaylist(nome);
 
         if(playlist != null){
             logger.info("Reproduzindo playlist: {}", playlist.getNome());
-            System.out.println("Reproduzindo playlist: " + playlist.getNome());
 
             int idx = 0;
 
             while (idx >= 0 && idx < playlist.getMusicas().size()) {
                 Musica m = playlist.getMusicas().get(idx);
-                System.out.println("► Tocando: " + m.getNome() + " de " + m.getArtista());
 
-                String cmd = menuReproducao(m, (idx == 0), (idx == (playlist.getMusicas().size())-1));
+                String resposta = menuReproducao(playlist, m, (idx == 0), (idx == (playlist.getMusicas().size())-1));
 
-                switch (cmd) {
+                switch (resposta){
                     case "n" -> {
                         idx++;
                         logger.info("Próxima música");
@@ -150,26 +181,29 @@ public class PlaylistView {
             }
         } else{
             System.out.println("Playlist " + nome + " não encontrada!");
-            AguardarUtil.esperarEnter();
+            ConsoleUtil.esperarEnter();
         }
     }
 
     private static void listarMusicasPlaylist(){
-        System.out.println("Nome da playlist: ");
+        ConsoleUtil.limparConsole();
+        System.out.println("**** Listar músicas ****");
+        System.out.print("\nNome da playlist: ");
 
         Playlist playlist = PlaylistController.buscarPlaylist(ScannerUtil.getScanner().nextLine());
         if(playlist != null){
             logger.info("Listando músicas da playlist: {}", playlist.getNome());
-            System.out.println("Playlist - " + playlist.getNome());
+            ConsoleUtil.limparConsole();
+            System.out.println("**** Playlist - " + playlist.getNome() + " ****\n");
             PlaylistController.listarMusicas(playlist);
-            System.out.printf("\nTotal: %d músicas\nDuração total: %.2f min\n", playlist.getMusicas().size(), playlist.getDuracao()/60);
+            System.out.printf("\nTotal: %d músicas\nDuração total: %.2f min\n", playlist.getMusicas().size(), playlist.getDuracao()/60.0);
         }else{
             System.out.println("Playlist não encontrada!");
         }
-        AguardarUtil.esperarEnter();
+        ConsoleUtil.esperarEnter();
     }
 
-    private static String menuReproducao(Musica musica, boolean isIndexZero, boolean isLastIndex) {
+    private static String menuReproducao(Playlist playlist, Musica musica, boolean isIndexZero, boolean isLastIndex) {
         String opcao;
 
         Thread thread = new Thread(() -> {
@@ -185,7 +219,9 @@ public class PlaylistView {
         thread.start();
 
         do {
-
+            ConsoleUtil.limparConsole();
+            System.out.println("Reproduzindo playlist: " + playlist.getNome());
+            System.out.println("► Tocando: " + musica.getNome() + " de " + musica.getArtista());
             if (!isIndexZero) System.out.print("[b] Back | ");
 
             if (!musica.isPausada()) System.out.print("[p] Pausar | ");

@@ -1,9 +1,7 @@
 package br.edu.up.pangaSongs.models;
 
 import br.edu.up.pangaSongs.controller.MusicPlayerController;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-
+import org.apache.logging.log4j.*;
 import javax.sound.sampled.*;
 import java.io.*;
 
@@ -56,8 +54,6 @@ public class Musica extends Media {
         MusicPlayerController.parar();
     }
 
-
-
     private Double calculaDuracao() {
         try {
             File arquivo = new File(getCaminhoArquivo());
@@ -80,14 +76,17 @@ public class Musica extends Media {
 
     public void setCaminhoArquivo(String caminhoArquivo) {
         this.caminhoArquivo = caminhoArquivo;
+        System.out.println("\nCaminho editado com sucesso!");
     }
 
     public void setArtista(String artista) {
         this.artista = artista;
+        System.out.println("\nArtista editado com sucesso!");
     }
 
     public void setGenero(String genero) {
         this.genero = genero;
+        System.out.println("\nGênero editado com sucesso!");
     }
 
     public String getArtista() {

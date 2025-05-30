@@ -21,6 +21,7 @@ public abstract class Media implements Reproduzivel {
 
     public void setNome(String nome) {
         this.nome = nome;
+        System.out.println("\nNome editado com sucesso!");
     }
 
     public void setDuracao(double duracao) {

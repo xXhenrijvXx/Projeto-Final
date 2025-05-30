@@ -1,8 +1,8 @@
 package br.edu.up.pangaSongs.views;
 
+import br.edu.up.pangaSongs.util.ConsoleUtil;
 import br.edu.up.pangaSongs.util.ScannerUtil;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.*;
 
 public class PrincipalView {
     private static final Logger logger = LogManager.getLogger(PrincipalView.class);
@@ -15,6 +15,7 @@ public class PrincipalView {
         logger.info("Menu Principal iniciado.");
 
         do {
+            ConsoleUtil.limparConsole();
             System.out.println("\n***** Menu Principal *****\n\n1. Gerenciar Músicas\n2. Gerenciar Playlists\n0. Sair");
             System.out.print("\nEscolha uma Opção: ");
 

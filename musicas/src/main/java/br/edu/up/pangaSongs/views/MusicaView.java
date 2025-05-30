@@ -3,10 +3,9 @@ package br.edu.up.pangaSongs.views;
 import br.edu.up.pangaSongs.controller.MusicaController;
 import br.edu.up.pangaSongs.controller.PlaylistMusicaController;
 import br.edu.up.pangaSongs.models.Musica;
-import br.edu.up.pangaSongs.util.AguardarUtil;
+import br.edu.up.pangaSongs.util.ConsoleUtil;
 import br.edu.up.pangaSongs.util.ScannerUtil;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.*;
 import java.util.UUID;
 
 public class MusicaView {
@@ -18,6 +17,7 @@ public class MusicaView {
         String opcao;
         logger.info("Menu de músicas iniciado.");
         do{
+            ConsoleUtil.limparConsole();
             System.out.println("\n***** Gerenciar Músicas *****\n\n1. Adicionar música\n2. Remover música\n3. Editar música\n4. Listar músicas\n5. Tocar música\n0. Voltar");
             System.out.print("\nEscolha uma Opção: ");
 
@@ -31,9 +31,10 @@ public class MusicaView {
                 case "3" -> editarMusica();
                 case "4" -> {
                     logger.info("Listando músicas");
-                    System.out.println("\n***** Músicas *****\n");
+                    ConsoleUtil.limparConsole();
+                    System.out.println("***** Músicas *****\n");
                     MusicaController.listarMusicas();
-                    AguardarUtil.esperarEnter();
+                    ConsoleUtil.esperarEnter();
                 }
                 case "5" -> tocarMusica();
                 case "0" -> {}
@@ -44,6 +45,7 @@ public class MusicaView {
     }
 
     private static void adicionarMusica() {
+        ConsoleUtil.limparConsole();
         System.out.println("***** Adicionar música *****");
         System.out.print("\nNome da nova música: ");
         String nome = ScannerUtil.getScanner().nextLine();
@@ -61,37 +63,39 @@ public class MusicaView {
                 musica = new Musica(UUID.randomUUID().toString(), nome, caminho, artista, genero);
                 if(musica.getDuracao() != 0.0) {
                     MusicaController.adicionarMusica(musica);
-                    System.out.println("Música adicionada!");
+                    System.out.println("\nMúsica adicionada!");
                     logger.info("Música criada");
                 }
             }else{
-                System.out.println("Tipo de arquivo não suportado, música não cadastrada.");
+                System.out.println("\nTipo de arquivo não suportado, música não cadastrada.");
                 logger.warn("Tipo de arquivo não suportado, música não cadastrada.");
             }
         }else{
-            System.out.println("Música já cadastrada");
+            System.out.println("\nMúsica já cadastrada: " + musica.getNome());
+            logger.warn("Música já cadastrada: {}", musica.getNome());
         }
-        AguardarUtil.esperarEnter();
+        ConsoleUtil.esperarEnter();
     }
 
     private static void removerMusica() {
-        System.out.println("Nome da música a remover: ");
+        ConsoleUtil.limparConsole();
+        System.out.println("***** Remover música *****");
+        System.out.print("\nNome da música a remover: ");
         String nome = ScannerUtil.getScanner().nextLine().trim().toLowerCase();
 
         Musica musica = MusicaController.buscarMusicaNome(nome);
         if(musica != null){
             PlaylistMusicaController.removerMusicaDasPlaylists(musica);
-            MusicaController.removerMusica(nome);
-            System.out.println("Música removida!");
-            logger.info("Música removida.");
+            MusicaController.removerMusica(nome);//alterar lógica de remoção por nome, remover diretamento por musica
         }else{
             System.out.println("Música não encontrada!");
         }
-        AguardarUtil.esperarEnter();
+        ConsoleUtil.esperarEnter();
     }
 
     private static void editarMusica(){
-
+        ConsoleUtil.limparConsole();
+        System.out.println("***** Editar música *****");
         System.out.print("\nNome da música a editar: ");
         String nome = ScannerUtil.getScanner().nextLine().trim();
 
@@ -100,7 +104,8 @@ public class MusicaView {
             logger.info("Editando a música: {}", musica.getNome());
             String opcao;
             do {
-                System.out.println("\n**** Editar Música - " + musica.getNome() + " ****\n\n1. Editar nome\n2. Editar artista\n3. Editar gênero\n4. Editar caminho\n0. Voltar");
+                ConsoleUtil.limparConsole();
+                System.out.println("**** Editar música - " + musica.getNome() + " ****\n\n1. Editar nome\n2. Editar artista\n3. Editar gênero\n4. Editar caminho\n0. Voltar");
                 System.out.print("\nEscolha uma Opção: ");
 
                 opcao = ScannerUtil.getScanner().nextLine();
@@ -110,25 +115,25 @@ public class MusicaView {
                 switch (opcao){
                     case "1" -> {
                         MusicaController.editarNome(musica);
-                        AguardarUtil.esperarEnter();
+                        ConsoleUtil.esperarEnter();
                     }
                     case "2" -> {
                         MusicaController.editarArtista(musica);
-                        AguardarUtil.esperarEnter();
+                        ConsoleUtil.esperarEnter();
                     }
                     case "3" -> {
                         MusicaController.editarGenero(musica);
-                        AguardarUtil.esperarEnter();
+                        ConsoleUtil.esperarEnter();
                     }
                     case "4" -> {
                         MusicaController.editarCaminho(musica);
-                        AguardarUtil.esperarEnter();
+                        ConsoleUtil.esperarEnter();
                     }
                     case "0" -> {}
                     default -> {
                         logger.warn("Opção inválida!");
                         System.out.println("Opção inválida!");
-                        AguardarUtil.esperarEnter();
+                        ConsoleUtil.esperarEnter();
                     }
                 }
 
@@ -151,9 +156,11 @@ public class MusicaView {
         });
         thread.start();
 
-        System.out.println("\n► Tocando: " + musica.getNome() + " de " + musica.getArtista());
+        logger.info("Reproduzindo música: {}", musica.getNome());
 
         do{
+            ConsoleUtil.limparConsole();
+            System.out.println("\n► Tocando: " + musica.getNome() + " de " + musica.getArtista());
             if (!musica.isPausada()) System.out.print("[p] Pausar | ");
             else System.out.print("[c] Continuar | ");
             System.out.print("[s] Stop\n");
@@ -173,7 +180,10 @@ public class MusicaView {
                         musica.continuar();
                     }
                 }
-                case "s" -> musica.parar();
+                case "s" -> {
+                    logger.info("Música encerrada.");
+                    musica.parar();
+                }
                 default -> {
                     logger.info("Opção inválida!");
                     System.out.println("Opção inválida!");
@@ -184,7 +194,6 @@ public class MusicaView {
         try{
             thread.join();
             System.out.println("Música finalizada");
-            logger.info("Música encerrada.");
         } catch (InterruptedException e){
             logger.error("Erro ao finalizar thread de reprodução: ", e);
             Thread.currentThread().interrupt();
@@ -192,7 +201,8 @@ public class MusicaView {
     }
 
     private static void tocarMusica(){
-        System.out.print("\n***** Reproduzir música *****\n\nNome da musica a tocar: ");
+        ConsoleUtil.limparConsole();
+        System.out.print("***** Reproduzir música *****\n\nNome da musica a reproduzir: ");
         String nome = ScannerUtil.getScanner().nextLine().trim().toLowerCase();
 
         Musica musica = MusicaController.buscarMusicaNome(nome);
@@ -201,7 +211,7 @@ public class MusicaView {
             menuReproducao(musica);
         }else{
             System.out.println("Música não encontrada!");
-            AguardarUtil.esperarEnter();
+            ConsoleUtil.esperarEnter();
         }
     }
 }

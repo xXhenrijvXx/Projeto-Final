@@ -15,3 +15,140 @@
 2025-05-29 15:15:23.402 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 1
 2025-05-29 15:15:53.756 [main] WARN  br.edu.up.pangaSongs.controller.MusicaController - Música não encontrada!
 2025-05-29 15:16:52.877 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Música criada
+2025-05-29 19:29:32.385 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-05-29 19:29:32.448 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-05-29 19:29:32.448 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-05-29 19:40:54.381 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-05-29 19:40:54.397 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-05-29 20:00:54.231 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-05-29 20:00:54.287 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-05-29 20:00:54.289 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-05-29 20:00:59.409 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-05-29 20:00:59.409 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-05-29 20:01:06.581 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 0
+2025-05-29 20:01:06.581 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas encerrado.
+2025-05-29 20:27:25.792 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-05-29 20:27:27.369 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-05-29 20:27:28.063 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-05-29 20:27:52.082 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-05-29 20:27:52.082 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-05-29 20:28:14.705 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-05-29 20:28:14.751 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-05-29 20:28:14.756 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-05-29 20:28:19.449 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-05-29 20:28:19.449 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-05-29 20:29:16.292 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 1
+2025-05-29 20:29:24.653 [main] WARN  br.edu.up.pangaSongs.controller.MusicaController - Música não encontrada!
+2025-05-29 20:29:54.523 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-05-29 20:29:54.570 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-05-29 20:29:54.570 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-05-29 20:30:08.452 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-05-29 20:30:08.458 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-05-29 20:30:11.036 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 1
+2025-05-29 20:30:16.455 [main] WARN  br.edu.up.pangaSongs.controller.MusicaController - Música não encontrada!
+2025-05-29 22:40:50.641 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-05-29 22:40:50.664 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-05-29 22:40:50.665 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-05-29 22:40:54.656 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-05-29 22:40:54.657 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-05-29 22:49:30.862 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 2
+2025-05-29 22:49:37.023 [main] WARN  br.edu.up.pangaSongs.controller.MusicaController - Música não encontrada!
+2025-05-29 22:51:21.866 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 3
+2025-05-29 23:07:08.330 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-05-29 23:07:08.349 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-05-29 23:07:08.350 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-05-29 23:07:14.270 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-05-29 23:07:14.272 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-05-29 23:07:20.500 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 4
+2025-05-29 23:07:20.501 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Listando músicas
+2025-05-29 23:07:29.844 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 3
+2025-05-29 23:07:36.770 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Editando a música: stairway to heaven
+2025-05-29 23:07:41.602 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 1
+2025-05-29 23:07:41.602 [main] INFO  br.edu.up.pangaSongs.controller.MusicaController - Alterando nome da música: stairway to heaven
+2025-05-29 23:09:08.994 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-05-29 23:09:09.010 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-05-29 23:09:09.012 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-05-29 23:09:11.891 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-05-29 23:09:11.892 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-05-29 23:09:17.496 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 4
+2025-05-29 23:09:17.496 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Listando músicas
+2025-05-29 23:09:22.386 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 3
+2025-05-29 23:09:29.418 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Editando a música: stairway to heaven
+2025-05-29 23:09:32.599 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 1
+2025-05-29 23:09:32.600 [main] INFO  br.edu.up.pangaSongs.controller.MusicaController - Alterando nome da música: stairway to heaven
+2025-05-29 23:13:04.903 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-05-29 23:13:04.916 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-05-29 23:13:04.918 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-05-29 23:13:08.310 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-05-29 23:13:08.311 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-05-29 23:13:16.558 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 4
+2025-05-29 23:13:16.558 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Listando músicas
+2025-05-29 23:13:26.166 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 3
+2025-05-29 23:13:38.459 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Editando a música: stairway to heaven
+2025-05-29 23:14:55.202 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 1
+2025-05-29 23:14:55.202 [main] INFO  br.edu.up.pangaSongs.controller.MusicaController - Alterando nome da música: stairway to heaven
+2025-05-29 23:16:40.040 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-05-29 23:16:40.055 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-05-29 23:16:40.057 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-05-29 23:16:43.753 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-05-29 23:16:43.755 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-05-29 23:16:47.348 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 4
+2025-05-29 23:16:47.349 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Listando músicas
+2025-05-29 23:16:52.170 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 3
+2025-05-29 23:17:00.105 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Editando a música: stairway to heaven
+2025-05-29 23:17:03.821 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 1
+2025-05-29 23:17:03.821 [main] INFO  br.edu.up.pangaSongs.controller.MusicaController - Alterando nome da música: stairway to heaven
+2025-05-29 23:17:32.726 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 2
+2025-05-29 23:17:32.726 [main] INFO  br.edu.up.pangaSongs.controller.MusicaController - Alterando artista da música: Stairway to heaven
+2025-05-29 23:17:49.473 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 3
+2025-05-29 23:17:49.474 [main] INFO  br.edu.up.pangaSongs.controller.MusicaController - Alterando gênero da música: Stairway to heaven
+2025-05-29 23:18:03.536 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 4
+2025-05-29 23:18:03.536 [main] INFO  br.edu.up.pangaSongs.controller.MusicaController - Alterando caminho da música: Stairway to heaven
+2025-05-29 23:18:19.369 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 0
+2025-05-29 23:18:31.521 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 4
+2025-05-29 23:18:31.521 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Listando músicas
+2025-05-29 23:18:40.499 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 5
+2025-05-29 23:18:57.961 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Música pausada.
+2025-05-29 23:19:05.746 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Continuando música.
+2025-05-29 23:22:08.275 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-05-29 23:22:08.288 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-05-29 23:22:08.290 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-05-29 23:22:21.044 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-05-29 23:22:21.045 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-05-29 23:22:22.759 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 5
+2025-05-29 23:22:36.696 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Música pausada.
+2025-05-29 23:22:40.043 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Continuando música.
+2025-05-29 23:22:47.185 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Música encerrada.
+2025-05-29 23:26:09.612 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 2
+2025-05-29 23:26:33.681 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Música removida.
+2025-05-29 23:31:39.660 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 4
+2025-05-29 23:31:39.661 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Listando músicas
+2025-05-29 23:31:43.814 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 0
+2025-05-29 23:31:43.814 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas encerrado.
+2025-05-29 23:31:46.088 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-05-29 23:31:46.103 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-05-29 23:31:54.142 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-05-29 23:31:57.934 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Listando músicas da playlist: rock
+2025-05-29 23:32:04.701 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-05-29 23:32:04.701 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists encerrado.
+2025-05-29 23:32:07.626 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-05-29 23:32:07.626 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-05-29 23:32:19.495 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 0
+2025-05-29 23:32:19.496 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas encerrado.
+2025-05-29 23:32:22.530 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 0
+2025-05-29 23:32:22.531 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu principal encerrado.
+2025-05-29 23:32:22.560 [main] INFO  br.edu.up.pangaSongs.Main - Encerrando aplicação...
+2025-05-29 23:34:07.594 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-05-29 23:34:07.611 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-05-29 23:34:07.612 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-05-29 23:34:14.666 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-05-29 23:34:14.667 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-05-29 23:34:36.256 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 1
+2025-05-29 23:34:42.868 [main] WARN  br.edu.up.pangaSongs.controller.MusicaController - Música não encontrada!
+2025-05-29 23:35:08.448 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Música criada
+2025-05-29 23:35:56.543 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 0
+2025-05-29 23:35:56.543 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas encerrado.
+2025-05-29 23:41:01.905 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-05-29 23:41:01.907 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-05-29 23:41:55.315 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 4
+2025-05-29 23:41:55.316 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Listando playlists.

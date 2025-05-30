@@ -38,15 +38,9 @@ public class Main {
         List<PlaylistMusica> idsCarregados = ArquivoPlaylistMusica.carregar();
 
         if(musicasCarregadas != null && playlistsCarregadas != null && idsCarregados != null) {
-            for (Musica m : musicasCarregadas) {
-                MusicaController.adicionarMusica(m);
-            }
+            MusicaController.setMusicas(musicasCarregadas);
 
-
-            for (Playlist p : playlistsCarregadas) {
-                PlaylistController.adicionarPlaylist(p);
-            }
-
+            PlaylistController.setPlaylists(playlistsCarregadas);
 
             for (PlaylistMusica id : idsCarregados) {
                 Playlist p = PlaylistController.buscarPlaylistId(id.getIdPlaylist());

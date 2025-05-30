@@ -2,14 +2,14 @@ package br.edu.up.pangaSongs.controller;
 
 import br.edu.up.pangaSongs.models.Musica;
 import br.edu.up.pangaSongs.models.Playlist;
+import br.edu.up.pangaSongs.util.ConsoleUtil;
 import br.edu.up.pangaSongs.util.ScannerUtil;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class PlaylistController {
-    private static final List<Playlist> playlists = new ArrayList<>();
+    private static List<Playlist> playlists = new ArrayList<>();
     private static final Logger logger = LogManager.getLogger(PlaylistController.class);
 
     private PlaylistController(){}
@@ -30,7 +30,8 @@ public class PlaylistController {
 
     public static void editarNome(Playlist p){
         logger.info("Alterando nome da playlist: {}", p.getNome());
-        System.out.println("Digite o novo nome: ");
+        ConsoleUtil.limparConsole();
+        System.out.print("**** Editar nome - " + p.getNome() + " ****\nDigite o novo nome: ");
         p.setNome(ScannerUtil.getScanner().nextLine());
     }
 
@@ -81,5 +82,9 @@ public class PlaylistController {
         }else{
             System.out.println("Música não encontrada");
         }
+    }
+
+    public static void setPlaylists(List<Playlist> playlists) {
+        PlaylistController.playlists = playlists;
     }
 }

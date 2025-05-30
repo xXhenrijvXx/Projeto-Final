@@ -1,0 +1,38 @@
+2025-05-30 00:25:49.724 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-05-30 00:25:49.739 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-05-30 00:25:49.740 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-05-30 00:25:55.607 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-05-30 00:25:55.608 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-05-30 00:25:57.671 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 1
+2025-05-30 00:26:00.014 [main] WARN  br.edu.up.pangaSongs.views.MusicaView - Música já cadastrada: creep
+2025-05-30 00:26:09.469 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 1
+2025-05-30 00:26:15.339 [main] WARN  br.edu.up.pangaSongs.controller.MusicaController - Música não encontrada!
+2025-05-30 00:26:37.737 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Música criada
+2025-05-30 00:26:47.263 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 0
+2025-05-30 00:26:47.264 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas encerrado.
+2025-05-30 00:26:49.160 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-05-30 00:26:49.162 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-05-30 00:26:59.247 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 4
+2025-05-30 00:26:59.247 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Listando playlists.
+2025-05-30 00:27:10.218 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 5
+2025-05-30 00:27:13.821 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo playlist: rock
+2025-05-30 00:27:13.823 [Thread-0] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo música: hotel california
+2025-05-30 00:27:26.718 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música pausada.
+2025-05-30 00:27:28.924 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Continuando música.
+2025-05-30 00:27:31.251 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Próxima música
+2025-05-30 00:27:31.252 [Thread-1] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo música: creep
+2025-05-30 00:27:37.135 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Encerrando reprodução da playlist.
+2025-05-30 00:27:43.715 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-05-30 00:28:05.894 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Listando músicas da playlist: rock
+2025-05-30 00:29:00.178 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 3
+2025-05-30 00:29:04.147 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Editando a playlist: rock
+2025-05-30 00:29:08.609 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 1
+2025-05-30 00:29:08.609 [main] INFO  br.edu.up.pangaSongs.controller.PlaylistController - Alterando nome da playlist: rock
+2025-05-30 00:31:06.281 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-05-30 00:31:32.801 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'stairway to heaven' adicionada na playlist 'Rock'
+2025-05-30 00:35:47.534 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-05-30 00:36:12.926 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-05-30 00:36:12.926 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists encerrado.
+2025-05-30 00:36:15.105 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 0
+2025-05-30 00:36:15.106 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu principal encerrado.
+2025-05-30 00:36:15.120 [main] INFO  br.edu.up.pangaSongs.Main - Encerrando aplicação...

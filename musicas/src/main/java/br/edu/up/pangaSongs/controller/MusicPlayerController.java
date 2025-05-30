@@ -1,7 +1,6 @@
 package br.edu.up.pangaSongs.controller;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import javax.sound.sampled.*;
 import java.io.File;
 import java.io.IOException;
@@ -71,7 +70,6 @@ public class MusicPlayerController {
             clip.stop();
             clip.close();
             finalizada = true;
-            System.out.println("Música parada.");
         }
     }
 
