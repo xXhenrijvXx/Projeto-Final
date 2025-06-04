@@ -1,5 +1,10 @@
 package br.edu.up.pangaSongs.archives;
 
+import br.edu.up.pangaSongs.controller.MusicaController;
+import br.edu.up.pangaSongs.controller.PlaylistController;
+import br.edu.up.pangaSongs.controller.PlaylistMusicaController;
+import br.edu.up.pangaSongs.models.Musica;
+import br.edu.up.pangaSongs.models.Playlist;
 import br.edu.up.pangaSongs.models.PlaylistMusica;
 import org.apache.logging.log4j.*;
 import java.io.*;
@@ -26,7 +31,7 @@ public class ArquivoPlaylistMusica {
         }
     }
 
-    public static List<PlaylistMusica> carregar() {
+    public static void carregar() {
         File arquivo = new File(caminhoArquivo);
         List<PlaylistMusica> ids = new ArrayList<>();
 
@@ -37,9 +42,8 @@ public class ArquivoPlaylistMusica {
             }catch (IOException e){
                 System.out.println("Erro ao salvar o arquivo de ids.");
                 logger.error("Erro ao salvar o arquivo de ids: ", e);
-                return null;
             }
-            return ids;
+            return;
         }
 
         try {
@@ -55,11 +59,22 @@ public class ArquivoPlaylistMusica {
             }
 
             br.close();
+
+            for (PlaylistMusica id : ids) {
+                Playlist p = PlaylistController.buscarPlaylistId(id.getIdPlaylist());
+                Musica m = MusicaController.buscarMusicaId(id.getIdMusica());
+
+                if (p != null && m != null) {
+                    PlaylistMusicaController.adicionarMusicaNaPlaylist(m.getId(), p.getId());
+                    PlaylistController.adicionarMusicaNaPlaylist(p, m);
+                } else {
+                    System.out.println("Erro, Id cadastrado mas música ou playlist não.");
+                    logger.error("Erro, Id cadastrado mas música ou playlist não.");
+                }
+            }
         }catch (IOException e){
             System.out.println("Erro ao ler o arquivo de ids");
             logger.error("Erro ao ler o arquivo de ids: ", e);
-            return null;
         }
-        return ids;
     }
 }

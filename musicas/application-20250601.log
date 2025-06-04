@@ -1,0 +1,22 @@
+2025-06-01 23:21:09.641 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-01 23:21:09.677 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-01 23:21:09.680 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-01 23:21:12.375 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-06-01 23:21:12.380 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-06-01 23:21:14.689 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 4
+2025-06-01 23:21:14.690 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Listando músicas
+2025-06-01 23:21:19.467 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 0
+2025-06-01 23:21:19.467 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas encerrado.
+2025-06-01 23:21:21.969 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-01 23:21:21.974 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-01 23:21:24.651 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 4
+2025-06-01 23:21:24.652 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Listando playlists.
+2025-06-01 23:21:29.500 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-01 23:21:33.453 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Listando músicas da playlist: Rock
+2025-06-01 23:21:42.551 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 
+2025-06-01 23:21:42.551 [main] WARN  br.edu.up.pangaSongs.views.PlaylistView - Opção inválida!
+2025-06-01 23:21:44.440 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-01 23:21:44.441 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists encerrado.
+2025-06-01 23:21:45.635 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 0
+2025-06-01 23:21:45.636 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu principal encerrado.
+2025-06-01 23:21:45.707 [main] INFO  br.edu.up.pangaSongs.Main - Encerrando aplicação...

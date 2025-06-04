@@ -50,29 +50,33 @@ public class MusicaView {
         System.out.print("\nNome da nova música: ");
         String nome = ScannerUtil.getScanner().nextLine();
 
-        Musica musica = MusicaController.buscarMusicaNome(nome);
-        if(musica == null){
-            System.out.print("Caminho do arquivo: ");
-            String caminho = ScannerUtil.getScanner().nextLine();
-            if(caminho.endsWith(".wav")){
-                System.out.print("Gênero da música: ");
-                String genero = ScannerUtil.getScanner().nextLine();
-                System.out.print("Artista: ");
-                String artista = ScannerUtil.getScanner().nextLine();
+        if(!nome.trim().isEmpty()) {
+            Musica musica = MusicaController.buscarMusicaNome(nome);
+            if (musica == null) {
+                System.out.print("Caminho do arquivo: ");
+                String caminho = ScannerUtil.getScanner().nextLine();
+                if (caminho.endsWith(".wav")) {
+                    System.out.print("Gênero da música: ");
+                    String genero = ScannerUtil.getScanner().nextLine();
+                    System.out.print("Artista: ");
+                    String artista = ScannerUtil.getScanner().nextLine();
 
-                musica = new Musica(UUID.randomUUID().toString(), nome, caminho, artista, genero);
-                if(musica.getDuracao() != 0.0) {
-                    MusicaController.adicionarMusica(musica);
-                    System.out.println("\nMúsica adicionada!");
-                    logger.info("Música criada");
+                    musica = new Musica(UUID.randomUUID().toString(), nome, caminho, artista, genero);
+                    if (musica.getDuracao() != 0.0) {
+                        MusicaController.adicionarMusica(musica);
+                        System.out.println("\nMúsica adicionada!");
+                        logger.info("Música criada");
+                    }
+                } else {
+                    System.out.println("\nTipo de arquivo não suportado, música não cadastrada.");
+                    logger.warn("Tipo de arquivo não suportado, música não cadastrada.");
                 }
-            }else{
-                System.out.println("\nTipo de arquivo não suportado, música não cadastrada.");
-                logger.warn("Tipo de arquivo não suportado, música não cadastrada.");
+            } else {
+                System.out.println("\nMúsica já cadastrada: " + musica.getNome());
+                logger.warn("Música já cadastrada: {}", musica.getNome());
             }
         }else{
-            System.out.println("\nMúsica já cadastrada: " + musica.getNome());
-            logger.warn("Música já cadastrada: {}", musica.getNome());
+            System.out.println("Digite um nome válido!");
         }
         ConsoleUtil.esperarEnter();
     }
@@ -81,7 +85,7 @@ public class MusicaView {
         ConsoleUtil.limparConsole();
         System.out.println("***** Remover música *****");
         System.out.print("\nNome da música a remover: ");
-        String nome = ScannerUtil.getScanner().nextLine().trim().toLowerCase();
+        String nome = ScannerUtil.getScanner().nextLine().trim();
 
         Musica musica = MusicaController.buscarMusicaNome(nome);
         if(musica != null){

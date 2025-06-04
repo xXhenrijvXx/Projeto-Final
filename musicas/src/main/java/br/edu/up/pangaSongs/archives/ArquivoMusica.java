@@ -1,5 +1,6 @@
 package br.edu.up.pangaSongs.archives;
 
+import br.edu.up.pangaSongs.controller.MusicaController;
 import br.edu.up.pangaSongs.models.Musica;
 import org.apache.logging.log4j.*;
 import java.io.*;
@@ -30,7 +31,7 @@ public class ArquivoMusica {
         }
     }
 
-    public static List<Musica> carregar() {
+    public static void carregar() {
         File arquivo = new File(caminhoArquivo);
         List<Musica> musicas = new ArrayList<>();
         if (!arquivo.exists()) {
@@ -40,9 +41,8 @@ public class ArquivoMusica {
             }catch(IOException e){
                 System.out.println("Erro ao criar o arquivo de músicas.");
                 logger.error("Erro ao criar o arquivo de músicas: ", e);
-                return null;
             }
-            return musicas;
+            return;
         }
         try{
             BufferedReader br = new BufferedReader(new FileReader(arquivo));
@@ -63,11 +63,10 @@ public class ArquivoMusica {
 
             br.close();
 
+            MusicaController.setMusicas(musicas);
         }catch (IOException e){
             System.out.println("Erro ao ler o arquivo de músicas");
             logger.error("Erro ao ler o arquivo de músicas: ", e);
-            return null;
         }
-        return musicas;
     }
 }

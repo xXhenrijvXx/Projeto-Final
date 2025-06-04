@@ -1,0 +1,42 @@
+2025-06-03 20:03:52.311 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-03 20:03:52.327 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-03 20:03:52.327 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-03 20:08:09.260 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-03 20:08:09.268 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-03 20:08:42.867 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 1
+2025-06-03 20:08:46.281 [main] WARN  br.edu.up.pangaSongs.controller.PlaylistController - Playlist não encontrada!
+2025-06-03 20:08:46.392 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Playlist criada: teste
+2025-06-03 20:08:49.790 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-03 20:08:52.881 [main] INFO  br.edu.up.pangaSongs.controller.PlaylistController - Playlist removida: teste
+2025-06-03 20:08:55.941 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 1
+2025-06-03 20:08:57.370 [main] WARN  br.edu.up.pangaSongs.controller.PlaylistController - Playlist não encontrada!
+2025-06-03 20:08:57.370 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Playlist criada: teste
+2025-06-03 20:09:00.011 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 4
+2025-06-03 20:09:00.011 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Listando playlists.
+2025-06-03 20:09:07.667 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 5
+2025-06-03 20:09:10.049 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo playlist: teste
+2025-06-03 20:09:19.421 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 5
+2025-06-03 20:09:22.132 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo playlist: Rock
+2025-06-03 20:09:22.141 [Thread-0] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo música: hotel california
+2025-06-03 20:09:25.217 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Encerrando reprodução da playlist.
+2025-06-03 20:09:29.343 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-03 20:09:31.973 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Listando músicas da playlist: Rock
+2025-06-03 20:09:40.581 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-03 20:09:49.550 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Listando músicas da playlist: Rock
+2025-06-03 20:09:51.910 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-03 20:09:53.645 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Listando músicas da playlist: teste
+2025-06-03 20:10:01.246 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 3
+2025-06-03 20:10:02.989 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Editando a playlist: teste
+2025-06-03 20:10:06.550 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 1
+2025-06-03 20:10:06.550 [main] INFO  br.edu.up.pangaSongs.controller.PlaylistController - Alterando nome da playlist: teste
+2025-06-03 20:10:13.095 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-03 20:10:22.102 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'stairway to heaven' adicionada na playlist 'Teste'
+2025-06-03 20:12:18.821 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-03 20:12:23.619 [main] WARN  br.edu.up.pangaSongs.controller.MusicaController - Música não encontrada!
+2025-06-03 20:12:26.936 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-03 20:12:31.227 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'stairway to heaven' adicionada na playlist 'Teste'
+2025-06-03 20:12:34.565 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-03 20:12:37.681 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 4
+2025-06-03 20:12:37.681 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Listando playlists.
+2025-06-03 20:12:43.393 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-03 20:12:46.449 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Listando músicas da playlist: Teste

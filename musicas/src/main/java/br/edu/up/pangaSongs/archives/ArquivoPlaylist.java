@@ -1,6 +1,7 @@
 package br.edu.up.pangaSongs.archives;
 
 
+import br.edu.up.pangaSongs.controller.PlaylistController;
 import br.edu.up.pangaSongs.models.Playlist;
 import org.apache.logging.log4j.*;
 import java.io.*;
@@ -27,7 +28,7 @@ public class ArquivoPlaylist {
         }
     }
 
-    public static List<Playlist> carregar() {
+    public static void carregar() {
         File arquivo = new File(caminhoArquivo);
         List<Playlist> playlists = new ArrayList<>();
         if (!arquivo.exists()) {
@@ -37,9 +38,8 @@ public class ArquivoPlaylist {
             }catch (IOException e){
                 System.out.println("Erro ao criar o arquivo de playlist.");
                 logger.error("Erro ao criar o arquivo de playlists: ", e);
-                return null;
             }
-            return playlists;
+            return;
         }
 
         try {
@@ -55,11 +55,11 @@ public class ArquivoPlaylist {
             }
 
             br.close();
+
+            PlaylistController.setPlaylists(playlists);
         }catch (IOException e){
             System.out.println("Erro ao ler o arquivo de playlists");
             logger.error("Erro ao ler o arquivo de playlists: ", e);
-            return null;
         }
-        return playlists;
     }
 }

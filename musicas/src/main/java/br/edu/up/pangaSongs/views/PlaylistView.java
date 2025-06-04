@@ -115,9 +115,16 @@ public class PlaylistView {
                         System.out.println("**** Adicionar música na playlist - " + p.getNome() + " ****");
                         System.out.print("\nNome da música a adicionar: ");
                         Musica m = MusicaController.buscarMusicaNome(ScannerUtil.getScanner().nextLine());
-                        PlaylistController.adicionarMusicaNaPlaylist(p, m);
+
                         if(m != null) {
-                            logger.info("Música '{}' adicionada na playlist '{}'", m.getNome(), p.getNome());
+                            if(!p.isMusicaNaPlaylist(m)) {
+                                PlaylistController.adicionarMusicaNaPlaylist(p, m);
+                                logger.info("Música '{}' adicionada na playlist '{}'", m.getNome(), p.getNome());
+                            }else{
+                                System.out.println("Música já cadastrada na playlist!");
+                            }
+                        }else{
+                            System.out.println("Música não cadastrada");
                         }
                         ConsoleUtil.esperarEnter();
                     }
@@ -127,7 +134,13 @@ public class PlaylistView {
                         System.out.print("\nNome da música a remover: ");
                         Musica m = MusicaController.buscarMusicaNome(ScannerUtil.getScanner().nextLine());
                         if(m != null){
-                            PlaylistController.removerMusicaDaPlaylist(p, m);
+                            if(p.isMusicaNaPlaylist(m)){
+                                PlaylistController.removerMusicaDaPlaylist(p, m);
+                            }else{
+                                System.out.println("Música não cadastrada na playlist.");
+                            }
+                        }else{
+                            System.out.println("Música não cadastrada!");
                         }
                         ConsoleUtil.esperarEnter();
                     }

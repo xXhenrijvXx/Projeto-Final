@@ -1,12 +1,10 @@
 package br.edu.up.pangaSongs;
 
 import br.edu.up.pangaSongs.controller.*;
-import br.edu.up.pangaSongs.models.*;
 import br.edu.up.pangaSongs.archives.*;
 import br.edu.up.pangaSongs.util.ScannerUtil;
 import br.edu.up.pangaSongs.views.*;
 import org.apache.logging.log4j.*;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args){
@@ -33,27 +31,8 @@ public class Main {
     }
 
     private static void carregarArquivos(Logger logger) {
-        List<Musica> musicasCarregadas = ArquivoMusica.carregar();
-        List<Playlist> playlistsCarregadas = ArquivoPlaylist.carregar();
-        List<PlaylistMusica> idsCarregados = ArquivoPlaylistMusica.carregar();
-
-        if(musicasCarregadas != null && playlistsCarregadas != null && idsCarregados != null) {
-            MusicaController.setMusicas(musicasCarregadas);
-
-            PlaylistController.setPlaylists(playlistsCarregadas);
-
-            for (PlaylistMusica id : idsCarregados) {
-                Playlist p = PlaylistController.buscarPlaylistId(id.getIdPlaylist());
-                Musica m = MusicaController.buscarMusicaId(id.getIdMusica());
-
-                if (p != null && m != null) {
-                    PlaylistMusicaController.adicionarMusicaNaPlaylist(m.getId(), p.getId());
-                    PlaylistController.adicionarMusicaNaPlaylist(p, m);
-                } else {
-                    System.out.println("Erro, Id cadastrado mas música ou playlist não.");
-                    logger.error("Erro, Id cadastrado mas música ou playlist não.");
-                }
-            }
-        }
+        ArquivoMusica.carregar();
+        ArquivoPlaylist.carregar();
+        ArquivoPlaylistMusica.carregar();
     }
 }

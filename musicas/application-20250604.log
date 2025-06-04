@@ -1,0 +1,39 @@
+2025-06-04 15:41:24.716 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-04 15:41:24.757 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-04 15:41:24.760 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-04 15:41:27.187 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-04 15:41:27.191 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-04 15:41:29.315 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 4
+2025-06-04 15:41:29.315 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Listando playlists.
+2025-06-04 15:41:31.868 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 1
+2025-06-04 15:41:33.575 [main] WARN  br.edu.up.pangaSongs.controller.PlaylistController - Playlist não encontrada!
+2025-06-04 15:41:33.720 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Playlist criada: teste
+2025-06-04 15:41:37.227 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 3
+2025-06-04 15:41:40.529 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Editando a playlist: teste
+2025-06-04 15:41:59.710 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-04 15:42:36.926 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'stairway to heaven' adicionada na playlist 'teste'
+2025-06-04 15:42:40.240 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-04 15:42:53.825 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-04 15:42:56.941 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 5
+2025-06-04 15:42:58.647 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo playlist: teste
+2025-06-04 15:42:58.663 [Thread-0] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo música: stairway to heaven
+2025-06-04 15:43:00.507 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Encerrando reprodução da playlist.
+2025-06-04 15:43:03.662 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-04 15:43:03.662 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists encerrado.
+2025-06-04 15:43:05.538 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 0
+2025-06-04 15:43:05.540 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu principal encerrado.
+2025-06-04 15:43:05.584 [main] INFO  br.edu.up.pangaSongs.Main - Encerrando aplicação...
+2025-06-04 15:46:34.692 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-04 15:46:34.717 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-04 15:46:34.717 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-04 15:46:39.829 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-04 15:46:39.833 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-04 15:46:47.788 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 5
+2025-06-04 15:46:51.704 [main] WARN  br.edu.up.pangaSongs.controller.PlaylistController - Playlist não encontrada!
+2025-06-04 15:46:57.735 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-04 15:47:01.972 [main] INFO  br.edu.up.pangaSongs.controller.PlaylistController - Playlist removida: teste
+2025-06-04 15:47:05.791 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-04 15:47:05.791 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists encerrado.
+2025-06-04 15:47:07.180 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 0
+2025-06-04 15:47:07.180 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu principal encerrado.
+2025-06-04 15:47:07.222 [main] INFO  br.edu.up.pangaSongs.Main - Encerrando aplicação...
