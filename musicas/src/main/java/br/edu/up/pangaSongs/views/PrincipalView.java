@@ -30,6 +30,7 @@ public class PrincipalView {
                 default -> {
                     logger.warn("Opção inválida!");
                     System.out.println("Opção inválida!");
+                    ConsoleUtil.esperarEnter();
                 }
             }
         } while (!opcao.equals("0"));

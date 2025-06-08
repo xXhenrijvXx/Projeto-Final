@@ -1,6 +1,8 @@
 package br.edu.up.pangaSongs.models;
 
 import br.edu.up.pangaSongs.controller.MusicPlayerController;
+import br.edu.up.pangaSongs.util.ConsoleUtil;
+import br.edu.up.pangaSongs.util.ScannerUtil;
 import org.apache.logging.log4j.*;
 import javax.sound.sampled.*;
 import java.io.*;
@@ -30,8 +32,60 @@ public class Musica extends Media {
     @Override
     public void reproduzir(){
 
-        MusicPlayerController.tocar(getCaminhoArquivo());
-        //verificar se é preciso implementar lógica de encerramento caso erro
+        String opcao;
+
+        Thread thread = new Thread(() -> {
+            try {
+                MusicPlayerController.tocar(getCaminhoArquivo());
+            } catch (Exception e) {
+                System.out.println("Erro: " + e.getMessage());
+                parar();
+            }
+        });
+        thread.start();
+
+        logger.info("Reproduzindo música: {}", getNome());
+
+        do{
+            ConsoleUtil.limparConsole();
+            System.out.println("\n► Tocando: " + getNome() + " de " + getArtista());
+            if (!isPausada()) System.out.print("[p] Pausar | ");
+            else System.out.print("[c] Continuar | ");
+            System.out.print("[s] Stop\n");
+            System.out.print("Digite: ");
+            opcao = ScannerUtil.getScanner().nextLine().trim().toLowerCase();
+
+            switch (opcao){
+                case "p" -> {
+                    if (!isPausada()){
+                        logger.info("Música pausada.");
+                        pausar();
+                    }
+                }
+                case "c" -> {
+                    if (isPausada()){
+                        logger.info("Continuando música.");
+                        continuar();
+                    }
+                }
+                case "s" -> {
+                    logger.info("Música encerrada.");
+                    parar();
+                }
+                default -> {
+                    logger.info("Opção inválida!");
+                    System.out.println("Opção inválida!");
+                }
+            }
+        }while(!opcao.equalsIgnoreCase("s") && !isFinalizada());
+
+        try{
+            thread.join();
+            System.out.println("Música finalizada");
+        } catch (InterruptedException e){
+            logger.error("Erro ao finalizar thread de reprodução: ", e);
+            Thread.currentThread().interrupt();
+        }
     }
 
     public boolean isFinalizada(){
@@ -50,11 +104,15 @@ public class Musica extends Media {
         MusicPlayerController.continuar();
     }
 
+    public void tocar(){
+        MusicPlayerController.tocar(getCaminhoArquivo());
+    }
+
     public void parar(){
         MusicPlayerController.parar();
     }
 
-    private Double calculaDuracao() {
+    private Double calculaDuracao() {//estudar
         try {
             File arquivo = new File(getCaminhoArquivo());
 

@@ -18,28 +18,24 @@ public class MusicaController {
     }
 
     public static void editarNome(Musica musica){
-        logger.info("Alterando nome da música: {}", musica.getNome());
         ConsoleUtil.limparConsole();
         System.out.print("**** Editar nome ****\n\nNome da música atual -> " + musica.getNome() + "\nDigite o novo nome: ");
         musica.setNome(ScannerUtil.getScanner().nextLine());
     }
 
     public static void editarArtista(Musica musica){
-        logger.info("Alterando artista da música: {}", musica.getNome());
         ConsoleUtil.limparConsole();
         System.out.print("**** Editar artista ****\n\nNome do artista atual -> " + musica.getArtista() + "\nDigite o novo artista: ");
         musica.setArtista(ScannerUtil.getScanner().nextLine());
     }
 
     public static void editarGenero(Musica musica){
-        logger.info("Alterando gênero da música: {}", musica.getNome());
         ConsoleUtil.limparConsole();
         System.out.print("**** Editar gênero ****\n\nNome do gênero atual -> " + musica.getGenero() + "\nDigite o novo gênero: ");
         musica.setGenero(ScannerUtil.getScanner().nextLine());
     }
 
     public static void editarCaminho(Musica musica){
-        logger.info("Alterando caminho da música: {}", musica.getNome());
         ConsoleUtil.limparConsole();
         System.out.print("**** Editar caminho ****\n\nCaminho da música atual -> " + musica.getCaminhoArquivo() + "\nDigite o novo caminho: ");
         musica.setCaminhoArquivo(ScannerUtil.getScanner().nextLine());
@@ -49,8 +45,6 @@ public class MusicaController {
         if(musicas.removeIf(m -> m.getNome().equalsIgnoreCase(nome))){
             System.out.println("Música removida!");
             logger.info("Música removida.");
-        } else{
-            System.out.println("Música não encontrada.");
         }
     }
 

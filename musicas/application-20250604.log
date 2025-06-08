@@ -37,3 +37,330 @@
 2025-06-04 15:47:07.180 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 0
 2025-06-04 15:47:07.180 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu principal encerrado.
 2025-06-04 15:47:07.222 [main] INFO  br.edu.up.pangaSongs.Main - Encerrando aplicação...
+2025-06-04 19:37:58.051 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-04 19:37:58.069 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-04 19:37:58.071 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-04 19:38:34.309 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 5
+2025-06-04 19:38:34.309 [main] WARN  br.edu.up.pangaSongs.views.PrincipalView - Opção inválida!
+2025-06-04 19:39:00.682 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 0
+2025-06-04 19:39:00.682 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu principal encerrado.
+2025-06-04 19:39:00.777 [main] INFO  br.edu.up.pangaSongs.Main - Encerrando aplicação...
+2025-06-04 19:39:08.323 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-04 19:39:08.338 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-04 19:39:08.339 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-04 19:39:37.622 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-06-04 19:39:37.625 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-06-04 19:40:23.480 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 6
+2025-06-04 19:41:36.174 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 1
+2025-06-04 19:42:38.840 [main] WARN  br.edu.up.pangaSongs.views.MusicaView - Música já cadastrada: stairway to heaven
+2025-06-04 19:42:49.601 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 1
+2025-06-04 19:54:42.879 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 2
+2025-06-04 19:57:14.191 [main] WARN  br.edu.up.pangaSongs.controller.MusicaController - Música não encontrada!
+2025-06-04 19:57:25.784 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 4
+2025-06-04 19:57:25.785 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Listando músicas
+2025-06-04 19:57:28.653 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 3
+2025-06-04 19:57:32.893 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Editando a música: creep
+2025-06-04 19:57:36.518 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 1
+2025-06-04 19:57:36.518 [main] INFO  br.edu.up.pangaSongs.controller.MusicaController - Alterando nome da música: creep
+2025-06-04 20:00:51.101 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 0
+2025-06-04 20:00:56.516 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 4
+2025-06-04 20:00:56.517 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Listando músicas
+2025-06-04 20:01:15.563 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 3
+2025-06-04 20:01:19.667 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Editando a música: Creep
+2025-06-04 20:01:21.899 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 1
+2025-06-04 20:01:21.900 [main] INFO  br.edu.up.pangaSongs.controller.MusicaController - Alterando nome da música: Creep
+2025-06-04 20:01:39.724 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 1
+2025-06-04 20:01:39.725 [main] INFO  br.edu.up.pangaSongs.controller.MusicaController - Alterando nome da música: andrey viado
+2025-06-04 20:01:47.573 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 1
+2025-06-04 20:01:47.573 [main] INFO  br.edu.up.pangaSongs.controller.MusicaController - Alterando nome da música: andrey viado
+2025-06-04 20:01:53.226 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 0
+2025-06-04 20:02:27.676 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 5
+2025-06-04 20:02:35.528 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Reproduzindo música: creep
+2025-06-04 20:02:45.003 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Música encerrada.
+2025-06-04 20:12:26.878 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 0
+2025-06-04 20:12:26.883 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas encerrado.
+2025-06-04 20:12:30.145 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-04 20:12:30.187 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-04 20:15:44.553 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 3
+2025-06-04 20:15:46.950 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Editando a playlist: Rock
+2025-06-04 20:16:50.425 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-04 20:16:57.368 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'stairway to heaven' adicionada na playlist 'Rock'
+2025-06-04 20:17:01.986 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-04 20:18:47.798 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-04 20:18:55.375 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 4
+2025-06-04 20:18:55.375 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Listando playlists.
+2025-06-04 20:19:06.775 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-04 20:19:10.831 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Listando músicas da playlist: Rock
+2025-06-04 20:21:24.677 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 5
+2025-06-04 20:30:16.859 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo playlist: Rock
+2025-06-04 20:30:16.871 [Thread-1] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo música: hotel california
+2025-06-04 20:30:26.693 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música pausada.
+2025-06-04 20:30:36.341 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Continuando música.
+2025-06-04 20:30:39.939 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música pausada.
+2025-06-04 20:30:57.527 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Próxima música
+2025-06-04 20:30:57.528 [Thread-2] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo música: creep
+2025-06-04 20:31:07.059 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música pausada.
+2025-06-04 20:32:41.245 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Próxima música
+2025-06-04 20:32:41.246 [Thread-3] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo música: stairway to heaven
+2025-06-04 20:32:49.082 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música pausada.
+2025-06-04 20:34:56.559 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-04 20:34:56.578 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-04 20:34:56.582 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-04 20:35:03.353 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-04 20:35:03.354 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-04 20:35:07.234 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-04 20:35:08.578 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Listando músicas da playlist: Rock
+2025-06-04 20:35:18.787 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 3
+2025-06-04 20:35:20.979 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Editando a playlist: Rock
+2025-06-04 20:35:23.033 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-04 20:35:27.811 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'stairway to heaven' adicionada na playlist 'Rock'
+2025-06-04 20:35:31.138 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-04 20:35:34.363 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 5
+2025-06-04 20:35:36.362 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo playlist: Rock
+2025-06-04 20:35:36.364 [Thread-0] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo música: hotel california
+2025-06-04 20:35:39.489 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música pausada.
+2025-06-04 20:35:42.397 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Continuando música.
+2025-06-04 20:35:43.569 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música pausada.
+2025-06-04 20:35:46.549 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Próxima música
+2025-06-04 20:35:46.550 [Thread-1] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo música: creep
+2025-06-04 20:35:48.625 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música pausada.
+2025-06-04 20:35:56.647 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música anterior
+2025-06-04 20:35:56.648 [Thread-2] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo música: hotel california
+2025-06-04 20:35:58.833 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música pausada.
+2025-06-04 20:36:07.493 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Próxima música
+2025-06-04 20:36:07.494 [Thread-3] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo música: creep
+2025-06-04 20:36:09.890 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música pausada.
+2025-06-04 20:36:23.169 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Próxima música
+2025-06-04 20:36:23.170 [Thread-4] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo música: stairway to heaven
+2025-06-04 20:36:25.778 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música pausada.
+2025-06-04 20:36:27.792 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Encerrando reprodução da playlist.
+2025-06-04 20:40:12.857 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-04 20:40:12.858 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists encerrado.
+2025-06-04 21:57:43.294 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-04 21:57:43.319 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-04 21:57:43.321 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-04 21:57:45.871 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-06-04 21:57:45.873 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-06-04 21:57:53.537 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 5
+2025-06-04 21:58:07.208 [main] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:07.614 [Thread-0] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:07.785 [Thread-1] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:07.954 [Thread-2] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:08.149 [Thread-3] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:08.345 [Thread-4] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:08.501 [Thread-5] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:08.736 [Thread-6] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:08.900 [Thread-7] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:09.084 [Thread-8] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:09.240 [Thread-9] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:09.362 [Thread-10] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:09.546 [Thread-11] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:09.664 [main] INFO  br.edu.up.pangaSongs.models.Musica - Música encerrada.
+2025-06-04 21:58:09.756 [Thread-12] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:09.810 [Thread-13] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:09.883 [Thread-14] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:10.027 [Thread-15] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:10.208 [Thread-16] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:10.378 [Thread-17] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:10.558 [Thread-18] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:10.775 [Thread-19] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:10.944 [Thread-20] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:11.134 [Thread-21] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:11.339 [Thread-22] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:11.555 [Thread-23] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:11.792 [Thread-24] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:11.951 [Thread-25] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:12.215 [Thread-26] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:12.421 [Thread-27] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:12.627 [Thread-28] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:12.838 [Thread-29] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:58:13.031 [Thread-30] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:32.020 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-04 21:59:32.524 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-04 21:59:32.530 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-04 21:59:42.106 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-06-04 21:59:42.110 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-06-04 21:59:44.602 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 5
+2025-06-04 21:59:48.762 [main] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:49.031 [Thread-0] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:49.206 [Thread-1] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:49.388 [Thread-2] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:49.523 [Thread-3] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:49.705 [Thread-4] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:49.845 [Thread-5] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:50.030 [Thread-6] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:50.137 [Thread-7] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:50.187 [Thread-8] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:50.238 [Thread-9] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:50.317 [Thread-10] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:50.517 [Thread-11] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:50.664 [Thread-12] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:50.834 [Thread-13] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:50.934 [Thread-14] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:51.120 [Thread-15] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:51.302 [Thread-16] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:51.437 [Thread-17] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:51.622 [Thread-18] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:51.778 [Thread-19] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:51.957 [Thread-20] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:52.146 [Thread-21] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:52.363 [Thread-22] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:52.557 [Thread-23] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:52.760 [Thread-24] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:52.921 [Thread-25] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:53.053 [Thread-26] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:53.203 [Thread-27] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:53.391 [Thread-28] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:53.568 [Thread-29] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:53.749 [Thread-30] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:53.903 [Thread-31] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:54.139 [Thread-32] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:54.274 [Thread-33] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:54.384 [Thread-34] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:54.479 [Thread-35] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:54.622 [Thread-36] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:54.795 [Thread-37] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:54.994 [Thread-38] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:55.151 [Thread-39] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:55.386 [Thread-40] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:55.477 [Thread-41] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:55.640 [Thread-42] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 21:59:55.728 [Thread-43] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 22:00:02.306 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-04 22:00:03.392 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-04 22:00:03.397 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-04 22:01:00.604 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-04 22:01:00.628 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-04 22:01:00.629 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-04 22:01:10.657 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-04 22:01:11.337 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-04 22:01:11.341 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-04 22:01:13.995 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-06-04 22:01:14.005 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-06-04 22:01:27.225 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 5
+2025-06-04 22:01:51.440 [main] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 22:01:58.870 [Thread-0] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 22:02:13.235 [Thread-1] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 22:02:13.400 [Thread-2] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 22:02:33.260 [Thread-3] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 22:03:10.641 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-04 22:03:11.159 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-04 22:03:11.162 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-04 22:03:13.903 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-06-04 22:03:13.924 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-06-04 22:03:16.154 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 5
+2025-06-04 22:05:07.136 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-04 22:05:07.155 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-04 22:05:07.157 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-04 22:05:14.189 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-06-04 22:05:14.191 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-06-04 22:05:17.257 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 5
+2025-06-04 22:05:20.073 [main] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: creep
+2025-06-04 22:05:23.490 [main] INFO  br.edu.up.pangaSongs.models.Musica - Música pausada.
+2025-06-04 22:05:25.885 [main] INFO  br.edu.up.pangaSongs.models.Musica - Continuando música.
+2025-06-04 22:05:26.868 [main] INFO  br.edu.up.pangaSongs.models.Musica - Música encerrada.
+2025-06-04 22:05:29.256 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 0
+2025-06-04 22:05:29.257 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas encerrado.
+2025-06-04 22:05:30.891 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-04 22:05:30.894 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-04 22:05:35.628 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 5
+2025-06-04 22:05:39.165 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo playlist: Rock
+2025-06-04 22:05:39.167 [Thread-1] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: hotel california
+2025-06-04 22:05:39.168 [Thread-1] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: hotel california
+2025-06-04 22:05:39.169 [Thread-1] ERROR br.edu.up.pangaSongs.models.Playlist - Erro ao reproduzir música 'hotel california':
+java.lang.IndexOutOfBoundsException: end
+	at java.base/java.util.regex.Matcher.region(Matcher.java:1514) ~[?:?]
+	at java.base/java.util.Scanner.findPatternInBuffer(Scanner.java:1089) ~[?:?]
+	at java.base/java.util.Scanner.findWithinHorizon(Scanner.java:1791) ~[?:?]
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1649) ~[?:?]
+	at br.edu.up.pangaSongs.models.Musica.reproduzir(Musica.java:56) ~[classes/:?]
+	at br.edu.up.pangaSongs.models.Playlist.lambda$reproduzir$0(Playlist.java:55) ~[classes/:?]
+	at java.base/java.lang.Thread.run(Thread.java:842) [?:?]
+2025-06-04 22:11:11.483 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-04 22:11:11.508 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-04 22:11:11.509 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-04 22:11:15.931 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-04 22:11:15.932 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-04 22:11:19.780 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 5
+2025-06-04 22:11:23.129 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo playlist: Rock
+2025-06-04 22:11:23.131 [Thread-0] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: hotel california
+2025-06-04 22:11:27.347 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Música pausada.
+2025-06-04 22:11:29.568 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Próxima música
+2025-06-04 22:11:29.569 [Thread-1] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: creep
+2025-06-04 22:11:34.815 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Encerrando reprodução da playlist.
+2025-06-04 22:11:38.253 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-04 22:11:41.765 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Listando músicas da playlist: Rock
+2025-06-04 22:11:48.561 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-04 22:11:48.561 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists encerrado.
+2025-06-04 22:11:49.834 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 0
+2025-06-04 22:11:49.834 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu principal encerrado.
+2025-06-04 22:11:49.870 [main] INFO  br.edu.up.pangaSongs.Main - Encerrando aplicação...
+2025-06-04 22:55:54.137 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-04 22:55:54.221 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-04 22:55:54.226 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-04 22:56:15.167 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-06-04 22:56:15.174 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-06-04 22:56:19.598 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 0
+2025-06-04 22:56:19.599 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas encerrado.
+2025-06-04 22:56:24.002 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-04 22:56:24.010 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-04 22:56:30.934 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 5
+2025-06-04 22:56:33.872 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo playlist: Rock
+2025-06-04 22:56:33.881 [Thread-0] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: hotel california
+2025-06-04 22:56:42.225 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Próxima música
+2025-06-04 22:56:42.230 [Thread-1] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: creep
+2025-06-04 22:56:42.516 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Próxima música
+2025-06-04 22:57:50.220 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-04 22:57:50.320 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-04 22:57:50.326 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-04 22:57:53.876 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-04 22:57:53.883 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-04 22:57:57.469 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 5
+2025-06-04 22:58:00.651 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo playlist: Rock
+2025-06-04 22:58:00.664 [Thread-0] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: hotel california
+2025-06-04 22:58:06.000 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Próxima música
+2025-06-04 22:58:06.010 [Thread-1] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: creep
+2025-06-04 23:02:11.149 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Música pausada.
+2025-06-04 23:02:11.150 [Thread-2] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: creep
+2025-06-04 23:02:15.770 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Música pausada.
+2025-06-04 23:02:17.019 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Continuando música.
+2025-06-04 23:02:17.931 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Encerrando reprodução da playlist.
+2025-06-04 23:10:24.360 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-04 23:10:24.394 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-04 23:10:24.395 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-04 23:10:44.226 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-04 23:10:44.229 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-04 23:10:47.543 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 5
+2025-06-04 23:10:49.541 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo playlist: Rock
+2025-06-04 23:10:49.543 [Thread-0] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: hotel california
+2025-06-04 23:10:52.494 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Música pausada.
+2025-06-04 23:10:54.120 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Continuando música.
+2025-06-04 23:10:55.704 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Próxima música
+2025-06-04 23:10:55.705 [Thread-1] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: creep
+2025-06-04 23:10:58.280 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Música anterior
+2025-06-04 23:10:58.280 [Thread-2] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: hotel california
+2025-06-04 23:11:00.155 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Encerrando reprodução da playlist.
+2025-06-04 23:11:03.318 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 5
+2025-06-04 23:11:05.837 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo playlist: Rock
+2025-06-04 23:11:05.838 [Thread-3] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: hotel california
+2025-06-04 23:11:21.121 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Próxima música
+2025-06-04 23:11:21.122 [Thread-4] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: creep
+2025-06-04 23:15:31.784 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Música anterior
+2025-06-04 23:15:31.785 [Thread-5] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: hotel california
+2025-06-04 23:15:31.848 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Próxima música
+2025-06-04 23:15:31.849 [Thread-6] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: creep
+2025-06-04 23:15:39.592 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Encerrando reprodução da playlist.
+2025-06-04 23:17:17.965 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-04 23:17:17.978 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-04 23:17:17.979 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-04 23:17:39.458 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-04 23:17:39.458 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-04 23:17:42.610 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 5
+2025-06-04 23:17:44.629 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo playlist: Rock
+2025-06-04 23:17:44.630 [Thread-0] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: hotel california
+2025-06-04 23:17:47.804 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Próxima música
+2025-06-04 23:17:47.805 [Thread-1] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: creep
+2025-06-04 23:17:52.137 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Música pausada.
+2025-06-04 23:17:54.076 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Música anterior
+2025-06-04 23:17:54.077 [Thread-2] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: hotel california
+2025-06-04 23:18:05.830 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Encerrando reprodução da playlist.

@@ -38,7 +38,10 @@ public class MusicaView {
                 }
                 case "5" -> tocarMusica();
                 case "0" -> {}
-                default -> System.out.println("\nOpção inválida!");
+                default -> {
+                    System.out.println("\nOpção inválida!");
+                    ConsoleUtil.esperarEnter();
+                }
             }
         } while (!opcao.equals("0"));
         logger.info("Menu de músicas encerrado.");
@@ -73,7 +76,6 @@ public class MusicaView {
                 }
             } else {
                 System.out.println("\nMúsica já cadastrada: " + musica.getNome());
-                logger.warn("Música já cadastrada: {}", musica.getNome());
             }
         }else{
             System.out.println("Digite um nome válido!");
@@ -90,9 +92,9 @@ public class MusicaView {
         Musica musica = MusicaController.buscarMusicaNome(nome);
         if(musica != null){
             PlaylistMusicaController.removerMusicaDasPlaylists(musica);
-            MusicaController.removerMusica(nome);//alterar lógica de remoção por nome, remover diretamento por musica
+            MusicaController.removerMusica(nome);
         }else{
-            System.out.println("Música não encontrada!");
+            System.out.println("Música não cadastrada");
         }
         ConsoleUtil.esperarEnter();
     }
@@ -147,72 +149,15 @@ public class MusicaView {
         }
     }
 
-    private static void menuReproducao(Musica musica) {
-        String opcao;
-
-        Thread thread = new Thread(() -> {
-            try {
-                musica.reproduzir();
-            } catch (Exception e) {
-                System.out.println("Erro: " + e.getMessage());
-                musica.parar();
-            }
-        });
-        thread.start();
-
-        logger.info("Reproduzindo música: {}", musica.getNome());
-
-        do{
-            ConsoleUtil.limparConsole();
-            System.out.println("\n► Tocando: " + musica.getNome() + " de " + musica.getArtista());
-            if (!musica.isPausada()) System.out.print("[p] Pausar | ");
-            else System.out.print("[c] Continuar | ");
-            System.out.print("[s] Stop\n");
-            System.out.print("Digite: ");
-            opcao = ScannerUtil.getScanner().nextLine().trim().toLowerCase();
-
-            switch (opcao){
-                case "p" -> {
-                    if (!musica.isPausada()){
-                        logger.info("Música pausada.");
-                        musica.pausar();
-                    }
-                }
-                case "c" -> {
-                    if (musica.isPausada()){
-                        logger.info("Continuando música.");
-                        musica.continuar();
-                    }
-                }
-                case "s" -> {
-                    logger.info("Música encerrada.");
-                    musica.parar();
-                }
-                default -> {
-                    logger.info("Opção inválida!");
-                    System.out.println("Opção inválida!");
-                }
-            }
-        }while(!opcao.equalsIgnoreCase("s") && !musica.isFinalizada());
-
-        try{
-            thread.join();
-            System.out.println("Música finalizada");
-        } catch (InterruptedException e){
-            logger.error("Erro ao finalizar thread de reprodução: ", e);
-            Thread.currentThread().interrupt();
-        }
-    }
-
     private static void tocarMusica(){
         ConsoleUtil.limparConsole();
         System.out.print("***** Reproduzir música *****\n\nNome da musica a reproduzir: ");
-        String nome = ScannerUtil.getScanner().nextLine().trim().toLowerCase();
+        String nome = ScannerUtil.getScanner().nextLine().trim();
 
         Musica musica = MusicaController.buscarMusicaNome(nome);
 
         if(musica != null){
-            menuReproducao(musica);
+            musica.reproduzir();
         }else{
             System.out.println("Música não encontrada!");
             ConsoleUtil.esperarEnter();

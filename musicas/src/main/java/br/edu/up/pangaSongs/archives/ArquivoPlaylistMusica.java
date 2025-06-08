@@ -17,10 +17,10 @@ public class ArquivoPlaylistMusica {
 
     private ArquivoPlaylistMusica(){}
 
-    public static void salvar(List<PlaylistMusica> ids) {
+    public static void salvar() {
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(caminhoArquivo));
-            for (PlaylistMusica pm : ids) {
+            for (PlaylistMusica pm : PlaylistMusicaController.getIds()) {
                 bw.write(pm.getIdMusica() + ";" + pm.getIdPlaylist());
                 bw.newLine();
             }

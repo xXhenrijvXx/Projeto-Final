@@ -13,12 +13,12 @@ public class ArquivoMusica {
 
     private ArquivoMusica(){}
 
-    public static void salvar(List<Musica> musicas) {
+    public static void salvar() {
         try {
             FileWriter fw = new FileWriter(caminhoArquivo);
             BufferedWriter bw = new BufferedWriter(fw);
 
-            for (Musica m : musicas) {
+            for (Musica m : MusicaController.getMusicas()) {
                 bw.write(m.getId() + ";" + m.getNome() + ";" + m.getDuracao() + ";" + m.getCaminhoArquivo() + ";" + m.getArtista() + ";" + m.getGenero());
                 bw.newLine();
             }

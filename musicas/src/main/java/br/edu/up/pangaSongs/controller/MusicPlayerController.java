@@ -69,6 +69,7 @@ public class MusicPlayerController {
         if (clip != null) {
             clip.stop();
             clip.close();
+            pausada = true;
             finalizada = true;
         }
     }

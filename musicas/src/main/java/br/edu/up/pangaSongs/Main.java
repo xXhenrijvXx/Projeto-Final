@@ -1,6 +1,5 @@
 package br.edu.up.pangaSongs;
 
-import br.edu.up.pangaSongs.controller.*;
 import br.edu.up.pangaSongs.archives.*;
 import br.edu.up.pangaSongs.util.ScannerUtil;
 import br.edu.up.pangaSongs.views.*;
@@ -12,7 +11,7 @@ public class Main {
 
         logger.info("Iniciando aplicação...");
 
-        carregarArquivos(logger);
+        carregarArquivos();
         logger.info("Arquivos carregados com sucesso!");
 
         PrincipalView.menu();
@@ -25,12 +24,12 @@ public class Main {
     }
 
     private static void salvarArquivos() {
-        ArquivoMusica.salvar(MusicaController.getMusicas());
-        ArquivoPlaylist.salvar(PlaylistController.getPlaylists());
-        ArquivoPlaylistMusica.salvar(PlaylistMusicaController.getIds());
+        ArquivoMusica.salvar();
+        ArquivoPlaylist.salvar();
+        ArquivoPlaylistMusica.salvar();
     }
 
-    private static void carregarArquivos(Logger logger) {
+    private static void carregarArquivos() {
         ArquivoMusica.carregar();
         ArquivoPlaylist.carregar();
         ArquivoPlaylistMusica.carregar();

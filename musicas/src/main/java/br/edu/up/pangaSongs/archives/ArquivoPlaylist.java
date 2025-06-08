@@ -14,10 +14,10 @@ public class ArquivoPlaylist {
 
     private ArquivoPlaylist(){}
 
-    public static void salvar(List<Playlist> playlists) {
+    public static void salvar() {
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(caminhoArquivo));
-            for (Playlist p : playlists) {
+            for (Playlist p : PlaylistController.getPlaylists()) {
                 bw.write(p.getId() + ";" + p.getNome());
                 bw.newLine();
             }
