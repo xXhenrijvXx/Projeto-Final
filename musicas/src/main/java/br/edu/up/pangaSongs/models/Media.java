@@ -3,7 +3,7 @@ package br.edu.up.pangaSongs.models;
 import br.edu.up.pangaSongs.interfaces.Reproduzivel;
 
 public abstract class Media implements Reproduzivel {
-    String id;
+    private final String id;
     private String nome;
     private double duracao;
 
@@ -13,11 +13,11 @@ public abstract class Media implements Reproduzivel {
         this.duracao = duracao;
     }
 
+    public abstract void reproduzir();
+
     public String getId() {
         return id;
     }
-
-    public abstract void reproduzir();
 
     public void setNome(String nome) {
         this.nome = nome;

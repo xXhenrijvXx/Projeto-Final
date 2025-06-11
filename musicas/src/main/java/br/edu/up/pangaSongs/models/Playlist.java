@@ -1,6 +1,5 @@
 package br.edu.up.pangaSongs.models;
 
-import br.edu.up.pangaSongs.controller.MusicPlayerController;
 import br.edu.up.pangaSongs.util.ConsoleUtil;
 import br.edu.up.pangaSongs.util.ScannerUtil;
 import org.apache.logging.log4j.LogManager;
