@@ -26,12 +26,12 @@ public class Main {
     private static void salvarArquivos() {
         ArquivoMusica.salvar();
         ArquivoPlaylist.salvar();
-        ArquivoPlaylistMusica.salvar();
+        ArquivoIds.salvar();
     }
 
     private static void carregarArquivos() {
         ArquivoMusica.carregar();
         ArquivoPlaylist.carregar();
-        ArquivoPlaylistMusica.carregar();
+        ArquivoIds.carregar();
     }
 }

@@ -1,7 +1,7 @@
 package br.edu.up.pangaSongs.views;
 
 import br.edu.up.pangaSongs.controller.MusicaController;
-import br.edu.up.pangaSongs.controller.PlaylistMusicaController;
+import br.edu.up.pangaSongs.controller.IdsController;
 import br.edu.up.pangaSongs.models.Musica;
 import br.edu.up.pangaSongs.util.ConsoleUtil;
 import br.edu.up.pangaSongs.util.ScannerUtil;
@@ -91,7 +91,7 @@ public class MusicaView {
 
         Musica musica = MusicaController.buscarMusicaNome(nome);
         if(musica != null){
-            PlaylistMusicaController.removerMusicaDasPlaylists(musica);
+            IdsController.removerMusicaDasPlaylists(musica);
             MusicaController.removerMusica(nome);
         }else{
             System.out.println("Música não cadastrada");

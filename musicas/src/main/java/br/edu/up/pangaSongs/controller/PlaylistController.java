@@ -69,7 +69,7 @@ public class PlaylistController {
     public static void removerMusicaDaPlaylist(Playlist playlist, Musica musica){
         if(musica != null){
             playlist.removerMusica(musica);
-            PlaylistMusicaController.removerMusicaDaPlaylist(musica, playlist);
+            IdsController.removerMusicaDaPlaylist(musica, playlist);
             logger.info("Música '{}' removida da playlist '{}'!", musica.getNome(), playlist.getNome());
         }else{
             System.out.println("Música não encontrada");

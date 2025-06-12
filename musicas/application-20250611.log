@@ -44,3 +44,8 @@
 2025-06-11 15:32:11.319 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 0
 2025-06-11 15:32:11.319 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu principal encerrado.
 2025-06-11 15:32:11.356 [main] INFO  br.edu.up.pangaSongs.Main - Encerrando aplicação...
+2025-06-11 23:19:45.388 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-11 23:19:45.406 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-11 23:19:45.406 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-11 23:20:23.262 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-06-11 23:20:23.263 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.

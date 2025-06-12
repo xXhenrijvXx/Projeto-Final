@@ -2,15 +2,15 @@ package br.edu.up.pangaSongs.controller;
 
 import br.edu.up.pangaSongs.models.Musica;
 import br.edu.up.pangaSongs.models.Playlist;
-import br.edu.up.pangaSongs.models.PlaylistMusica;
+import br.edu.up.pangaSongs.models.Ids;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class PlaylistMusicaController{
-    private static final List<PlaylistMusica> ids = new ArrayList<>();
+public class IdsController {
+    private static final List<Ids> ids = new ArrayList<>();
 
-    private PlaylistMusicaController(){}
+    private IdsController(){}
 
     public static void removerMusicaDasPlaylists(Musica musica){
         for(Playlist p : PlaylistController.getPlaylists()){
@@ -31,10 +31,10 @@ public class PlaylistMusicaController{
     }
 
     public static void adicionarMusicaNaPlaylist(String musicaId, String playlistId){
-        ids.add(new PlaylistMusica(musicaId, playlistId));
+        ids.add(new Ids(musicaId, playlistId));
     }
 
-    public static List<PlaylistMusica> getIds() {
+    public static List<Ids> getIds() {
         return ids;
     }
 }

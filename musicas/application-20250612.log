@@ -1,0 +1,17 @@
+2025-06-12 17:59:15.694 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-12 17:59:15.794 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-12 17:59:15.797 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-12 17:59:59.095 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-12 17:59:59.098 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-12 18:00:03.915 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 5
+2025-06-12 18:00:06.796 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo playlist: Rock
+2025-06-12 18:00:06.800 [Thread-0] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: hotel california
+2025-06-12 18:00:10.608 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Música pausada.
+2025-06-12 18:00:12.359 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Próxima música
+2025-06-12 18:00:12.360 [Thread-1] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: creep
+2025-06-12 18:00:13.440 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Encerrando reprodução da playlist.
+2025-06-12 18:00:18.267 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:00:18.267 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists encerrado.
+2025-06-12 18:00:21.717 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 0
+2025-06-12 18:00:21.717 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu principal encerrado.
+2025-06-12 18:00:21.745 [main] INFO  br.edu.up.pangaSongs.Main - Encerrando aplicação...

@@ -2,25 +2,25 @@ package br.edu.up.pangaSongs.archives;
 
 import br.edu.up.pangaSongs.controller.MusicaController;
 import br.edu.up.pangaSongs.controller.PlaylistController;
-import br.edu.up.pangaSongs.controller.PlaylistMusicaController;
+import br.edu.up.pangaSongs.controller.IdsController;
 import br.edu.up.pangaSongs.models.Musica;
 import br.edu.up.pangaSongs.models.Playlist;
-import br.edu.up.pangaSongs.models.PlaylistMusica;
+import br.edu.up.pangaSongs.models.Ids;
 import org.apache.logging.log4j.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArquivoPlaylistMusica {
+public class ArquivoIds {
     private static final String caminhoArquivo = "data/musica_playlist.txt";
-    private static final Logger logger = LogManager.getLogger(ArquivoPlaylistMusica.class);
+    private static final Logger logger = LogManager.getLogger(ArquivoIds.class);
 
-    private ArquivoPlaylistMusica(){}
+    private ArquivoIds(){}
 
     public static void salvar() {
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(caminhoArquivo));
-            for (PlaylistMusica pm : PlaylistMusicaController.getIds()) {
+            for (Ids pm : IdsController.getIds()) {
                 bw.write(pm.getIdMusica() + ";" + pm.getIdPlaylist());
                 bw.newLine();
             }
@@ -33,7 +33,7 @@ public class ArquivoPlaylistMusica {
 
     public static void carregar() {
         File arquivo = new File(caminhoArquivo);
-        List<PlaylistMusica> ids = new ArrayList<>();
+        List<Ids> ids = new ArrayList<>();
 
         if (!arquivo.exists()) {
             arquivo.getParentFile().mkdirs();
@@ -53,19 +53,19 @@ public class ArquivoPlaylistMusica {
             while ((linha = br.readLine()) != null) {
                 String[] partes = linha.split(";");
                 if (partes.length == 2) {
-                    PlaylistMusica pm = new PlaylistMusica(partes[0], partes[1]);
+                    Ids pm = new Ids(partes[0], partes[1]);
                     ids.add(pm);
                 }
             }
 
             br.close();
 
-            for (PlaylistMusica id : ids) {
+            for (Ids id : ids) {
                 Playlist p = PlaylistController.buscarPlaylistId(id.getIdPlaylist());
                 Musica m = MusicaController.buscarMusicaId(id.getIdMusica());
 
                 if (p != null && m != null) {
-                    PlaylistMusicaController.adicionarMusicaNaPlaylist(m.getId(), p.getId());
+                    IdsController.adicionarMusicaNaPlaylist(m.getId(), p.getId());
                     PlaylistController.adicionarMusicaNaPlaylist(p, m);
                 } else {
                     System.out.println("Erro, Id cadastrado mas música ou playlist não.");
