@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ArquivoIds {
-    private static final String caminhoArquivo = "data/musica_playlist.txt";
+    private static final String caminhoArquivo = "data/ids.txt";
     private static final Logger logger = LogManager.getLogger(ArquivoIds.class);
 
     private ArquivoIds(){}
@@ -65,7 +65,6 @@ public class ArquivoIds {
                 Musica m = MusicaController.buscarMusicaId(id.getIdMusica());
 
                 if (p != null && m != null) {
-                    IdsController.adicionarMusicaNaPlaylist(m.getId(), p.getId());
                     PlaylistController.adicionarMusicaNaPlaylist(p, m);
                 } else {
                     System.out.println("Erro, Id cadastrado mas música ou playlist não.");

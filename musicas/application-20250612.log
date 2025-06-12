@@ -15,3 +15,331 @@
 2025-06-12 18:00:21.717 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 0
 2025-06-12 18:00:21.717 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu principal encerrado.
 2025-06-12 18:00:21.745 [main] INFO  br.edu.up.pangaSongs.Main - Encerrando aplicação...
+2025-06-12 18:11:19.263 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-12 18:11:19.295 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-12 18:11:19.297 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-12 18:11:21.485 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-06-12 18:11:21.487 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-06-12 18:11:22.708 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 1
+2025-06-12 18:11:28.874 [main] WARN  br.edu.up.pangaSongs.controller.MusicaController - Música não encontrada!
+2025-06-12 18:11:41.670 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Música criada
+2025-06-12 18:11:47.939 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 4
+2025-06-12 18:11:47.939 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Listando músicas
+2025-06-12 18:11:54.321 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 5
+2025-06-12 18:12:01.288 [main] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: R U Mine?
+2025-06-12 18:12:06.983 [main] INFO  br.edu.up.pangaSongs.models.Musica - Música encerrada.
+2025-06-12 18:12:12.568 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 3
+2025-06-12 18:12:25.824 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Editando a música: R U Mine?
+2025-06-12 18:12:35.159 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 0
+2025-06-12 18:12:38.350 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 2
+2025-06-12 18:12:44.552 [main] INFO  br.edu.up.pangaSongs.controller.MusicaController - Música removida.
+2025-06-12 18:12:49.828 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 4
+2025-06-12 18:12:49.828 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Listando músicas
+2025-06-12 18:12:53.180 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 1
+2025-06-12 18:12:57.787 [main] WARN  br.edu.up.pangaSongs.controller.MusicaController - Música não encontrada!
+2025-06-12 18:13:06.475 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Música criada
+2025-06-12 18:13:09.256 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 0
+2025-06-12 18:13:09.256 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas encerrado.
+2025-06-12 18:13:10.120 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-12 18:13:10.136 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-12 18:13:16.714 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 1
+2025-06-12 18:13:18.872 [main] WARN  br.edu.up.pangaSongs.controller.PlaylistController - Playlist não encontrada!
+2025-06-12 18:13:18.873 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Playlist criada: teste
+2025-06-12 18:13:27.196 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 4
+2025-06-12 18:13:29.786 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-12 18:13:39.004 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 3
+2025-06-12 18:13:45.914 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:13:50.211 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'R U mine?' adicionada na playlist 'teste'
+2025-06-12 18:17:41.336 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:17:47.548 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'stairway to heaven' adicionada na playlist 'teste'
+2025-06-12 18:17:53.564 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:17:55.538 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:17:55.538 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists encerrado.
+2025-06-12 18:17:56.504 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 0
+2025-06-12 18:17:56.506 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu principal encerrado.
+2025-06-12 18:17:56.545 [main] INFO  br.edu.up.pangaSongs.Main - Encerrando aplicação...
+2025-06-12 18:18:09.684 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-12 18:18:09.710 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-12 18:18:09.712 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-12 18:18:28.959 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-06-12 18:18:28.976 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-06-12 18:18:30.850 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 1
+2025-06-12 18:18:37.758 [main] WARN  br.edu.up.pangaSongs.controller.MusicaController - Música não encontrada!
+2025-06-12 18:18:48.129 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Música criada
+2025-06-12 18:18:52.579 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 4
+2025-06-12 18:18:52.580 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Listando músicas
+2025-06-12 18:18:58.085 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 5
+2025-06-12 18:19:03.406 [main] INFO  br.edu.up.pangaSongs.models.Musica - Reproduzindo música: paradise city
+2025-06-12 18:19:08.352 [main] INFO  br.edu.up.pangaSongs.models.Musica - Música pausada.
+2025-06-12 18:19:09.639 [main] INFO  br.edu.up.pangaSongs.models.Musica - Música encerrada.
+2025-06-12 18:19:12.144 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 0
+2025-06-12 18:19:12.144 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas encerrado.
+2025-06-12 18:19:14.868 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-12 18:19:14.869 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-12 18:19:18.783 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 3
+2025-06-12 18:19:28.120 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:19:32.530 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'paradise city' adicionada na playlist 'teste'
+2025-06-12 18:19:42.075 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 3
+2025-06-12 18:19:46.824 [main] INFO  br.edu.up.pangaSongs.controller.PlaylistController - Música 'paradise city' removida da playlist 'teste'!
+2025-06-12 18:21:27.602 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:21:31.066 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-12 18:21:39.725 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:21:39.725 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists encerrado.
+2025-06-12 18:21:41.006 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-06-12 18:21:41.006 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-06-12 18:21:44.200 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 4
+2025-06-12 18:21:44.200 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Listando músicas
+2025-06-12 18:21:47.483 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 0
+2025-06-12 18:21:47.483 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas encerrado.
+2025-06-12 18:21:49.326 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 0
+2025-06-12 18:21:49.326 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu principal encerrado.
+2025-06-12 18:21:49.345 [main] INFO  br.edu.up.pangaSongs.Main - Encerrando aplicação...
+2025-06-12 18:21:55.803 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-12 18:21:55.820 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-12 18:21:55.822 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-12 18:21:58.441 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-12 18:21:58.443 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-12 18:22:00.513 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 4
+2025-06-12 18:22:07.818 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 3
+2025-06-12 18:22:16.553 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:22:23.398 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'stairway to heaven' adicionada na playlist 'teste'
+2025-06-12 18:22:26.400 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:22:30.475 [main] WARN  br.edu.up.pangaSongs.controller.MusicaController - Música não encontrada!
+2025-06-12 18:22:30.476 [main] WARN  br.edu.up.pangaSongs.views.PlaylistView - Música não cadastrada
+2025-06-12 18:22:37.396 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:22:42.073 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:22:42.073 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists encerrado.
+2025-06-12 18:22:43.429 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-06-12 18:22:43.431 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-06-12 18:22:46.424 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 4
+2025-06-12 18:22:46.425 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Listando músicas
+2025-06-12 18:22:57.218 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 0
+2025-06-12 18:22:57.219 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas encerrado.
+2025-06-12 18:22:58.726 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-12 18:22:58.727 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-12 18:23:02.115 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 3
+2025-06-12 18:23:06.881 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:23:09.127 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'paradise city' adicionada na playlist 'teste'
+2025-06-12 18:23:13.662 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:23:18.420 [main] WARN  br.edu.up.pangaSongs.views.PlaylistView - Música já cadastrada na playlist!
+2025-06-12 18:23:21.621 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:23:29.020 [main] WARN  br.edu.up.pangaSongs.views.PlaylistView - Música já cadastrada na playlist!
+2025-06-12 18:23:31.126 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:23:39.192 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'R U mine?' adicionada na playlist 'teste'
+2025-06-12 18:23:45.933 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:23:49.129 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'creep' adicionada na playlist 'teste'
+2025-06-12 18:23:52.440 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:23:54.336 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-12 18:24:03.299 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-12 18:24:09.342 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 5
+2025-06-12 18:24:11.641 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Reproduzindo playlist: teste
+2025-06-12 18:24:11.644 [Thread-0] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: stairway to heaven
+2025-06-12 18:24:27.503 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Próxima música
+2025-06-12 18:24:27.505 [Thread-1] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: paradise city
+2025-06-12 18:24:31.175 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Próxima música
+2025-06-12 18:24:31.175 [Thread-2] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: R U mine?
+2025-06-12 18:24:40.514 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Próxima música
+2025-06-12 18:24:40.516 [Thread-3] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: creep
+2025-06-12 18:24:46.124 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Música pausada.
+2025-06-12 18:24:47.623 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Música anterior
+2025-06-12 18:24:47.624 [Thread-4] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: R U mine?
+2025-06-12 18:24:50.106 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Música anterior
+2025-06-12 18:24:50.107 [Thread-5] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: paradise city
+2025-06-12 18:24:53.106 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Música anterior
+2025-06-12 18:24:53.107 [Thread-6] INFO  br.edu.up.pangaSongs.models.Playlist - Reproduzindo música: stairway to heaven
+2025-06-12 18:24:55.407 [main] INFO  br.edu.up.pangaSongs.models.Playlist - Encerrando reprodução da playlist.
+2025-06-12 18:24:59.415 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:24:59.415 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists encerrado.
+2025-06-12 18:25:00.395 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 0
+2025-06-12 18:25:00.395 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu principal encerrado.
+2025-06-12 18:25:00.418 [main] INFO  br.edu.up.pangaSongs.Main - Encerrando aplicação...
+2025-06-12 18:28:35.774 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-12 18:28:35.806 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-12 18:28:35.807 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-12 18:28:39.064 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-12 18:28:39.066 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-12 18:28:44.285 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 4
+2025-06-12 18:28:47.713 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 3
+2025-06-12 18:28:51.885 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:28:58.069 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'R U mine?' adicionada na playlist 'teste'
+2025-06-12 18:29:00.525 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:29:05.615 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'stairway to heaven' adicionada na playlist 'teste'
+2025-06-12 18:29:08.580 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:29:10.941 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'creep' adicionada na playlist 'teste'
+2025-06-12 18:29:12.730 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:29:17.057 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'paradise city' adicionada na playlist 'teste'
+2025-06-12 18:29:19.860 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:29:21.356 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-12 18:29:27.346 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:29:27.346 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists encerrado.
+2025-06-12 18:29:29.290 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 0
+2025-06-12 18:29:29.291 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu principal encerrado.
+2025-06-12 18:29:29.323 [main] INFO  br.edu.up.pangaSongs.Main - Encerrando aplicação...
+2025-06-12 18:33:12.171 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-12 18:33:12.194 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-12 18:33:12.195 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-12 18:33:19.474 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-06-12 18:33:19.490 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-06-12 18:33:21.470 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 4
+2025-06-12 18:33:21.471 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Listando músicas
+2025-06-12 18:33:24.809 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 0
+2025-06-12 18:33:24.809 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas encerrado.
+2025-06-12 18:33:25.995 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-12 18:33:25.997 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-12 18:33:29.905 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-12 18:33:39.383 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 
+2025-06-12 18:33:39.383 [main] WARN  br.edu.up.pangaSongs.views.PlaylistView - Opção inválida!
+2025-06-12 18:33:42.257 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 
+2025-06-12 18:33:42.257 [main] WARN  br.edu.up.pangaSongs.views.PlaylistView - Opção inválida!
+2025-06-12 18:33:53.456 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:33:55.838 [main] INFO  br.edu.up.pangaSongs.controller.PlaylistController - Playlist removida: teste
+2025-06-12 18:34:01.230 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 4
+2025-06-12 18:34:04.470 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 1
+2025-06-12 18:34:08.168 [main] WARN  br.edu.up.pangaSongs.controller.PlaylistController - Playlist não encontrada!
+2025-06-12 18:34:08.279 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Playlist criada: teste
+2025-06-12 18:34:17.770 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 3
+2025-06-12 18:34:22.827 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:34:28.295 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'R U mine?' adicionada na playlist 'teste'
+2025-06-12 18:34:30.370 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:34:33.623 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'paradise city' adicionada na playlist 'teste'
+2025-06-12 18:34:35.840 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:34:40.293 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'creep' adicionada na playlist 'teste'
+2025-06-12 18:34:43.358 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:34:46.076 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 3
+2025-06-12 18:34:50.847 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:34:55.870 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'R U mine?' adicionada na playlist 'Rock'
+2025-06-12 18:34:59.528 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:35:04.224 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'paradise city' adicionada na playlist 'Rock'
+2025-06-12 18:35:08.233 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:35:10.758 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-12 18:35:31.970 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 
+2025-06-12 18:35:31.970 [main] WARN  br.edu.up.pangaSongs.views.PlaylistView - Opção inválida!
+2025-06-12 18:35:37.359 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:35:37.359 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists encerrado.
+2025-06-12 18:35:38.887 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-06-12 18:35:38.887 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-06-12 18:35:41.645 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 2
+2025-06-12 18:35:54.407 [main] INFO  br.edu.up.pangaSongs.controller.MusicaController - Música removida.
+2025-06-12 18:36:00.590 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 0
+2025-06-12 18:36:00.590 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas encerrado.
+2025-06-12 18:36:03.184 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-12 18:36:03.184 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-12 18:36:05.312 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-12 18:36:14.514 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-12 18:36:21.391 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:36:21.391 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists encerrado.
+2025-06-12 18:36:22.577 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-06-12 18:36:22.577 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-06-12 18:36:24.451 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 2
+2025-06-12 18:36:26.595 [main] INFO  br.edu.up.pangaSongs.controller.MusicaController - Música removida.
+2025-06-12 18:36:29.448 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 0
+2025-06-12 18:36:29.448 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas encerrado.
+2025-06-12 18:36:31.331 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-12 18:36:31.332 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-12 18:36:34.913 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-12 18:36:43.277 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 
+2025-06-12 18:36:43.278 [main] WARN  br.edu.up.pangaSongs.views.PlaylistView - Opção inválida!
+2025-06-12 18:37:03.801 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:37:03.801 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists encerrado.
+2025-06-12 18:37:06.955 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 1
+2025-06-12 18:37:06.956 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas iniciado.
+2025-06-12 18:37:08.419 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 2
+2025-06-12 18:37:13.890 [main] WARN  br.edu.up.pangaSongs.controller.MusicaController - Música não encontrada!
+2025-06-12 18:37:17.773 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 2
+2025-06-12 18:37:21.913 [main] WARN  br.edu.up.pangaSongs.controller.MusicaController - Música não encontrada!
+2025-06-12 18:37:24.709 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Opção selecionada: 0
+2025-06-12 18:37:24.709 [main] INFO  br.edu.up.pangaSongs.views.MusicaView - Menu de músicas encerrado.
+2025-06-12 18:37:25.788 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-12 18:37:25.789 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-12 18:37:31.303 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 3
+2025-06-12 18:37:36.668 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 3
+2025-06-12 18:37:41.124 [main] INFO  br.edu.up.pangaSongs.controller.PlaylistController - Música 'hotel california' removida da playlist 'Rock'!
+2025-06-12 18:37:41.124 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'hotel california' removida da playlist 'Rock'
+2025-06-12 18:37:44.187 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 00
+2025-06-12 18:37:44.187 [main] WARN  br.edu.up.pangaSongs.views.PlaylistView - Opção inválida!
+2025-06-12 18:37:47.295 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:37:51.151 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-12 18:37:58.988 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 
+2025-06-12 18:37:58.988 [main] WARN  br.edu.up.pangaSongs.views.PlaylistView - Opção inválida!
+2025-06-12 18:38:05.915 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:38:09.141 [main] WARN  br.edu.up.pangaSongs.controller.PlaylistController - Playlist não encontrada!
+2025-06-12 18:38:20.339 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 3
+2025-06-12 18:38:28.809 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 3
+2025-06-12 18:38:32.459 [main] INFO  br.edu.up.pangaSongs.controller.PlaylistController - Música 'hotel california' removida da playlist 'Rock'!
+2025-06-12 18:38:32.460 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'hotel california' removida da playlist 'Rock'
+2025-06-12 18:38:35.962 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:38:38.336 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-12 18:38:48.133 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:38:48.133 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists encerrado.
+2025-06-12 18:38:49.500 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 0
+2025-06-12 18:38:49.501 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu principal encerrado.
+2025-06-12 18:38:49.518 [main] INFO  br.edu.up.pangaSongs.Main - Encerrando aplicação...
+2025-06-12 18:41:16.591 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-12 18:41:16.608 [main] WARN  br.edu.up.pangaSongs.controller.MusicaController - Música não encontrada!
+2025-06-12 18:41:16.608 [main] ERROR br.edu.up.pangaSongs.archives.ArquivoIds - Erro, Id cadastrado mas música ou playlist não.
+2025-06-12 18:41:16.608 [main] ERROR br.edu.up.pangaSongs.archives.ArquivoIds - Erro, Id cadastrado mas música ou playlist não.
+2025-06-12 18:41:16.609 [main] WARN  br.edu.up.pangaSongs.controller.MusicaController - Música não encontrada!
+2025-06-12 18:41:16.609 [main] ERROR br.edu.up.pangaSongs.archives.ArquivoIds - Erro, Id cadastrado mas música ou playlist não.
+2025-06-12 18:41:16.609 [main] ERROR br.edu.up.pangaSongs.archives.ArquivoIds - Erro, Id cadastrado mas música ou playlist não.
+2025-06-12 18:41:16.610 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-12 18:41:16.611 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-12 18:41:23.348 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-12 18:41:23.350 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-12 18:41:30.531 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-12 18:41:40.375 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 3
+2025-06-12 18:41:45.227 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:41:49.906 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'stairway to heaven' adicionada na playlist 'Rock'
+2025-06-12 18:41:54.427 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:41:55.962 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:41:55.962 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists encerrado.
+2025-06-12 18:42:04.999 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 0
+2025-06-12 18:42:05.000 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu principal encerrado.
+2025-06-12 18:42:05.034 [main] INFO  br.edu.up.pangaSongs.Main - Encerrando aplicação...
+2025-06-12 18:42:39.993 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-12 18:42:40.013 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-12 18:42:40.014 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-12 18:42:43.442 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-12 18:42:43.444 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-12 18:42:46.398 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 4
+2025-06-12 18:42:51.655 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-12 18:42:57.201 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:42:57.201 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists encerrado.
+2025-06-12 18:42:59.180 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 0
+2025-06-12 18:42:59.181 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu principal encerrado.
+2025-06-12 18:42:59.214 [main] INFO  br.edu.up.pangaSongs.Main - Encerrando aplicação...
+2025-06-12 18:45:05.935 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-12 18:45:05.964 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-12 18:45:05.965 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-12 18:45:18.635 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-12 18:45:18.636 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-12 18:45:21.004 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 3
+2025-06-12 18:45:26.480 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:45:33.815 [main] WARN  br.edu.up.pangaSongs.views.PlaylistView - Música já cadastrada na playlist!
+2025-06-12 18:45:37.556 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:45:42.036 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'stairway to heaven' adicionada na playlist 'Rock'
+2025-06-12 18:45:44.699 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:45:46.279 [main] WARN  br.edu.up.pangaSongs.controller.MusicaController - Música não encontrada!
+2025-06-12 18:45:46.279 [main] WARN  br.edu.up.pangaSongs.views.PlaylistView - Música não cadastrada
+2025-06-12 18:45:48.285 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 2
+2025-06-12 18:46:02.280 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Música 'hotel california' adicionada na playlist 'Rock'
+2025-06-12 18:46:05.061 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:46:09.211 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-12 18:46:13.650 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-12 18:46:22.195 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:46:22.196 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists encerrado.
+2025-06-12 18:46:23.152 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 0
+2025-06-12 18:46:23.152 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu principal encerrado.
+2025-06-12 18:46:23.184 [main] INFO  br.edu.up.pangaSongs.Main - Encerrando aplicação...
+2025-06-12 18:48:10.952 [main] INFO  br.edu.up.pangaSongs.Main - Iniciando aplicação...
+2025-06-12 18:48:10.974 [main] INFO  br.edu.up.pangaSongs.Main - Arquivos carregados com sucesso!
+2025-06-12 18:48:10.975 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu Principal iniciado.
+2025-06-12 18:48:15.093 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 2
+2025-06-12 18:48:15.095 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists iniciado.
+2025-06-12 18:48:18.366 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 6
+2025-06-12 18:48:29.896 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 
+2025-06-12 18:48:29.896 [main] WARN  br.edu.up.pangaSongs.views.PlaylistView - Opção inválida!
+2025-06-12 18:48:32.729 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Opção selecionada: 0
+2025-06-12 18:48:32.729 [main] INFO  br.edu.up.pangaSongs.views.PlaylistView - Menu de playlists encerrado.
+2025-06-12 18:48:33.464 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Opção selecionada: 0
+2025-06-12 18:48:33.465 [main] INFO  br.edu.up.pangaSongs.views.PrincipalView - Menu principal encerrado.
+2025-06-12 18:48:33.495 [main] INFO  br.edu.up.pangaSongs.Main - Encerrando aplicação...

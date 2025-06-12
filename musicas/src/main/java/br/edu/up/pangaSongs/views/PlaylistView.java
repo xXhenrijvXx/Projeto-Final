@@ -116,6 +116,7 @@ public class PlaylistView {
                             if(!p.isMusicaNaPlaylist(m)) {
                                 PlaylistController.adicionarMusicaNaPlaylist(p, m);
                                 logger.info("Música '{}' adicionada na playlist '{}'", m.getNome(), p.getNome());
+                                System.out.println("Música adicionada com sucesso!");
                             }else{
                                 System.out.println("Música já cadastrada na playlist!");
                                 logger.warn("Música já cadastrada na playlist!");
@@ -134,6 +135,8 @@ public class PlaylistView {
                         if(m != null){
                             if(p.isMusicaNaPlaylist(m)){
                                 PlaylistController.removerMusicaDaPlaylist(p, m);
+                                logger.info("Música '{}' removida da playlist '{}'", m.getNome(), p.getNome());
+                                System.out.println("Música removida");
                             }else{
                                 System.out.println("Música não cadastrada na playlist.");
                                 logger.warn("Música não cadastrada na playlist.");

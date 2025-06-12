@@ -79,6 +79,7 @@ public class PlaylistController {
     public static void adicionarMusicaNaPlaylist(Playlist playlist, Musica musica){
         if(musica != null){
             playlist.adicionarMusica(musica);
+            IdsController.adicionarMusicaNaPlaylist(musica.getId(), playlist.getId());
         }else{
             System.out.println("Música não encontrada");
         }
